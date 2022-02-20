@@ -16,14 +16,14 @@ ion-content {
     align-items: center;
 
     h1 {
-      font-size: 35px;
+      font-size: 30px;
       font-family: 'Merriweather',
         serif;
 
     }
 
     ion-icon {
-      font-size: 35px;
+      font-size: 30px;
     }
   }
 
@@ -44,6 +44,29 @@ ion-content {
       background-color: var(--ion-color-primary);
       height: 45px;
       border-radius: 80px;
+    }
+  }
+}
+
+.hadith-list-container {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 10px 25px;
+  font-family: 'Merriweather',
+    serif;
+
+  .hadith-item {
+    background-color: var(--ion-color-light);
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+
+    p {
+      width: 90%;
+      font-size: 22px;
     }
   }
 }
