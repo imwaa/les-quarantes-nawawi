@@ -1,18 +1,19 @@
 <ion-content>
 
   <!-- HEADER -->
-  <div class="header">
-    <div class="header-first-section">
-      <h1>Hadith</h1>
-      <ion-icon name="search-outline"></ion-icon>
-    </div>
-    <div class="header-second-section">
-      <div class="button_favoris">
-        <span>Vos Hadiths favoris</span>
+  <ion-header class="ion-no-border">
+    <div class="header">
+      <div class="header-first-section">
+        <h1>Hadith</h1>
+        <ion-icon name="search-outline"></ion-icon>
+      </div>
+      <div class="header-second-section">
+        <div class="button_favoris">
+          <span>Vos Hadiths favoris</span>
+        </div>
       </div>
     </div>
-  </div>
-
+  </ion-header>
   <!-- LIST HADITH -->
   <div class="hadith-list-container">
     <div class="hadith-item" *ngFor="let item of [1,2,3,5,5,6,7,5]">
