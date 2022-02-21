@@ -1,23 +1,23 @@
 <ion-content>
 
   <!-- HEADER -->
-  <ion-header class="ion-no-border">
-    <div class="header">
-      <div class="header-first-section">
-        <h1>Hadith</h1>
-        <ion-icon name="search-outline"></ion-icon>
-      </div>
-      <div class="header-second-section">
-        <div class="button_favoris">
-          <span>Vos Hadiths favoris</span>
-        </div>
+  <div class="header">
+    <div class="header-first-section">
+      <h1>Hadith</h1>
+      <ion-icon name="search-outline"></ion-icon>
+    </div>
+    <div class="header-second-section">
+      <div class="button_favoris">
+        <span>Vos Hadiths favoris</span>
       </div>
     </div>
-  </ion-header>
+  </div>
   <!-- LIST HADITH -->
   <div class="hadith-list-container">
-    <div class="hadith-item" *ngFor="let item of [1,2,3,5,5,6,7,5]">
-      <p>{{item}}. Les actes ne valent que par leurs intentions, Les actes ne valent que par leurs intentions</p>
+    <div class="hadith-item" *ngFor="let item of [1,2,3,5,5,6,7,5]" routerLink='/selected-hadith-page'>
+      <span>{{item}}.</span>
+      <p>Les actes ne valent que par leurs intentions, Les actes ne valent que par leurs
+        intentions</p>
     </div>
   </div>
 

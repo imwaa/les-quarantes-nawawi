@@ -63,6 +63,8 @@ ion-content {
     margin-bottom: 20px;
     padding: 5px;
     border-radius: 10px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1);
+
 
     display: flex;
     justify-content: center;
@@ -70,6 +72,13 @@ ion-content {
     p {
       width: 90%;
       font-size: 22px;
+    }
+
+    span {
+      font-weight: bold;
+      color: var(--ion-color-primary);
+      font-size: 20px;
+      margin-right: 5px;
     }
   }
 }
