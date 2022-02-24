@@ -27,3 +27,24 @@ ion-toolbar {
   }
 
 }
+
+.hadith-content {
+  padding: 20px 18px;
+  font-family: 'Merriweather',
+    serif;
+
+  .hadith_content_box {
+    background-color: var(--ion-color-light);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 0px 30px 30px 30px;
+  }
+
+  .hadith-content__arab {
+    p {
+      text-align: justify;
+      font-family: 'Noto Kufi Arabic',
+        sans-serif;
+    }
+  }
+}
