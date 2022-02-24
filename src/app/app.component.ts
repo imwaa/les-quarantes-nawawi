@@ -9,11 +9,6 @@ import { isPlatform } from '@ionic/angular';
 })
 export class AppComponent {
   constructor() {
-  }
-
-  ionViewWillEnter(){
-    if(isPlatform('mobile') || isPlatform('pwa')){
-      StatusBar.setBackgroundColor({color:'#fff'})
-    }
+    StatusBar.setBackgroundColor({ color: '#FFFF' });
   }
 }
