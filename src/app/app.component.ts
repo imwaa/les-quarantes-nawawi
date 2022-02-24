@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { StatusBar } from '@capacitor/status-bar';
+import { isPlatform } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor() {
+    if(isPlatform('mobile') && isPlatform('pwa')){
+      StatusBar.setBackgroundColor({color:'#fff'})
+    }
+  }
 }
