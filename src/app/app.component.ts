@@ -9,6 +9,5 @@ import { isPlatform } from '@ionic/angular';
 })
 export class AppComponent {
   constructor() {
-    StatusBar.setBackgroundColor({ color: '#FFFF' });
   }
 }
