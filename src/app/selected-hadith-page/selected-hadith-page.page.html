@@ -1,4 +1,3 @@
-<ion-content *ngIf="hadith">
   <ion-header class="ion-no-border" mode="ios">
     <ion-toolbar>
       <ion-buttons slot="start">
@@ -11,23 +10,32 @@
         </ion-button>
       </ion-buttons>
     </ion-toolbar>
-    <div class="header_title">
-      <p>{{hadith.hadithContent[0].title}}</p>
-    </div>
   </ion-header>
+  <ion-content *ngIf="hadith">
+    <div class="hadith-content">
+      <div class="hadith-content__french">
+        <div class="hadith_title_box">
+          <p style="white-space: pre-line">{{hadith.hadithContent[0].title}}</p>
+        </div>
+        <div class="hadith_content_box">
+          <p style="white-space: pre-line">{{hadith.hadithContent[0].contenu}}</p>
+        </div>
+      </div>
 
-  <div class="hadith-content">
-    <div class="hadith_content_box hadith-content__french">
-      <p style="white-space: pre-line">{{hadith.hadithContent[0].contenu}}</p>
-    </div>
-    <div class="hadith_content_box hadith-content__arab">
-      <p style="white-space: pre-line">{{hadith.hadithContent[1].contenu}}</p>
-    </div>
-  </div>
+      <div class="hadith-content__arab">
+        <div class="hadith_title_box">
+          <p style="white-space: pre-line">{{hadith.hadithContent[1].title}}</p>
+        </div>
+        <div class="hadith_content_box">
+          <p style="white-space: pre-line">{{hadith.hadithContent[1].contenu}}</p>
+        </div>
+      </div>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button>
-      <ion-icon name="play"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-</ion-content>
+    </div>
+
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button>
+        <ion-icon name="play"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </ion-content>
