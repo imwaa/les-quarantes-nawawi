@@ -19,13 +19,4 @@ export class Tab1Page implements OnInit {
   ngOnInit(): void {
     this.haditList = this.hadithService.getAllHadith();
   }
-
-  openSelectedHadith(id: number) {
-    const navigationExtras: NavigationExtras = {
-      state: {
-        id
-      }
-    };
-    this.router.navigate(['/selected-hadith-page'], navigationExtras);
-  }
 }

@@ -14,12 +14,7 @@ export class SelectedHadithPagePage implements OnInit {
   public index: any;
 
   constructor(private route: ActivatedRoute, private router: Router, private hadithService: HadithServiceService) {
-    this.route.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation().extras.state) {
-        this.index = this.router.getCurrentNavigation().extras.state.id;
-        console.log(this.index);
-      }
-    });
+    this.index = this.route.snapshot.paramMap.get('id');
   }
 
   ngOnInit() {

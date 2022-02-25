@@ -14,8 +14,8 @@
   </div>
   <!-- LIST HADITH -->
   <div class="hadith-list-container">
-    <div class="hadith-item" *ngFor="let item of haditList, let index = index;" routerLink='/selected-hadith-page'
-      (click)="openSelectedHadith(index)">
+    <div class="hadith-item" *ngFor="let item of haditList, let index = index;"
+      routerLink='/selected-hadith-page/{{index}}'>
       <span>{{item.id}}.</span>
       <p>{{item.hadithContent[0].title}}</p>
     </div>
