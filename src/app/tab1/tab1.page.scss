@@ -54,7 +54,7 @@ ion-content {
 .hadith-list-container {
   margin-top: 170px;
   margin-bottom: 60px;
-  padding: 10px 25px;
+  padding: 10px 20px;
   font-family: 'Merriweather',
     serif;
 
@@ -63,22 +63,26 @@ ion-content {
     margin-bottom: 20px;
     padding: 5px;
     border-radius: 10px;
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 
 
     display: flex;
     justify-content: center;
+    align-items: baseline;
 
     p {
-      width: 90%;
-      font-size: 22px;
+      width: 85%;
+      font-size: 18px;
     }
 
     span {
-      font-weight: bold;
+      font-family: 'Montserrat',
+        sans-serif;
+      font-weight: 600;
       color: var(--ion-color-primary);
-      font-size: 20px;
-      margin-right: 5px;
+      font-size: 18px;
+      margin-right: 10px;
+      height: auto;
     }
   }
 }
