@@ -12,7 +12,7 @@ export class HadithServiceService {
 
   getAllHadith(): HadithList[] {
     const hadithList: HadithList[] = [];
-    for (let i = 0; i < 3; i++) {
+    for (let i = 0; i < 7; i++) {
       hadithList.push(this.getOneHadith(i));
     }
     return hadithList;
