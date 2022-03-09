@@ -14,8 +14,8 @@ HADITH APP MVP
                 -Audio du hadith
                 -Button pour partager et ajouter en favoris
 
-    2. Biographie Imam Nawawi:
-        Cette page affichera une biograpghie breve de l'imam nawawi.
+    2. Biographies:
+        Cette page affichera une biograpghie breve de l'imam nawawi, Bukhrari, Mouslim,...
 
     3. Autre:
         Cette page contiendra des elements bonus, tels que la liste des
