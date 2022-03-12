@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header mode="ios">
   <ion-toolbar>
     <ion-title>
       Tab 2
@@ -7,11 +7,35 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header collapse="condense" mode="ios">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Biographies</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <ion-card mode="ios">
+    <!-- <img src="https://cdn.dribbble.com/users/2612108/screenshots/10759245/media/ee6a5e157167bf0f1b390044e4f1845c.gif" /> -->
+    <img src="../../assets/image_processing20200317-26108-1mzl6gl.gif" />
+
+    <ion-card-header>
+      <ion-card-subtitle>Al-Imam Muîn ad-Dîn</ion-card-subtitle>
+      <ion-card-title color="primary">Al-Nawawi</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Né en 631 de l’Hégire, soit en 1233 du calendrier grégorien, dans le village de Nawā dans la région de Ḥūrān au
+      Sud de la Syrie, il est une figure de l'école chaféite, considéré comme l’éditeur...
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card mode="ios">
+    <ion-card-header>
+      <ion-card-subtitle>Mouhammad al-Boukhârî</ion-card-subtitle>
+      <ion-card-title color="primary">Al-Boukhârî</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Né en 631 de l’Hégire, soit en 1233 du calendrier grégorien, dans le village de Nawā dans la région de Ḥūrān au
+      Sud de la Syrie, il est une figure de l'école chaféite, considéré comme l’éditeur...
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
