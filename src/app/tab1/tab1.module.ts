@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Tab1Page } from './tab1.page';
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
-import { ShortenPipe } from '../utils/shortenPipe';
+import { ShortenPipe } from '../utils/pipes/shorten.pipe';
 
 @NgModule({
   imports: [
