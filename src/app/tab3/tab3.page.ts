@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
+  constructor() { }
+
+  toggleDarkMode = () => {
+    document.body.classList.toggle('dark');
+  };
 
 }

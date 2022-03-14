@@ -1,14 +1,15 @@
   <ion-header class="ion-no-border" mode="ios">
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-back-button defaultHref="/tabs/tab1" mode="md"></ion-back-button>
+        <ion-back-button text="" defaultHref="/tabs/tab1"></ion-back-button>
       </ion-buttons>
-      <ion-title>Hadith {{hadith.id}}</ion-title>
       <ion-buttons slot="end">
-        <ion-button mode="md">
-          <ion-icon color="white" name="share-social"></ion-icon>
+        <ion-button>
+          <ion-icon slot="icon-only" ios="star-outline" md="star-sharp"></ion-icon>
         </ion-button>
       </ion-buttons>
+
+      <ion-title slot="start">Hadith {{hadith.id}}</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-content *ngIf="hadith">

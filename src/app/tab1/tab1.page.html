@@ -1,38 +1,52 @@
-<!-- <ion-header mode="ios">
+<ion-header mode="ios">
   <ion-toolbar>
     <ion-title>
       Hadith Nawawi
     </ion-title>
   </ion-toolbar>
-</ion-header> -->
+</ion-header>
 
-<ion-content >
-  <!-- <ion-header collapse="condense" mode="ios">
+
+<!-- HEADER -->
+<!-- <div class="header">
+  <div class="header-first-section">
+    <h1>Hadith Nawawi</h1>
+    <ion-icon name="search-outline"></ion-icon>
+  </div>
+  <div class="header-second-section">
+    <div class="button_favoris ion-activatable ripple-parent">
+      <span>Vos Hadiths favoris</span>
+      <ion-ripple-effect></ion-ripple-effect>
+    </div>
+  </div>
+</div> -->
+
+
+<ion-content>
+  <ion-header collapse="condense" mode="ios">
     <ion-toolbar>
       <ion-title size="large">Hadith Nawawi</ion-title>
     </ion-toolbar>
-  </ion-header> -->
+  </ion-header>
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="header-first-section">
-      <h1>Hadith Nawawi</h1>
-      <ion-icon name="search-outline"></ion-icon>
-    </div>
-    <div class="header-second-section">
-      <div class="button_favoris ion-activatable ripple-parent">
-        <span>Vos Hadiths favoris</span>
-        <ion-ripple-effect></ion-ripple-effect>
-      </div>
-    </div>
-  </div>
+
   <!-- LIST HADITH -->
-  <div class="hadith-list-container">
+  <!-- <div class="hadith-list-container">
     <div class="hadith-item" *ngFor="let item of haditList, let index = index;"
       routerLink='/selected-hadith-page/{{index}}'>
       <span>{{item.id}}.</span>
       <p>{{item.hadithContent[0].title}}</p>
     </div>
-  </div>
+  </div> -->
+
+  <ion-card mode="ios" *ngFor="let item of haditList, let index = index;">
+    <ion-card-header>
+      <ion-card-subtitle>Hadith {{item.id}}</ion-card-subtitle>
+      <ion-card-title color="primary">{{item.hadithContent[0].title}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      {{ item.hadithContent[0].contenu | shorten:200 }}
+    </ion-card-content>
+  </ion-card>
 
 </ion-content>
