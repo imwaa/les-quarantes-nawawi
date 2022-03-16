@@ -9,9 +9,10 @@ const routes: Routes = [
   {
     path: 'selected-hadith-page/:id',
     loadChildren: () => import('./selected-hadith-page/selected-hadith-page.module').then(m => m.SelectedHadithPagePageModule)
-  },  {
-    path: 'biographies',
-    loadChildren: () => import('./pages/biographies/biographies.module').then( m => m.BiographiesPageModule)
+  },
+  {
+    path: 'biographies/:id',
+    loadChildren: () => import('./pages/biographies/biographies.module').then(m => m.BiographiesPageModule)
   }
 
 

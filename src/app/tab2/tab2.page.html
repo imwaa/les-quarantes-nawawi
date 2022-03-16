@@ -13,54 +13,16 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card mode="ios">
-    <!-- <img src="https://cdn.dribbble.com/users/2612108/screenshots/10759245/media/ee6a5e157167bf0f1b390044e4f1845c.gif" /> -->
-    <img src="../../assets/image_processing20200317-26108-1mzl6gl.gif" />
-
+  <ion-card mode="ios" *ngFor="let item of imamList, let index = index;">
+    <img *ngIf="item.surnom ==='Imam Al-Nawawi'" src="../../assets/image_processing20200317-26108-1mzl6gl.gif" />
     <ion-card-header>
-      <ion-card-subtitle color="primary">Muîn ad-Dîn</ion-card-subtitle>
-      <ion-card-title>Imam Al-Nawawi</ion-card-title>
+      <ion-card-subtitle color="primary">{{item.vraiNom}}</ion-card-subtitle>
+      <ion-card-title>{{item.surnom}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      Né en 631 de l’Hégire, soit en 1233 du calendrier grégorien, dans le village de Nawā dans la région de Ḥūrān au
-      Sud de la Syrie, il est une figure de l'école chaféite, considéré comme l’éditeur...
-
+      {{item.biographie | shorten:230}}
       <div class="card-content-button-div">
-        <ion-button size="small">
-          Lire
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card mode="ios">
-    <ion-card-header>
-      <ion-card-subtitle color="primary">Mouhammad al-Boukhârî</ion-card-subtitle>
-      <ion-card-title>Imam Al-Boukhârî</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Né en 631 de l’Hégire, soit en 1233 du calendrier grégorien, dans le village de Nawā dans la région de Ḥūrān au
-      Sud de la Syrie, il est une figure de l'école chaféite, considéré comme l’éditeur...
-      <div class="card-content-button-div">
-        <ion-button size="small">
-          Lire
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-        </ion-button>
-      </div>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card mode="ios">
-    <ion-card-header>
-      <ion-card-subtitle color="primary">Muslim ibn al-Ḥajjāj</ion-card-subtitle>
-      <ion-card-title>Imam Muslim</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      Né en 631 de l’Hégire, soit en 1233 du calendrier grégorien, dans le village de Nawā dans la région de Ḥūrān au
-      Sud de la Syrie, il est une figure de l'école chaféite, considéré comme l’éditeur...
-      <div class="card-content-button-div">
-        <ion-button size="small">
+        <ion-button size="small" routerLink='/biographies/{{index}}'>
           Lire
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </ion-button>

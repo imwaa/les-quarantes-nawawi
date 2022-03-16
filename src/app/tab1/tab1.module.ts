@@ -14,6 +14,6 @@ import { ShortenPipe } from '../utils/pipes/shorten.pipe';
     FormsModule,
     Tab1PageRoutingModule
   ],
-  declarations: [Tab1Page, ShortenPipe]
+  declarations: [Tab1Page]
 })
 export class Tab1PageModule { }
