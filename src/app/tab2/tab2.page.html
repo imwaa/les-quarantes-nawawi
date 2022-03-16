@@ -20,11 +20,11 @@
       <ion-card-title>{{item.surnom}}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      {{item.biographie | shorten:230}}
-      <div class="card-content-button-div">
+      <!-- {{item.biographie | shorten:230}} -->
+      <div>
         <ion-button size="small" routerLink='/biographies/{{index}}'>
-          Lire
-          <ion-icon name="chevron-forward-outline"></ion-icon>
+          Lire sa biographie
+          <ion-icon name="chevron-forward"></ion-icon>
         </ion-button>
       </div>
     </ion-card-content>
