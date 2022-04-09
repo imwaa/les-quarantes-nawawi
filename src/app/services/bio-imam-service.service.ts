@@ -12,7 +12,7 @@ export class BioImamServiceService {
 
   getAllImams(): ImamDTO[] {
     const imamList: ImamDTO[] = [];
-    for (let i = 0; i < 2; i++) {
+    for (let i = 0; i < 4; i++) {
       imamList.push(this.getOneImam(i));
     }
     return imamList;
