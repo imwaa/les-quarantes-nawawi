@@ -1,16 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '../services/theme.service';
+import { StorageServiceService } from '../services/storage-service.service';
 
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
-export class Tab3Page {
+export class Tab3Page{
 
-  constructor() { }
+  themeValue = false;
 
-  toggleDarkMode = () => {
-    document.body.classList.toggle('dark');
-  };
+  constructor(private themeService: ThemeService, private storage: StorageServiceService) {
+    this.storage.getData().subscribe(res => {
+      this.themeValue = res;
+    })
+  }
+  
+  get darkBoolean() {
+    return this.themeService.sharedDarkValue;
+  }
+
+  toggleTheme(event) {
+    this.themeService.setAppTheme(event.detail.checked, true);
+  }
 
 }

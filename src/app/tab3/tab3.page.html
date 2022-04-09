@@ -23,7 +23,7 @@
           <ion-label>
             Mode Sombre
           </ion-label>
-          <ion-toggle color="primary" slot="end" onIonChange={this.toggleDarkMode}></ion-toggle>
+          <ion-toggle color="primary" [(ngModel)]="themeValue" slot="end" (ionChange)="toggleTheme($event)" ></ion-toggle>
         </ion-item>
       </ion-list>
     </ion-card-content>

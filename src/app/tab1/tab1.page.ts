@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { HadithContent, HadithList } from '../interfaces/hadithDTO';
 import { HadithServiceService } from '../services/hadith-service.service';
+import { StorageServiceService } from '../services/storage-service.service';
+import { ThemeService } from '../services/theme.service';
 
 
 @Component({
@@ -12,9 +14,10 @@ import { HadithServiceService } from '../services/hadith-service.service';
 export class Tab1Page implements OnInit {
   public haditList: HadithList[] = [];
 
-  constructor(private hadithService: HadithServiceService, private router: Router) {
-    console.log(hadithService.getAllHadith());
-    console.log(hadithService.getOneHadith(1));
+  constructor(
+    private hadithService: HadithServiceService,
+    private router: Router,
+  ) {
   }
   ngOnInit(): void {
     this.haditList = this.hadithService.getAllHadith();

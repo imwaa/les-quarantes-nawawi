@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ThemeService } from '../services/theme.service';
+import { StorageServiceService } from '../services/storage-service.service';
 
 @Component({
   selector: 'app-tabs',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
-
+  constructor(private themeService: ThemeService, private storage: StorageServiceService) {
+    this.storage.getData().subscribe(res => {
+      if (res === null) {
+        this.themeService.setAppTheme(false,true)
+      } else {
+        this.themeService.setAppTheme(res,false)
+      }
+    })
+  }
 }
