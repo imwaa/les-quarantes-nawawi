@@ -45,13 +45,13 @@ ion-toolbar {
     margin-bottom: 30px;
 
     .hadith_content_box {
-      color: rgb(37, 37, 37);
       background-color: var(--ion-color-light);
       margin-bottom: 20px;
-      padding: 15px;
+      padding: 20px;
       border-radius: 0px 15px 15px 15px;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
       text-align: justify;
+      line-height: 20px;
     }
 
     .hadith_title_box {
@@ -60,7 +60,7 @@ ion-toolbar {
       background-color: var(--ion-color-light);
       margin-bottom: 10px;
       padding: 1px 15px;
-      border-radius: 30px 30px 30px 0px;
+      border-radius: 15px 15px 15px 0px;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 
 
@@ -85,15 +85,13 @@ ion-toolbar {
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
       text-align: justify;
       direction: rtl;
-      color: rgb(37, 37, 37);
-
     }
 
     .hadith_title_box {
       background-color: var(--ion-color-light);
       margin-bottom: 10px;
       padding: 1px 15px;
-      border-radius: 30px 30px 0px 30px;
+      border-radius: 15px 15px 0px 15px;
       box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
 
 
