@@ -11,11 +11,12 @@ export class AproposPage implements OnInit {
 
 
   constructor(
-    private modalCtr: ModalController,
+    public modalCtrl: ModalController,
   ) { }
 
+  async close() {
+    await this.modalCtrl.dismiss();
+  }
   ngOnInit() { }
-
-
 
 }

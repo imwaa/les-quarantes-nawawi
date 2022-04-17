@@ -15,7 +15,8 @@ import { IonRouterOutlet } from '@ionic/angular';
 export class Tab3Page {
 
   themeValue = false;
-  modalDataResponse: any;
+  currentModal: any;
+
 
   constructor(
     private themeService: ThemeService,
@@ -26,7 +27,7 @@ export class Tab3Page {
       this.themeValue = res;
     })
   }
-  
+
   get darkBoolean() {
     return this.themeService.sharedDarkValue;
   }
@@ -36,20 +37,17 @@ export class Tab3Page {
   }
 
   async initModal() {
-    const modal = await this.modalCtrl.create({
-      component: AproposPage,
-      swipeToClose: true,
-      presentingElement: this.routerOutlet.nativeEl
-    });
+  const modal = await this.modalCtrl.create({
+    component: AproposPage,
+    swipeToClose: true,
+    presentingElement: this.routerOutlet.nativeEl
+  });
+    
+  modal.onDidDismiss().then(() => {
+    console.log("femer")
+  });
 
-    modal.onDidDismiss().then((modalDataResponse) => {
-      if (modalDataResponse !== null) {
-        this.modalDataResponse = modalDataResponse.data;
-        console.log('Modal Sent Data : ' + modalDataResponse.data);
-      }
-    });
+  return await modal.present();
 
-    return await modal.present();
-
-  }
+}
 }
