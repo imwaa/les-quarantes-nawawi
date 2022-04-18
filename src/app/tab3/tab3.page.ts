@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ThemeService } from '../services/theme.service';
 import { StorageServiceService } from '../services/storage-service.service';
-import { ModalController } from '@ionic/angular';
-import { AproposPage } from '../pages/apropos/apropos.page';
 import { IonRouterOutlet } from '@ionic/angular';
 
 
@@ -15,39 +13,18 @@ import { IonRouterOutlet } from '@ionic/angular';
 export class Tab3Page {
 
   themeValue = false;
-  currentModal: any;
-
-
   constructor(
     private themeService: ThemeService,
-    private storage: StorageServiceService,
-    public modalCtrl: ModalController,
-    private routerOutlet: IonRouterOutlet) {
+    private storage: StorageServiceService) {
     this.storage.getData().subscribe(res => {
       this.themeValue = res;
     })
   }
-
   get darkBoolean() {
     return this.themeService.sharedDarkValue;
   }
-
   toggleTheme(event) {
     this.themeService.setAppTheme(event.detail.checked, true);
   }
 
-  async initModal() {
-  const modal = await this.modalCtrl.create({
-    component: AproposPage,
-    swipeToClose: true,
-    presentingElement: this.routerOutlet.nativeEl
-  });
-    
-  modal.onDidDismiss().then(() => {
-    console.log("femer")
-  });
-
-  return await modal.present();
-
-}
 }

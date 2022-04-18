@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'Hadith App',
+  appId: 'com.walid.nawawi',
+  appName: '40 Hadith',
   webDir: 'www',
   bundledWebRuntime: false
 };

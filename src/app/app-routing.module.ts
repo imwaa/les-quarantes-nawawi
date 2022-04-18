@@ -13,13 +13,7 @@ const routes: Routes = [
   {
     path: 'biographies/:id',
     loadChildren: () => import('./pages/biographies/biographies.module').then(m => m.BiographiesPageModule)
-  },  {
-    path: 'apropos',
-    loadChildren: () => import('./pages/apropos/apropos.module').then( m => m.AproposPageModule)
-  }
-
-
-
+  },
 ];
 @NgModule({
   imports: [
