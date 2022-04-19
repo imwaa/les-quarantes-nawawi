@@ -24,9 +24,14 @@ ion-toolbar {
   .hadith-content {
     ion-card-content {
       font-size: 18px;
-      margin-bottom: 20px;
       text-align: justify;
     }
+  }
+
+  .share_fr{
+    position: absolute;
+    right: 100px;
+    top: 340px;
   }
 }
 
