@@ -11,22 +11,11 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card mode="ios" *ngFor="let item of imamList, let index = index;">
-    <img
-      *ngIf="item.surnom ==='Imam Al-Nawawi'"
-      src="../../assets/image_processing20200317-26108-1mzl6gl.gif"
-    />
+  <ion-card mode="ios" button="true" *ngFor="let item of imamList, let index = index;"
+    routerLink="/biographies/{{index}}">
     <ion-card-header>
       <ion-card-subtitle color="primary">{{item.vraiNom}}</ion-card-subtitle>
       <ion-card-title>{{item.surnom}}</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
-      <div>
-        <ion-button size="small" routerLink="/biographies/{{index}}">
-          Lire sa biographie
-          <ion-icon name="chevron-forward"></ion-icon>
-        </ion-button>
-      </div>
-    </ion-card-content>
   </ion-card>
 </ion-content>

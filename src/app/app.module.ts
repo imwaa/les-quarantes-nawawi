@@ -10,7 +10,6 @@ import { environment } from '../environments/environment';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { Drivers } from '@ionic/storage';
 import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
-
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],

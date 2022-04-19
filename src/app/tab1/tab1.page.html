@@ -11,11 +11,8 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card
-    mode="ios"
-    *ngFor="let item of haditList, let index = index;"
-    routerLink="/selected-hadith-page/{{index}}"
-  >
+  <ion-card button="true" mode="ios" *ngFor="let item of haditList, let index = index;"
+    routerLink="/selected-hadith-page/{{index}}">
     <ion-card-header>
       <ion-card-subtitle color="primary">Hadith {{item.id}}</ion-card-subtitle>
       <ion-card-title>{{item.hadithContent[0].title}}</ion-card-title>

@@ -10,7 +10,7 @@ import { BioImamServiceService } from '../services/bio-imam-service.service';
 export class Tab2Page implements OnInit {
   public imamList: ImamDTO[] = [];
 
-  constructor(private imamService: BioImamServiceService) {}
+  constructor(private imamService: BioImamServiceService) { }
   ngOnInit(): void {
     this.imamList = this.imamService.getAllImams();
   }
