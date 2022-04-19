@@ -1,8 +1,6 @@
 <ion-header class="ion-no-border" mode="ios">
   <ion-toolbar>
-    <ion-title>
-      Hadith Al-Nawawi
-    </ion-title>
+    <ion-title> Hadith Al-Nawawi </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,12 +11,14 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card mode="ios" *ngFor="let item of haditList, let index = index;" routerLink='/selected-hadith-page/{{index}}'>
+  <ion-card
+    mode="ios"
+    *ngFor="let item of haditList, let index = index;"
+    routerLink="/selected-hadith-page/{{index}}"
+  >
     <ion-card-header>
       <ion-card-subtitle color="primary">Hadith {{item.id}}</ion-card-subtitle>
       <ion-card-title>{{item.hadithContent[0].title}}</ion-card-title>
     </ion-card-header>
-
   </ion-card>
-
 </ion-content>

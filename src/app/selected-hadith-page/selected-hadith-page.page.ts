@@ -9,16 +9,18 @@ import { HadithServiceService } from '../services/hadith-service.service';
   styleUrls: ['./selected-hadith-page.page.scss'],
 })
 export class SelectedHadithPagePage implements OnInit {
-
   public hadith: HadithList;
   public index: any;
 
-  constructor(private route: ActivatedRoute, private router: Router, private hadithService: HadithServiceService) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private hadithService: HadithServiceService
+  ) {
     this.index = this.route.snapshot.paramMap.get('id');
   }
 
   ngOnInit() {
     this.hadith = this.hadithService.getOneHadith(this.index);
   }
-
 }

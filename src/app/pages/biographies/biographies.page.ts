@@ -10,16 +10,18 @@ import { HadithServiceService } from 'src/app/services/hadith-service.service';
   styleUrls: ['./biographies.page.scss'],
 })
 export class BiographiesPage implements OnInit {
-
   public imam: ImamDTO;
   public index: any;
 
-  constructor(private route: ActivatedRoute, private router: Router, private imamService: BioImamServiceService) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private imamService: BioImamServiceService
+  ) {
     this.index = this.route.snapshot.paramMap.get('id');
   }
 
   ngOnInit() {
     this.imam = this.imamService.getOneImam(this.index);
   }
-
 }

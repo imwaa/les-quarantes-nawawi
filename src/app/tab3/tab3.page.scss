@@ -15,4 +15,16 @@
     color: rgb(180, 180, 180);
   }
 
+  .social-links{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    ion-icon{
+      font-size:25px;
+      color: rgb(180, 180, 180);
+
+    }
+  }
+
 }

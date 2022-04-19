@@ -16,6 +16,6 @@ import { IonicStorageModule } from '@ionic/storage-angular';
     RouterModule.forChild([{ path: '', component: Tab3Page }]),
     Tab3PageRoutingModule,
   ],
-  declarations: [Tab3Page]
+  declarations: [Tab3Page],
 })
-export class Tab3PageModule { }
+export class Tab3PageModule {}

@@ -1,33 +1,29 @@
-  <ion-header class="ion-no-border" mode="ios">
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-back-button text="" defaultHref="/tabs/tab1"></ion-back-button>
-      </ion-buttons>
-
-      <ion-title slot="start">Hadith {{hadith.id}}</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-content *ngIf="hadith">
-    <div class="hadith-content">
-      <div class="hadith-content__french">
-        <div class="hadith_title_box">
-          <p style="white-space: pre-line">{{hadith.hadithContent[0].title}}</p>
-        </div>
-        <div class="hadith_content_box">
-          <p style="white-space: pre-line">{{hadith.hadithContent[0].contenu}}</p>
-        </div>
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/tabs/tab1"></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="start">Hadith {{hadith.id}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="hadith">
+  <div class="hadith-content">
+    <div class="hadith-content__french">
+      <div class="hadith_title_box">
+        <p style="white-space: pre-line">{{hadith.hadithContent[0].title}}</p>
       </div>
-      <div>
-
+      <div class="hadith_content_box">
+        <p style="white-space: pre-line">{{hadith.hadithContent[0].contenu}}</p>
       </div>
-      <div class="hadith-content__arab">
-        <div class="hadith_title_box">
-          <p style="white-space: pre-line">{{hadith.hadithContent[1].title}}</p>
-        </div>
-        <div class="hadith_content_box">
-          <p style="white-space: pre-line">{{hadith.hadithContent[1].contenu}}</p>
-        </div>
-      </div>
-
     </div>
-  </ion-content>
+    <div></div>
+    <div class="hadith-content__arab">
+      <div class="hadith_title_box">
+        <p style="white-space: pre-line">{{hadith.hadithContent[1].title}}</p>
+      </div>
+      <div class="hadith_content_box">
+        <p style="white-space: pre-line">{{hadith.hadithContent[1].contenu}}</p>
+      </div>
+    </div>
+  </div>
+</ion-content>
