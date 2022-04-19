@@ -7,23 +7,29 @@
   </ion-toolbar>
 </ion-header>
 <ion-content *ngIf="hadith">
-  <div class="hadith-content">
-    <div class="hadith-content__french">
-      <div class="hadith_title_box">
+    <div class="french_section">
+      <div class="hadith-title">
         <p style="white-space: pre-line">{{hadith.hadithContent[0].title}}</p>
       </div>
-      <div class="hadith_content_box">
-        <p style="white-space: pre-line">{{hadith.hadithContent[0].contenu}}</p>
+      <div class="hadith-content">
+        <ion-card mode="ios">
+          <ion-card-content style="white-space: pre-line">
+            {{hadith.hadithContent[0].contenu}}
+          </ion-card-content>
+        </ion-card>
       </div>
     </div>
-    <div></div>
-    <div class="hadith-content__arab">
-      <div class="hadith_title_box">
+    
+    <div class="arab_section">
+      <div class="hadith-title">
         <p style="white-space: pre-line">{{hadith.hadithContent[1].title}}</p>
       </div>
-      <div class="hadith_content_box">
-        <p style="white-space: pre-line">{{hadith.hadithContent[1].contenu}}</p>
+      <div class="hadith-content">
+        <ion-card mode="ios">
+          <ion-card-content style="white-space: pre-line">
+            {{hadith.hadithContent[1].contenu}}
+          </ion-card-content>
+        </ion-card>
       </div>
     </div>
-  </div>
 </ion-content>

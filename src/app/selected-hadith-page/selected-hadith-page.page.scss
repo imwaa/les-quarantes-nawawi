@@ -1,7 +1,3 @@
-ion-content {
-  --ion-background-color: var(--ion-color-light-tint);
-}
-
 ion-toolbar {
   ion-title {
     font-family: 'Merriweather',
@@ -11,92 +7,51 @@ ion-toolbar {
   }
 }
 
-.header_title {
-  padding: 10px 25px;
-  border-radius: 0px 0px 30px 30px;
-  box-shadow: 0px -3px 21px rgba(0, 0, 0, 0.2);
-  background-color: var(--ion-color-light);
-  width: 100%;
 
-  p {
+.french_section {
+  margin-top: 20px;
+  .hadith-title {
     font-family: 'Merriweather',
       serif;
-    font-size: 20px;
+    padding: 1px 15px;
+
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
   }
 
+  .hadith-content {
+    ion-card-content {
+      font-size: 18px;
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+  }
 }
 
-.hadith-content {
-  padding: 20px 18px;
-
-
-  .hadith_content_box {
-    background-color: var(--ion-color-light);
-    margin-bottom: 20px;
-    padding: 15px;
-    border-radius: 0px 30px 30px 30px;
-    box-shadow: 0px 1px 1px rgba(0, 255, 191, 0.3);
-    text-align: justify;
-  }
-
-  .hadith-content__french {
-    margin-bottom: 30px;
-
-    .hadith_content_box {
-      background-color: var(--ion-color-light);
-      margin-bottom: 20px;
-      padding: 20px;
-      border-radius: 0px 15px 15px 15px;
-      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-      text-align: justify;
-      line-height: 20px;
-    }
-
-    .hadith_title_box {
-      font-family: 'Merriweather',
-        serif;
-      background-color: var(--ion-color-light);
-      margin-bottom: 10px;
-      padding: 1px 15px;
-      border-radius: 15px 15px 15px 0px;
-      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-
-
-
-      p {
-        text-align: center;
-        font-size: 20px;
-      }
-    }
-  }
-
-
-  .hadith-content__arab {
+.arab_section {
+  .hadith-title {
     font-family: 'Noto Kufi Arabic',
-      sans-serif;
+    sans-serif;
+    padding: 1px 15px;
 
-    .hadith_content_box {
-      background-color: var(--ion-color-light);
+    p {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  .hadith-content {
+    ion-card-content {
+      font-size: 18px;
       margin-bottom: 20px;
-      padding: 15px;
-      border-radius: 15px 0px 15px 15px;
-      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
       text-align: justify;
       direction: rtl;
-    }
-
-    .hadith_title_box {
-      background-color: var(--ion-color-light);
-      margin-bottom: 10px;
-      padding: 1px 15px;
-      border-radius: 15px 15px 0px 15px;
-      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
-
-
-      p {
-        text-align: center;
-        font-size: 20px;
-      }
+      font-family: 'Noto Kufi Arabic',
+      sans-serif;
+      line-height: 32px;
     }
   }
 }
+
