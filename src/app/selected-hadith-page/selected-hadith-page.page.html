@@ -16,8 +16,15 @@
         <ion-card-content style="white-space: pre-line">
           {{hadith.hadithContent[0].contenu}}
           <div>
-            <ion-button class="ion-float-right" mode="md" fill="outline" style="font-size: 18px; margin-bottom: 10px;"
-              size="small" shape="round" (click)="share(0)">
+            <ion-button
+              class="ion-float-right"
+              mode="md"
+              fill="outline"
+              style="font-size: 18px; margin: 10px 0px"
+              size="small"
+              shape="round"
+              (click)="shareHadith(0)"
+            >
               <ion-icon name="share-social-sharp"></ion-icon>
             </ion-button>
           </div>
@@ -35,8 +42,15 @@
         <ion-card-content style="white-space: pre-line">
           {{hadith.hadithContent[1].contenu}}
           <div>
-            <ion-button class="ion-float-right" mode="md" fill="outline" style="font-size: 18px; margin-bottom: 10px;"
-              size="small" shape="round" (click)="share(1)">
+            <ion-button
+              class="ion-float-right"
+              mode="md"
+              fill="outline"
+              style="font-size: 18px; margin: 10px 0px"
+              size="small"
+              shape="round"
+              (click)="shareHadith(1)"
+            >
               <ion-icon name="share-social-sharp"></ion-icon>
             </ion-button>
           </div>

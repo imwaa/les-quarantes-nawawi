@@ -1,4 +1,5 @@
 .footer {
+  margin-top: 20px;
   text-align: center;
 
   .app-title {
@@ -15,16 +16,13 @@
     color: rgb(180, 180, 180);
   }
 
-  .social-links{
+  .social-links {
     display: flex;
     justify-content: center;
     gap: 20px;
 
-    ion-icon{
-      font-size:25px;
-      color: rgb(180, 180, 180);
-
+    ion-icon {
+      font-size: 25px;
     }
   }
-
 }

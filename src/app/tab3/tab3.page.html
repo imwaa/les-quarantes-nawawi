@@ -30,7 +30,7 @@
   <ion-card>
     <ion-card-content>
       <ion-list lines="none">
-        <ion-item>
+        <ion-item (click)="shareApp()">
           <ion-icon slot="start" name="people"></ion-icon>
           <ion-icon
             color="primary"
@@ -39,7 +39,9 @@
           ></ion-icon>
           <ion-label>Partager l'application</ion-label>
         </ion-item>
-        <ion-item>
+        <ion-item
+          (click)="openBrowser('https://play.google.com/store/apps/details?id=com.walid.nawawi')"
+        >
           <ion-icon slot="start" name="star"></ion-icon>
           <ion-icon
             color="primary"
@@ -56,11 +58,51 @@
     <ion-chip color="primary">
       <ion-label>Version 1.0</ion-label>
     </ion-chip>
-    <p class="author">Developpé par Salhi Belkacem Walid</p>
+    <p class="author">Made with ❤ by Walid Salhi Belkacem</p>
+    <p class="author">Liège, Belgium</p>
     <div class="social-links">
-      <ion-icon name="globe-outline" (click)="openBrowser('https://salhi-walid.netlify.app/')"></ion-icon>
-      <ion-icon name="mail-outline" (click)="openBrowser('mailto:walid.slh.blk@outlook.fr')"></ion-icon>
-      <ion-icon name="logo-instagram" (click)="openBrowser('https://www.instagram.com/im.waa/')"></ion-icon>
+      <ion-button
+        color="medium"
+        class="ion-float-right"
+        mode="md"
+        fill="solid"
+        style="font-size: 18px; margin: 10px 0px"
+        size="small"
+        shape="round"
+      >
+        <ion-icon
+          name="globe-outline"
+          (click)="openBrowser('https://salhi-walid.netlify.app/')"
+        ></ion-icon>
+      </ion-button>
+      <ion-button
+        color="medium"
+        class="ion-float-right"
+        mode="md"
+        fill="solid"
+        style="font-size: 18px; margin: 10px 0px"
+        size="small"
+        shape="round"
+      >
+        <ion-icon
+          name="mail-outline"
+          (click)="openBrowser('mailto:walid.slh.blk@outlook.fr')"
+        ></ion-icon>
+      </ion-button>
+      <ion-button
+        color="medium"
+        class="ion-float-right"
+        mode="md"
+        fill="solid"
+        style="font-size: 18px; margin: 10px 0px"
+        size="small"
+        shape="round"
+      >
+        <ion-icon
+          name="logo-instagram"
+          (click)="openBrowser('https://www.instagram.com/im.waa/')"
+        ></ion-icon>
+      </ion-button>
     </div>
   </div>
 </ion-content>
