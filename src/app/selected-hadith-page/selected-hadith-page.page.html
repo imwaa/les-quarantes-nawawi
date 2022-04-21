@@ -4,6 +4,11 @@
       <ion-back-button text="" defaultHref="/tabs/tab1"></ion-back-button>
     </ion-buttons>
     <ion-title slot="start">Hadith {{hadith.id}}</ion-title>
+    <ion-buttons slot="primary" (click)="addHadith2Favoris(index)">
+      <ion-button>
+        <ion-icon name="star-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 <ion-content *ngIf="hadith">

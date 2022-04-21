@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { HadithList } from '../interfaces/hadithDTO';
 import { HadithServiceService } from '../services/hadith-service.service';
 import { Share } from '@capacitor/share';
+import { StorageServiceService } from '../services/storage-service.service';
 
 @Component({
   selector: 'app-selected-hadith-page',
@@ -15,14 +16,18 @@ export class SelectedHadithPagePage implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
-    private hadithService: HadithServiceService
+    private hadithService: HadithServiceService,
+    private storage: StorageServiceService
   ) {
     this.index = this.route.snapshot.paramMap.get('id');
   }
 
   ngOnInit() {
     this.hadith = this.hadithService.getOneHadith(this.index);
+  }
+
+  async addHadith2Favoris(index) {
+    await this.storage.setHadithFavoris(index);
   }
 
   async shareHadith(hadith_num) {

@@ -36,5 +36,7 @@ export class Tab3Page {
       url: 'https://play.google.com/store/apps/details?id=com.walid.nawawi',
       dialogTitle: "Partager l'application 40 Nawawi",
     });
+
+    
   }
 }

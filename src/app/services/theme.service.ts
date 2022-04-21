@@ -3,12 +3,12 @@ import { Storage } from '@ionic/storage-angular';
 import { StorageServiceService } from './storage-service.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ThemeService {
   sharedDarkValue: any;
 
-  constructor(private storage: Storage, private storageService: StorageServiceService) {}
+  constructor(private storageService: StorageServiceService) {}
 
   setAppTheme(color, flag) {
     this.sharedDarkValue = color;
@@ -17,7 +17,6 @@ export class ThemeService {
     } else {
       document.body.removeAttribute('color-theme');
     }
-    if (flag)
-      this.storageService.setData(color);
+    if (flag) this.storageService.setData(color);
   }
 }
