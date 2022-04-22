@@ -12,6 +12,7 @@ import { StorageServiceService } from '../services/storage-service.service';
 })
 export class Tab4Page implements ViewWillEnter {
   listeHadithFavoris: any = [];
+  hadithNumber: number;
   constructor(
     private storage: StorageServiceService,
     private hadithService: HadithServiceService
@@ -27,13 +28,9 @@ export class Tab4Page implements ViewWillEnter {
       if(res != null){
         res.forEach((item) => {
           this.listeHadithFavoris.push(this.hadithService.getOneHadith(item));
+          this.hadithNumber == item;
         });
       }
     });
-  }
-
-  async removeDate(index) {
-    this.storage.removeHadithFavoris(index);
-    // this.listeHadithFavoris.splice(index, 1);
   }
 }
