@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 import cordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
-import { BehaviorSubject, from, Observable, of, pipe } from 'rxjs';
+import { BehaviorSubject, from, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 import { filter } from 'rxjs/operators';
 
@@ -14,8 +14,6 @@ const HADITHFAVORIS_KEY = 'hadithFavoris';
 })
 export class StorageServiceService {
   private storageReady = new BehaviorSubject(false);
-  public hadithFavoris$ = new BehaviorSubject(this.getHadithFavoris); //
-
   constructor(private storage: Storage) {
     this.init();
   }
@@ -36,9 +34,7 @@ export class StorageServiceService {
   }
 
   async setData(value: any) {
-    console.log('SETTING DATA...' + value);
     this.storage.set(THEME_KEY, value);
-    console.log('SETTING DATA DONE');
   }
 
   getHadithFavoris() {
@@ -56,7 +52,6 @@ export class StorageServiceService {
     storedData.push(item);
     console.log(storedData);
     this.storage.set(HADITHFAVORIS_KEY, storedData);
-    this.hadithFavoris$.next(storedData);
   }
 
   async removeHadithFavoris(index) {

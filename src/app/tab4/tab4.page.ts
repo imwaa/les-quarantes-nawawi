@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ViewWillEnter } from '@ionic/angular';
 import { Observable, of } from 'rxjs';
 import { HadithList } from '../interfaces/hadithDTO';
 import { HadithServiceService } from '../services/hadith-service.service';
@@ -9,23 +10,16 @@ import { StorageServiceService } from '../services/storage-service.service';
   templateUrl: './tab4.page.html',
   styleUrls: ['./tab4.page.scss'],
 })
-export class Tab4Page implements OnInit {
+export class Tab4Page implements ViewWillEnter {
   listeHadithFavoris: any = [];
-  numHadith: number[];
   constructor(
     private storage: StorageServiceService,
     private hadithService: HadithServiceService
-  ) {
+  ) {}
+  ionViewWillEnter(): void {
+    this.listeHadithFavoris = [];
     this.loadData();
-    // storage.hadithFavoris$.subscribe((res) => {
-    //   console.log(res);
-    //   for (let index = 0; index < res.length; index++) {
-    //     this.listeHadithFavoris.push(this.hadithService.getOneHadith(index));
-    //   }
-    // });
   }
-
-  ngOnInit() {}
 
   async loadData() {
     this.storage.getHadithFavoris().subscribe((res) => {
