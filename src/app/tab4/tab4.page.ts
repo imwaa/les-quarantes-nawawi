@@ -24,9 +24,11 @@ export class Tab4Page implements ViewWillEnter {
   async loadData() {
     this.storage.getHadithFavoris().subscribe((res) => {
       console.log(res);
-      res.forEach((item) => {
-        this.listeHadithFavoris.push(this.hadithService.getOneHadith(item));
-      });
+      if(res != null){
+        res.forEach((item) => {
+          this.listeHadithFavoris.push(this.hadithService.getOneHadith(item));
+        });
+      }
     });
   }
 
