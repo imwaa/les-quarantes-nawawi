@@ -1,15 +1,17 @@
 <ion-header class="ion-no-border" mode="ios">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button text=""></ion-back-button>
+    <ion-buttons slot="start" (click)="closeModal()">
+      <ion-button>
+          Fermer
+      </ion-button>
     </ion-buttons>
     <ion-title slot="start">Hadith {{hadith.id}}</ion-title>
-    <ion-buttons *ngIf="isStored" slot="primary" (click)="savedHadithManage(hadithNumber)">
+    <ion-buttons *ngIf="isStored" slot="primary" (click)="savedHadithManage(passedHadithindex)">
       <ion-button>
           <ion-icon name="star"></ion-icon>
       </ion-button>
     </ion-buttons>
-    <ion-buttons *ngIf="!isStored" slot="primary" (click)="savedHadithManage(hadithNumber)">
+    <ion-buttons *ngIf="!isStored" slot="primary" (click)="savedHadithManage(passedHadithindex)">
       <ion-button>
           <ion-icon name="star-outline"></ion-icon>
       </ion-button>

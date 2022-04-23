@@ -17,7 +17,11 @@ const routes: Routes = [
   {
     path: 'tab4',
     loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
+  },  {
+    path: 'saved-hadith-page',
+    loadChildren: () => import('./pages/saved-hadith-page/saved-hadith-page.module').then( m => m.SavedHadithPagePageModule)
   },
+
 
 ];
 @NgModule({

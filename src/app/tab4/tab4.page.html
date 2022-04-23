@@ -14,7 +14,7 @@
     button="true"
     mode="ios"
     *ngFor="let item of listeHadithFavoris, let index = index;"
-    routerLink="/selected-hadith-page/{{item.id-1}}"
+    (click)="openModal(item.id-1)"
   >
     <ion-card-header>
       <ion-card-subtitle color="primary">Hadith {{item.id}}</ion-card-subtitle>

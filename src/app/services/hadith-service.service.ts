@@ -24,4 +24,5 @@ export class HadithServiceService {
       hadithContent: hadithJsonFile.hadithList[hadithNumber].hadithContent
     };
   }
+  
 }

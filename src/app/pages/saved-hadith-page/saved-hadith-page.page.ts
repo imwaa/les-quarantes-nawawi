@@ -1,47 +1,51 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { HadithList } from '../interfaces/hadithDTO';
-import { HadithServiceService } from '../services/hadith-service.service';
+import { HadithList } from '../../interfaces/hadithDTO';
+import { HadithServiceService } from '../../services/hadith-service.service';
 import { Share } from '@capacitor/share';
-import { StorageServiceService } from '../services/storage-service.service';
+import { StorageServiceService } from '../../services/storage-service.service';
 import { ToastController } from '@ionic/angular';
+import { ModalController } from '@ionic/angular';
+
 
 @Component({
-  selector: 'app-selected-hadith-page',
-  templateUrl: './selected-hadith-page.page.html',
-  styleUrls: ['./selected-hadith-page.page.scss'],
+  selector: 'app-saved-hadith-page',
+  templateUrl: './saved-hadith-page.page.html',
+  styleUrls: ['./saved-hadith-page.page.scss'],
 })
-export class SelectedHadithPagePage implements OnInit {
+export class SavedHadithPagePage implements OnInit {
+
+  @Input() passedHadithindex;
+
   public hadith: HadithList;
-  public hadithNumber: any;
   public isStored: boolean = false;
   public hadithDbIndex: number;
-
   constructor(
-    private route: ActivatedRoute,
     private hadithService: HadithServiceService,
     private storage: StorageServiceService,
-    public toastController: ToastController
+    public toastController: ToastController,
+    private modalCtr: ModalController
   ) {
-    this.hadithNumber = this.route.snapshot.paramMap.get('id');
-    this.loadData();
+
   }
 
   ngOnInit() {
-    this.hadith = this.hadithService.getOneHadith(this.hadithNumber);
+    this.loadData();
+    this.hadith = this.hadithService.getOneHadith(this.passedHadithindex);
+  }
+
+  async closeModal() {
+    await this.modalCtr.dismiss();
   }
 
   async hadithFavorisPopUp() {
     const toast = await this.toastController.create({
-      message: this.isStored?'Hadith ajouté aux favoris':  'Hadith Supprimé des favoris',
+      message: this.isStored ? 'Hadith ajouté aux favoris' : 'Hadith Supprimé des favoris',
       mode: 'ios',
-      color: this.isStored? 'primary':'danger' ,
+      color: this.isStored ? 'primary' : 'danger',
       duration: 1000
     });
     toast.present();
-
-    const { role } = await toast.onDidDismiss();
-    console.log('onDidDismiss resolved with role', role);
   }
 
 
@@ -66,11 +70,11 @@ export class SelectedHadithPagePage implements OnInit {
   }
 
   loadData() {
-    this.storage.getHadithFavoris().subscribe((res:Number[]) => {
+    this.storage.getHadithFavoris().subscribe((res) => {
       if (res != null) {
-        if(res.includes(this.hadithNumber)){
+        if (res.includes(String(this.passedHadithindex))) {
           this.isStored = true;
-          this.hadithDbIndex = res.indexOf(this.hadithNumber)
+          this.hadithDbIndex = res.indexOf(String(this.passedHadithindex))
         }
       }
     });
@@ -83,4 +87,5 @@ export class SelectedHadithPagePage implements OnInit {
       dialogTitle: 'Partager un Hadith Nawawi',
     });
   }
+
 }
