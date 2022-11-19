@@ -1,0 +1,7 @@
+{
+  "name": "hadith-nawawi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
