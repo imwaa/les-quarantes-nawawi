@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">40 Nawawi</string>
+    <string name="title_activity_main">40 Nawawi</string>
+    <string name="package_name">com.walid.nawawi</string>
+    <string name="custom_url_scheme">com.walid.nawawi</string>
+</resources>

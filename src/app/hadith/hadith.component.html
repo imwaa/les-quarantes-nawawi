@@ -1,0 +1,38 @@
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="choicedLanguage === 'fr'"
+      >Hadith {{ hadith?.id }}</ion-title
+    >
+    <ion-title *ngIf="choicedLanguage === 'ar'">
+      الحديث {{ hadith?.id }}</ion-title
+    >
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="list-container" mode="ios">
+    <ion-card *ngIf="choicedLanguage === 'fr'">
+      <ion-card-header>
+        <ion-card-title color="primary">{{ hadith?.titre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{ hadith?.contenu }}
+      </ion-card-content>
+    </ion-card>
+    <ion-card *ngIf="choicedLanguage === 'ar'" class="arabic-text">
+      <ion-card-header>
+        <ion-card-title color="primary">{{ hadith?.titre }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="arabic-hadith">
+        {{ hadith?.contenu }}
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="share()">
+      <ion-icon name="share-social-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

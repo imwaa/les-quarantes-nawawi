@@ -1,0 +1,56 @@
+<ion-header [translucent]="true" mode="ios">
+  <ion-toolbar>
+    <ion-title color="primary">Les 40 Al-Nawawi</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" mode="ios">
+    <ion-toolbar>
+      <ion-title size="large">Les 40 Al-Nawawi</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="list-container" mode="ios">
+    <div class="segment-container">
+      <ion-segment
+        color="primary"
+        [value]="choicedLanguage"
+        (ionChange)="segmentChanged($event)"
+      >
+        <ion-segment-button value="français">
+          <ion-label>Français</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="arabe">
+          <ion-label>العربية</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </div>
+
+    <div *ngIf="choicedLanguage === 'français'">
+      <ion-card
+        *ngFor="let hadith of hadithFrList"
+        routerLink="/hadith/{{ hadith.id }}/fr"
+      >
+        <ion-card-header>
+          <ion-card-subtitle color="primary"
+            >Hadith {{ hadith.id }}</ion-card-subtitle
+          >
+          <ion-card-title>{{ hadith.titre }}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+
+    <div *ngIf="choicedLanguage == 'arabe'" class="arabic-text">
+      <ion-card
+        *ngFor="let hadith of hadithArList"
+        routerLink="/hadith/{{ hadith.id }}/ar"
+      >
+        <ion-card-header>
+          <ion-card-subtitle color="primary"
+            >الحديث {{ hadith.id }}</ion-card-subtitle
+          >
+          <ion-card-title>{{ hadith.titre }}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
