@@ -1,30 +1,25 @@
-<ion-header [translucent]="true" mode="ios">
+<ion-header [translucent]="true" mode="md">
   <ion-toolbar>
     <ion-title color="primary">Les 40 Al-Nawawi</ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-segment
+      color="primary"
+      [value]="choicedLanguage"
+      (ionChange)="segmentChanged($event)"
+    >
+      <ion-segment-button value="français">
+        <ion-label>Français</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="arabe">
+        <ion-label class="arabic-font">العربية</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense" mode="ios">
-    <ion-toolbar>
-      <ion-title size="large">Les 40 Al-Nawawi</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <div class="list-container" mode="ios">
-    <div class="segment-container">
-      <ion-segment
-        color="primary"
-        [value]="choicedLanguage"
-        (ionChange)="segmentChanged($event)"
-      >
-        <ion-segment-button value="français">
-          <ion-label>Français</ion-label>
-        </ion-segment-button>
-        <ion-segment-button value="arabe">
-          <ion-label>العربية</ion-label>
-        </ion-segment-button>
-      </ion-segment>
-    </div>
 
+<ion-content [fullscreen]="true">
+  <div class="list-container" mode="md">
     <div *ngIf="choicedLanguage === 'français'">
       <ion-card
         *ngFor="let hadith of hadithFrList"
@@ -43,6 +38,7 @@
       <ion-card
         *ngFor="let hadith of hadithArList"
         routerLink="/hadith/{{ hadith.id }}/ar"
+        class="arabic-font"
       >
         <ion-card-header>
           <ion-card-subtitle color="primary"

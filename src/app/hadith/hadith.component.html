@@ -1,4 +1,4 @@
-<ion-header [translucent]="true" mode="ios">
+<ion-header [translucent]="true" mode="md">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
@@ -12,7 +12,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <div class="list-container" mode="ios">
+  <div class="list-container" mode="md">
     <ion-card *ngIf="choicedLanguage === 'fr'">
       <ion-card-header>
         <ion-card-title color="primary">{{ hadith?.titre }}</ion-card-title>
@@ -21,7 +21,7 @@
         {{ hadith?.contenu }}
       </ion-card-content>
     </ion-card>
-    <ion-card *ngIf="choicedLanguage === 'ar'" class="arabic-text">
+    <ion-card *ngIf="choicedLanguage === 'ar'" class="arabic-text arabic-font">
       <ion-card-header>
         <ion-card-title color="primary">{{ hadith?.titre }}</ion-card-title>
       </ion-card-header>

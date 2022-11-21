@@ -1,8 +1,14 @@
 .arabic-text {
   direction: rtl;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-size: 18px;
+}
+
+.arabic-font {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
 }
 
 ion-card-content {
-  font-size: 18px;
+  font-size: 16px;
   text-align: justify;
 }
