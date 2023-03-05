@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { ThemeService } from '../services/theme.service';
-import { StorageServiceService } from '../services/storage-service.service';
+import {Component} from '@angular/core';
+import {ThemeService} from '../services/theme.service';
+import {StorageServiceService} from '../services/storage-service.service';
 
 @Component({
   selector: 'app-tabs',
@@ -12,7 +12,7 @@ export class TabsPage {
     private themeService: ThemeService,
     private storage: StorageServiceService
   ) {
-    this.storage.getData().subscribe((res) => {
+    this.storage.getThemeData().subscribe((res) => {
       if (res === null) {
         this.themeService.setAppTheme(false, true);
       } else {

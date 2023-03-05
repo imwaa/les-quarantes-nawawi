@@ -1,0 +1,72 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title slot="start">Hadith {{hadithFr.id}}</ion-title>
+    <ion-buttons (click)="savedHadithManage(hadithNumber)" *ngIf="isStored" slot="primary">
+      <ion-button>
+        <ion-icon name="star"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons (click)="savedHadithManage(hadithNumber)" *ngIf="!isStored" slot="primary">
+      <ion-button>
+        <ion-icon name="star-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="hadithFr">
+  <div class="french_section">
+    <div class="hadith-title">
+      <p style="white-space: pre-line">{{hadithFr.titre}}</p>
+    </div>
+    <div class="hadith-content">
+      <ion-card mode="ios">
+        <ion-card-content style="white-space: pre-line">
+          {{hadithFr.contenu}}
+          <div>
+            <ion-button
+              (click)="shareHadith(0)"
+              class="ion-float-right"
+              fill="outline"
+              mode="md"
+              shape="round"
+              size="small"
+              style="font-size: 18px; margin: 10px 0"
+            >
+              <ion-icon name="share-social-sharp"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+  <div class="arab_section">
+    <div class="hadith-title">
+      <p style="white-space: pre-line">{{hadithAr.titre}}</p>
+    </div>
+    <div class="hadith-content">
+      <ion-card mode="ios">
+        <ion-card-content style="white-space: pre-line">
+          {{hadithAr.contenu}}
+          <div>
+            <ion-button
+              (click)="shareHadith(1)"
+              class="ion-float-right"
+              fill="outline"
+              mode="md"
+              shape="round"
+              size="small"
+              style="font-size: 18px; margin: 10px 0"
+            >
+              <ion-icon name="share-social-sharp"></ion-icon>
+            </ion-button>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+
+</ion-content>

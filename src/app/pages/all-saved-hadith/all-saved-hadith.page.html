@@ -1,0 +1,16 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar>
+    <ion-title>Hadith Favoris</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense" mode="ios">
+    <ion-toolbar>
+      <ion-title size="large">Vos favoris</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <app-hadith-list [hadithList]="hadithList"></app-hadith-list>
+
+</ion-content>

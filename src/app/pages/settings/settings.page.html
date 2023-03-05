@@ -1,0 +1,63 @@
+<ion-header class="ion-no-border" mode="ios">
+  <ion-toolbar>
+    <ion-title> Tab 3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" mode="ios">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Paramètres</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-card>
+    <ion-card-content>
+      <ion-list lines="none">
+        <ion-item>
+          <ion-icon icon="moon" slot="start"></ion-icon>
+          <ion-label> Mode Sombre</ion-label>
+          <ion-toggle
+            (ionChange)="toggleTheme($event)"
+            [(ngModel)]="themeValue"
+            color="primary"
+            slot="end"
+          ></ion-toggle>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list lines="none">
+        <ion-item (click)="shareApp()">
+          <ion-icon name="people" slot="start"></ion-icon>
+          <ion-icon
+            color="primary"
+            name="chevron-forward"
+            slot="end"
+          ></ion-icon>
+          <ion-label>Partager l'application</ion-label>
+        </ion-item>
+        <ion-item
+          (click)="openBrowser('https://play.google.com/store/apps/details?id=com.walid.nawawi')"
+        >
+          <ion-icon name="star" slot="start"></ion-icon>
+          <ion-icon
+            color="primary"
+            name="chevron-forward"
+            slot="end"
+          ></ion-icon>
+          <ion-label>Donner un avis</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <div class="footer">
+    <ion-chip color="primary">
+      <ion-label>Version 4.0.0</ion-label>
+    </ion-chip>
+    <p class="author">Walid Salhi Belkacem</p>
+  </div>
+</ion-content>

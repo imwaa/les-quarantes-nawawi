@@ -1,28 +1,24 @@
-import { Injectable } from '@angular/core';
-import { HadithContent, HadithDTO, HadithList } from '../interfaces/hadithDTO';
-import * as hadithFile from '../../assets/hadith.json';
-const hadithJsonFile = hadithFile;
+import {Injectable} from '@angular/core';
+import {Hadith} from '../interfaces/Hadith';
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class HadithServiceService {
+  hadithFrList: Hadith[] = [];
+  hadithArList: Hadith[] = [];
 
   constructor() {
+    this.hadithFrList = require('../../assets/nawawi-fr.json');
+    this.hadithArList = require('../../assets/nawawi-ar.json');
   }
 
-  getAllHadith(): HadithList[] {
-    const hadithList: HadithList[] = [];
-    for (let i = 0; i < 42; i++) {
-      hadithList.push(this.getOneHadith(i));
-    }
-    return hadithList;
+  getHadithFrById(id: number) {
+    return this.hadithFrList.find((i) => i.id == id);
   }
 
-  getOneHadith(hadithNumber: number): HadithList {
-    return {
-      id: hadithJsonFile.hadithList[hadithNumber].id,
-      hadithContent: hadithJsonFile.hadithList[hadithNumber].hadithContent
-    };
+  getHadithArById(id: number) {
+    return this.hadithArList.find((i) => i.id == id);
   }
-  
 }

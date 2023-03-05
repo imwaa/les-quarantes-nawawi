@@ -1,0 +1,7 @@
+<ion-card *ngFor="let item of hadithList, let index = index;" button="true" mode="ios"
+          routerLink="/hadith-page/{{item.id}}">
+  <ion-card-header>
+    <ion-card-subtitle color="primary">Hadith {{item.id}}</ion-card-subtitle>
+    <ion-card-title>{{item.titre}}</ion-card-title>
+  </ion-card-header>
+</ion-card>
