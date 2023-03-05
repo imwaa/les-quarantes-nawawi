@@ -1,15 +1,23 @@
 <ion-header class="ion-no-border" mode="ios">
   <ion-toolbar>
-    <ion-title> Hadith Al-Nawawi</ion-title>
+    <ion-title>Les Quarantes Al-Nawawi</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense" mode="ios">
     <ion-toolbar>
-      <ion-title size="large">Hadith Al-Nawawi</ion-title>
+      <ion-title size="large">Les 40 Al-Nawawi</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <ion-card (click)="openModal()" button="true" class="auteurCard" mode="ios">
+    <img alt="Silhouette of mountains" src="assets/img.png"/>
+    <ion-card-header>
+      <ion-card-subtitle color="primary">Biographie de l'auteur</ion-card-subtitle>
+      <ion-card-title>Imam Al-Nawawi</ion-card-title>
+    </ion-card-header>
+  </ion-card>
 
   <app-hadith-list [hadithList]="haditList"></app-hadith-list>
 
