@@ -12,5 +12,6 @@
   </ion-header>
 
   <app-hadith-list [hadithList]="hadithList"></app-hadith-list>
+  <p *ngIf="hadithList.length === 0" class="emptyHadith">Aucun hadith n'a été ajouté dans les favoris</p>
 
 </ion-content>
