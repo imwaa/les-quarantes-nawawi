@@ -28,7 +28,7 @@ export class AllHadithPage implements OnInit {
     const modal = await this.modalCtrl.create({
       component: AuteurComponent,
       animated: true,
-      swipeToClose: true,
+      canDismiss: true,
       initialBreakpoint: 1,
       breakpoints: [0, 1]
     });

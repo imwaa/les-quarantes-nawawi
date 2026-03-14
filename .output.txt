@@ -1,0 +1,950 @@
+browser                 prerendered-routes.json
+www/browser:
+all-hadith.module-43GWFHTF.js
+all-hadith.module-43GWFHTF.js.map
+all-hadith.page.css.map
+all-saved-hadith.module-AH73OE3E.js
+all-saved-hadith.module-AH73OE3E.js.map
+all-saved-hadith.page.css.map
+app.component.css.map
+assets
+auteur.component.css.map
+chunk-2ZPL5ZCF.js
+chunk-2ZPL5ZCF.js.map
+chunk-466BCJGM.js
+chunk-466BCJGM.js.map
+chunk-4LZLDCVM.js
+chunk-4LZLDCVM.js.map
+chunk-5BCVOG4L.js
+chunk-5BCVOG4L.js.map
+chunk-5PFEA626.js
+chunk-5PFEA626.js.map
+chunk-6GSQAUAF.js
+chunk-6GSQAUAF.js.map
+chunk-7B6LYSKG.js
+chunk-7B6LYSKG.js.map
+chunk-7N4MINYI.js
+chunk-7N4MINYI.js.map
+chunk-7NA53B7M.js
+chunk-7NA53B7M.js.map
+chunk-BY2EJ7V6.js
+chunk-BY2EJ7V6.js.map
+chunk-D4BGZ3LF.js
+chunk-D4BGZ3LF.js.map
+chunk-DGNELUN7.js
+chunk-DGNELUN7.js.map
+chunk-DQQGRJHV.js
+chunk-DQQGRJHV.js.map
+chunk-ERKWAWGE.js
+chunk-ERKWAWGE.js.map
+chunk-EYRRG5LM.js
+chunk-EYRRG5LM.js.map
+chunk-F3TJ5DGF.js
+chunk-F3TJ5DGF.js.map
+chunk-H7W7X3R4.js
+chunk-H7W7X3R4.js.map
+chunk-HF2Y3TON.js
+chunk-HF2Y3TON.js.map
+chunk-HPEO5HJC.js
+chunk-HPEO5HJC.js.map
+chunk-J5JVDPFK.js
+chunk-J5JVDPFK.js.map
+chunk-JS2SJ34Z.js
+chunk-JS2SJ34Z.js.map
+chunk-KXXXZCB6.js
+chunk-KXXXZCB6.js.map
+chunk-MMEJDL5D.js
+chunk-MMEJDL5D.js.map
+chunk-N3534FJA.js
+chunk-N3534FJA.js.map
+chunk-NDZGOJ5Q.js
+chunk-NDZGOJ5Q.js.map
+chunk-NGMDXJ64.js
+chunk-NGMDXJ64.js.map
+chunk-NUI7GPHG.js
+chunk-NUI7GPHG.js.map
+chunk-PT7UYCYE.js
+chunk-PT7UYCYE.js.map
+chunk-Q3EXZMAG.js
+chunk-Q3EXZMAG.js.map
+chunk-QINLMX2Z.js
+chunk-QINLMX2Z.js.map
+chunk-QTAT7GCA.js
+chunk-QTAT7GCA.js.map
+chunk-RCJONU2A.js
+chunk-RCJONU2A.js.map
+chunk-SXJEWRFU.js
+chunk-SXJEWRFU.js.map
+chunk-TG3C6FPD.js
+chunk-TG3C6FPD.js.map
+chunk-THFXZCFT.js
+chunk-THFXZCFT.js.map
+chunk-TYROORRU.js
+chunk-TYROORRU.js.map
+chunk-UBGW6LGE.js
+chunk-UBGW6LGE.js.map
+chunk-UIVJRARY.js
+chunk-UIVJRARY.js.map
+chunk-VMIZ33K7.js
+chunk-VMIZ33K7.js.map
+chunk-VU46ZB2V.js
+chunk-VU46ZB2V.js.map
+chunk-VV5O2X5B.js
+chunk-VV5O2X5B.js.map
+chunk-VZXYYFOL.js
+chunk-VZXYYFOL.js.map
+chunk-WT36X4X3.js
+chunk-WT36X4X3.js.map
+chunk-XJTRD73S.js
+chunk-XJTRD73S.js.map
+chunk-Y4ZVYZVJ.js
+chunk-Y4ZVYZVJ.js.map
+chunk-Y75TVRVW.js
+chunk-Y75TVRVW.js.map
+chunk-YSZWGYJT.js
+chunk-YSZWGYJT.js.map
+chunk-ZDSQ3B7E.js
+chunk-ZDSQ3B7E.js.map
+focus-visible-BmVRXR1y-GZWFQZIK.js
+focus-visible-BmVRXR1y-GZWFQZIK.js.map
+hadith-list.component.css.map
+hadith-page.module-4LBNOTFR.js
+hadith-page.module-4LBNOTFR.js.map
+hadith-page.page.css.map
+hardware-back-button-CTe4XmL7-GUE3B43N.js
+hardware-back-button-CTe4XmL7-GUE3B43N.js.map
+index-BtUdxPjv-FQBRXNDA.js
+index-BtUdxPjv-FQBRXNDA.js.map
+index-CfgBF1SE-2YXKMWA3.js
+index-CfgBF1SE-2YXKMWA3.js.map
+index.html
+input-shims-AaDhOpKN-2UYNGPVB.js
+input-shims-AaDhOpKN-2UYNGPVB.js.map
+ion-accordion_2.entry-RBJXNAGG.js
+ion-accordion_2.entry-RBJXNAGG.js.map
+ion-action-sheet.entry-HUS5QQ23.js
+ion-action-sheet.entry-HUS5QQ23.js.map
+ion-alert.entry-L5EBKTCU.js
+ion-alert.entry-L5EBKTCU.js.map
+ion-app_8.entry-URQQUON5.js
+ion-app_8.entry-URQQUON5.js.map
+ion-avatar_3.entry-EG6WRKLM.js
+ion-avatar_3.entry-EG6WRKLM.js.map
+ion-back-button.entry-62CN2LZ2.js
+ion-back-button.entry-62CN2LZ2.js.map
+ion-backdrop.entry-KA6M7EGH.js
+ion-backdrop.entry-KA6M7EGH.js.map
+ion-breadcrumb_2.entry-WYPKCDSS.js
+ion-breadcrumb_2.entry-WYPKCDSS.js.map
+ion-button_2.entry-IXU4N2XB.js
+ion-button_2.entry-IXU4N2XB.js.map
+ion-card_5.entry-VAG3DKG7.js
+ion-card_5.entry-VAG3DKG7.js.map
+ion-checkbox.entry-N4MM7ZGQ.js
+ion-checkbox.entry-N4MM7ZGQ.js.map
+ion-chip.entry-QSSA2S4G.js
+ion-chip.entry-QSSA2S4G.js.map
+ion-col_3.entry-OFILMKZ2.js
+ion-col_3.entry-OFILMKZ2.js.map
+ion-datetime-button.entry-YIFSVKBM.js
+ion-datetime-button.entry-YIFSVKBM.js.map
+ion-datetime_3.entry-4ISLYI33.js
+ion-datetime_3.entry-4ISLYI33.js.map
+ion-fab_3.entry-GIQLAMCS.js
+ion-fab_3.entry-GIQLAMCS.js.map
+ion-img.entry-N5YAYATV.js
+ion-img.entry-N5YAYATV.js.map
+ion-infinite-scroll_2.entry-6MPHYHQA.js
+ion-infinite-scroll_2.entry-6MPHYHQA.js.map
+ion-input-otp.entry-MTTC2QQS.js
+ion-input-otp.entry-MTTC2QQS.js.map
+ion-input-password-toggle.entry-TFBI4MD2.js
+ion-input-password-toggle.entry-TFBI4MD2.js.map
+ion-input.entry-XVVRDXPQ.js
+ion-input.entry-XVVRDXPQ.js.map
+ion-item-option_3.entry-LI6Y23X6.js
+ion-item-option_3.entry-LI6Y23X6.js.map
+ion-item_8.entry-KGT4KVVT.js
+ion-item_8.entry-KGT4KVVT.js.map
+ion-loading.entry-6QBVAXOB.js
+ion-loading.entry-6QBVAXOB.js.map
+ion-menu_3.entry-SF4GX465.js
+ion-menu_3.entry-SF4GX465.js.map
+ion-modal.entry-7U6E5EQ7.js
+ion-modal.entry-7U6E5EQ7.js.map
+ion-nav_2.entry-4ZF7577V.js
+ion-nav_2.entry-4ZF7577V.js.map
+ion-picker-column-option.entry-LCT7WWOR.js
+ion-picker-column-option.entry-LCT7WWOR.js.map
+ion-picker-column.entry-M2KKB46D.js
+ion-picker-column.entry-M2KKB46D.js.map
+ion-picker.entry-Y7TZ533W.js
+ion-picker.entry-Y7TZ533W.js.map
+ion-popover.entry-OLOLOXZ6.js
+ion-popover.entry-OLOLOXZ6.js.map
+ion-progress-bar.entry-TWF44HLC.js
+ion-progress-bar.entry-TWF44HLC.js.map
+ion-radio_2.entry-EJIL5B5D.js
+ion-radio_2.entry-EJIL5B5D.js.map
+ion-range.entry-N4DCNV3Q.js
+ion-range.entry-N4DCNV3Q.js.map
+ion-refresher_2.entry-DYFJ7QU2.js
+ion-refresher_2.entry-DYFJ7QU2.js.map
+ion-reorder_2.entry-I7V3KCMK.js
+ion-reorder_2.entry-I7V3KCMK.js.map
+ion-ripple-effect.entry-U3Q5CLRQ.js
+ion-ripple-effect.entry-U3Q5CLRQ.js.map
+ion-route_4.entry-2MWO6GX4.js
+ion-route_4.entry-2MWO6GX4.js.map
+ion-searchbar.entry-3PW5XOVI.js
+ion-searchbar.entry-3PW5XOVI.js.map
+ion-segment-content.entry-D7CTLP5D.js
+ion-segment-content.entry-D7CTLP5D.js.map
+ion-segment-view.entry-XCPSFYQD.js
+ion-segment-view.entry-XCPSFYQD.js.map
+ion-segment_2.entry-ALAEG2R7.js
+ion-segment_2.entry-ALAEG2R7.js.map
+ion-select-modal.entry-TCBCQECY.js
+ion-select-modal.entry-TCBCQECY.js.map
+ion-select_3.entry-OXT2E73E.js
+ion-select_3.entry-OXT2E73E.js.map
+ion-spinner.entry-JJSQZOQ4.js
+ion-spinner.entry-JJSQZOQ4.js.map
+ion-split-pane.entry-3PZPV4JS.js
+ion-split-pane.entry-3PZPV4JS.js.map
+ion-tab-bar_2.entry-BVBLTVYY.js
+ion-tab-bar_2.entry-BVBLTVYY.js.map
+ion-tab_2.entry-4WO7R6NY.js
+ion-tab_2.entry-4WO7R6NY.js.map
+ion-text.entry-AMDT4CZP.js
+ion-text.entry-AMDT4CZP.js.map
+ion-textarea.entry-EU3BR3KR.js
+ion-textarea.entry-EU3BR3KR.js.map
+ion-toast.entry-P6PJSR77.js
+ion-toast.entry-P6PJSR77.js.map
+ion-toggle.entry-TY6RE34H.js
+ion-toggle.entry-TY6RE34H.js.map
+ios.transition--aMF-pDH-LV5R3ZKI.js
+ios.transition--aMF-pDH-LV5R3ZKI.js.map
+keyboard-ywgs5efA-MB2Z6E6S.js
+keyboard-ywgs5efA-MB2Z6E6S.js.map
+main.js
+main.js.map
+manifest.webmanifest
+md.transition-BEVbfm8j-3T227NN2.js
+md.transition-BEVbfm8j-3T227NN2.js.map
+ngsw-worker.js
+ngsw.json
+p-CBzELu-H-I2QNJOSI.js
+p-CBzELu-H-I2QNJOSI.js.map
+p-CU1SSH8_-HQJ4BPNG.js
+p-CU1SSH8_-HQJ4BPNG.js.map
+polyfills.js
+polyfills.js.map
+safety-worker.js
+settings.module-UQCI5T7I.js
+settings.module-UQCI5T7I.js.map
+settings.page.css.map
+status-tap-BfJqFSLF-F64NRHPD.js
+status-tap-BfJqFSLF-F64NRHPD.js.map
+styles.css
+styles.css.map
+svg
+swipe-back-BZBFwTQV-3D5J3PMA.js
+swipe-back-BZBFwTQV-3D5J3PMA.js.map
+tabs.module-CQU4K5YR.js
+tabs.module-CQU4K5YR.js.map
+tabs.page.css.map
+web-4TJMUDHW.js
+web-4TJMUDHW.js.map
+web-XZ256XSE.js
+web-XZ256XSE.js.map
+worker-basic.min.js
+www/browser/assets:
+hadith.json    icons          img.png        nawawi-fr.json
+icon           imams.json     nawawi-ar.json
+www/browser/assets/icon:
+favicon.png
+www/browser/assets/icons:
+icon-128x128.png icon-152x152.png icon-384x384.png icon-72x72.png
+icon-144x144.png icon-192x192.png icon-512x512.png icon-96x96.png
+www/browser/svg:
+accessibility-outline.svg              information-circle-sharp.svg
+accessibility-sharp.svg                information-circle.svg
+accessibility.svg                      information-outline.svg
+add-circle-outline.svg                 information-sharp.svg
+add-circle-sharp.svg                   information.svg
+add-circle.svg                         invert-mode-outline.svg
+add-outline.svg                        invert-mode-sharp.svg
+add-sharp.svg                          invert-mode.svg
+add.svg                                journal-outline.svg
+airplane-outline.svg                   journal-sharp.svg
+airplane-sharp.svg                     journal.svg
+airplane.svg                           key-outline.svg
+alarm-outline.svg                      key-sharp.svg
+alarm-sharp.svg                        key.svg
+alarm.svg                              keypad-outline.svg
+albums-outline.svg                     keypad-sharp.svg
+albums-sharp.svg                       keypad.svg
+albums.svg                             language-outline.svg
+alert-circle-outline.svg               language-sharp.svg
+alert-circle-sharp.svg                 language.svg
+alert-circle.svg                       laptop-outline.svg
+alert-outline.svg                      laptop-sharp.svg
+alert-sharp.svg                        laptop.svg
+alert.svg                              layers-outline.svg
+american-football-outline.svg          layers-sharp.svg
+american-football-sharp.svg            layers.svg
+american-football.svg                  leaf-outline.svg
+analytics-outline.svg                  leaf-sharp.svg
+analytics-sharp.svg                    leaf.svg
+analytics.svg                          library-outline.svg
+aperture-outline.svg                   library-sharp.svg
+aperture-sharp.svg                     library.svg
+aperture.svg                           link-outline.svg
+apps-outline.svg                       link-sharp.svg
+apps-sharp.svg                         link.svg
+apps.svg                               list-circle-outline.svg
+archive-outline.svg                    list-circle-sharp.svg
+archive-sharp.svg                      list-circle.svg
+archive.svg                            list-outline.svg
+arrow-back-circle-outline.svg          list-sharp.svg
+arrow-back-circle-sharp.svg            list.svg
+arrow-back-circle.svg                  locate-outline.svg
+arrow-back-outline.svg                 locate-sharp.svg
+arrow-back-sharp.svg                   locate.svg
+arrow-back.svg                         location-outline.svg
+arrow-down-circle-outline.svg          location-sharp.svg
+arrow-down-circle-sharp.svg            location.svg
+arrow-down-circle.svg                  lock-closed-outline.svg
+arrow-down-left-box-outline.svg        lock-closed-sharp.svg
+arrow-down-left-box-sharp.svg          lock-closed.svg
+arrow-down-left-box.svg                lock-open-outline.svg
+arrow-down-outline.svg                 lock-open-sharp.svg
+arrow-down-right-box-outline.svg       lock-open.svg
+arrow-down-right-box-sharp.svg         log-in-outline.svg
+arrow-down-right-box.svg               log-in-sharp.svg
+arrow-down-sharp.svg                   log-in.svg
+arrow-down.svg                         log-out-outline.svg
+arrow-forward-circle-outline.svg       log-out-sharp.svg
+arrow-forward-circle-sharp.svg         log-out.svg
+arrow-forward-circle.svg               logo-alipay.svg
+arrow-forward-outline.svg              logo-amazon.svg
+arrow-forward-sharp.svg                logo-amplify.svg
+arrow-forward.svg                      logo-android.svg
+arrow-redo-circle-outline.svg          logo-angular.svg
+arrow-redo-circle-sharp.svg            logo-appflow.svg
+arrow-redo-circle.svg                  logo-apple-appstore.svg
+arrow-redo-outline.svg                 logo-apple-ar.svg
+arrow-redo-sharp.svg                   logo-apple.svg
+arrow-redo.svg                         logo-behance.svg
+arrow-undo-circle-outline.svg          logo-bitbucket.svg
+arrow-undo-circle-sharp.svg            logo-bitcoin.svg
+arrow-undo-circle.svg                  logo-buffer.svg
+arrow-undo-outline.svg                 logo-capacitor.svg
+arrow-undo-sharp.svg                   logo-chrome.svg
+arrow-undo.svg                         logo-closed-captioning.svg
+arrow-up-circle-outline.svg            logo-codepen.svg
+arrow-up-circle-sharp.svg              logo-css3.svg
+arrow-up-circle.svg                    logo-designernews.svg
+arrow-up-left-box-outline.svg          logo-deviantart.svg
+arrow-up-left-box-sharp.svg            logo-discord.svg
+arrow-up-left-box.svg                  logo-docker.svg
+arrow-up-outline.svg                   logo-dribbble.svg
+arrow-up-right-box-outline.svg         logo-dropbox.svg
+arrow-up-right-box-sharp.svg           logo-edge.svg
+arrow-up-right-box.svg                 logo-electron.svg
+arrow-up-sharp.svg                     logo-euro.svg
+arrow-up.svg                           logo-facebook.svg
+at-circle-outline.svg                  logo-figma.svg
+at-circle-sharp.svg                    logo-firebase.svg
+at-circle.svg                          logo-firefox.svg
+at-outline.svg                         logo-flickr.svg
+at-sharp.svg                           logo-foursquare.svg
+at.svg                                 logo-github.svg
+attach-outline.svg                     logo-gitlab.svg
+attach-sharp.svg                       logo-google-playstore.svg
+attach.svg                             logo-google.svg
+backspace-outline.svg                  logo-hackernews.svg
+backspace-sharp.svg                    logo-html5.svg
+backspace.svg                          logo-instagram.svg
+bag-add-outline.svg                    logo-ionic.svg
+bag-add-sharp.svg                      logo-ionitron.svg
+bag-add.svg                            logo-javascript.svg
+bag-check-outline.svg                  logo-laravel.svg
+bag-check-sharp.svg                    logo-linkedin.svg
+bag-check.svg                          logo-markdown.svg
+bag-handle-outline.svg                 logo-mastodon.svg
+bag-handle-sharp.svg                   logo-medium.svg
+bag-handle.svg                         logo-microsoft.svg
+bag-outline.svg                        logo-no-smoking.svg
+bag-remove-outline.svg                 logo-nodejs.svg
+bag-remove-sharp.svg                   logo-npm.svg
+bag-remove.svg                         logo-octocat.svg
+bag-sharp.svg                          logo-paypal.svg
+bag.svg                                logo-pinterest.svg
+balloon-outline.svg                    logo-playstation.svg
+balloon-sharp.svg                      logo-pwa.svg
+balloon.svg                            logo-python.svg
+ban-outline.svg                        logo-react.svg
+ban-sharp.svg                          logo-reddit.svg
+ban.svg                                logo-rss.svg
+bandage-outline.svg                    logo-sass.svg
+bandage-sharp.svg                      logo-skype.svg
+bandage.svg                            logo-slack.svg
+bar-chart-outline.svg                  logo-snapchat.svg
+bar-chart-sharp.svg                    logo-soundcloud.svg
+bar-chart.svg                          logo-stackoverflow.svg
+barbell-outline.svg                    logo-steam.svg
+barbell-sharp.svg                      logo-stencil.svg
+barbell.svg                            logo-tableau.svg
+barcode-outline.svg                    logo-threads.svg
+barcode-sharp.svg                      logo-tiktok.svg
+barcode.svg                            logo-trapeze.svg
+baseball-outline.svg                   logo-tumblr.svg
+baseball-sharp.svg                     logo-tux.svg
+baseball.svg                           logo-twitch.svg
+basket-outline.svg                     logo-twitter.svg
+basket-sharp.svg                       logo-usd.svg
+basket.svg                             logo-venmo.svg
+basketball-outline.svg                 logo-vercel.svg
+basketball-sharp.svg                   logo-vimeo.svg
+basketball.svg                         logo-vk.svg
+battery-charging-outline.svg           logo-vue.svg
+battery-charging-sharp.svg             logo-web-component.svg
+battery-charging.svg                   logo-wechat.svg
+battery-dead-outline.svg               logo-whatsapp.svg
+battery-dead-sharp.svg                 logo-windows.svg
+battery-dead.svg                       logo-wordpress.svg
+battery-full-outline.svg               logo-x.svg
+battery-full-sharp.svg                 logo-xbox.svg
+battery-full.svg                       logo-xing.svg
+battery-half-outline.svg               logo-yahoo.svg
+battery-half-sharp.svg                 logo-yen.svg
+battery-half.svg                       logo-youtube.svg
+beaker-outline.svg                     magnet-outline.svg
+beaker-sharp.svg                       magnet-sharp.svg
+beaker.svg                             magnet.svg
+bed-outline.svg                        mail-open-outline.svg
+bed-sharp.svg                          mail-open-sharp.svg
+bed.svg                                mail-open.svg
+beer-outline.svg                       mail-outline.svg
+beer-sharp.svg                         mail-sharp.svg
+beer.svg                               mail-unread-outline.svg
+bicycle-outline.svg                    mail-unread-sharp.svg
+bicycle-sharp.svg                      mail-unread.svg
+bicycle.svg                            mail.svg
+binoculars-outline.svg                 male-female-outline.svg
+binoculars-sharp.svg                   male-female-sharp.svg
+binoculars.svg                         male-female.svg
+bluetooth-outline.svg                  male-outline.svg
+bluetooth-sharp.svg                    male-sharp.svg
+bluetooth.svg                          male.svg
+boat-outline.svg                       man-outline.svg
+boat-sharp.svg                         man-sharp.svg
+boat.svg                               man.svg
+body-outline.svg                       map-outline.svg
+body-sharp.svg                         map-sharp.svg
+body.svg                               map.svg
+bonfire-outline.svg                    medal-outline.svg
+bonfire-sharp.svg                      medal-sharp.svg
+bonfire.svg                            medal.svg
+book-outline.svg                       medical-outline.svg
+book-sharp.svg                         medical-sharp.svg
+book.svg                               medical.svg
+bookmark-outline.svg                   medkit-outline.svg
+bookmark-sharp.svg                     medkit-sharp.svg
+bookmark.svg                           medkit.svg
+bookmarks-outline.svg                  megaphone-outline.svg
+bookmarks-sharp.svg                    megaphone-sharp.svg
+bookmarks.svg                          megaphone.svg
+bowling-ball-outline.svg               menu-outline.svg
+bowling-ball-sharp.svg                 menu-sharp.svg
+bowling-ball.svg                       menu.svg
+briefcase-outline.svg                  mic-circle-outline.svg
+briefcase-sharp.svg                    mic-circle-sharp.svg
+briefcase.svg                          mic-circle.svg
+browsers-outline.svg                   mic-off-circle-outline.svg
+browsers-sharp.svg                     mic-off-circle-sharp.svg
+browsers.svg                           mic-off-circle.svg
+brush-outline.svg                      mic-off-outline.svg
+brush-sharp.svg                        mic-off-sharp.svg
+brush.svg                              mic-off.svg
+bug-outline.svg                        mic-outline.svg
+bug-sharp.svg                          mic-sharp.svg
+bug.svg                                mic.svg
+build-outline.svg                      moon-outline.svg
+build-sharp.svg                        moon-sharp.svg
+build.svg                              moon.svg
+bulb-outline.svg                       move-outline.svg
+bulb-sharp.svg                         move-sharp.svg
+bulb.svg                               move.svg
+bus-outline.svg                        musical-note-outline.svg
+bus-sharp.svg                          musical-note-sharp.svg
+bus.svg                                musical-note.svg
+business-outline.svg                   musical-notes-outline.svg
+business-sharp.svg                     musical-notes-sharp.svg
+business.svg                           musical-notes.svg
+cafe-outline.svg                       navigate-circle-outline.svg
+cafe-sharp.svg                         navigate-circle-sharp.svg
+cafe.svg                               navigate-circle.svg
+calculator-outline.svg                 navigate-outline.svg
+calculator-sharp.svg                   navigate-sharp.svg
+calculator.svg                         navigate.svg
+calendar-clear-outline.svg             newspaper-outline.svg
+calendar-clear-sharp.svg               newspaper-sharp.svg
+calendar-clear.svg                     newspaper.svg
+calendar-number-outline.svg            notifications-circle-outline.svg
+calendar-number-sharp.svg              notifications-circle-sharp.svg
+calendar-number.svg                    notifications-circle.svg
+calendar-outline.svg                   notifications-off-circle-outline.svg
+calendar-sharp.svg                     notifications-off-circle-sharp.svg
+calendar.svg                           notifications-off-circle.svg
+call-outline.svg                       notifications-off-outline.svg
+call-sharp.svg                         notifications-off-sharp.svg
+call.svg                               notifications-off.svg
+camera-outline.svg                     notifications-outline.svg
+camera-reverse-outline.svg             notifications-sharp.svg
+camera-reverse-sharp.svg               notifications.svg
+camera-reverse.svg                     nuclear-outline.svg
+camera-sharp.svg                       nuclear-sharp.svg
+camera.svg                             nuclear.svg
+car-outline.svg                        nutrition-outline.svg
+car-sharp.svg                          nutrition-sharp.svg
+car-sport-outline.svg                  nutrition.svg
+car-sport-sharp.svg                    open-outline.svg
+car-sport.svg                          open-sharp.svg
+car.svg                                open.svg
+card-outline.svg                       options-outline.svg
+card-sharp.svg                         options-sharp.svg
+card.svg                               options.svg
+caret-back-circle-outline.svg          paper-plane-outline.svg
+caret-back-circle-sharp.svg            paper-plane-sharp.svg
+caret-back-circle.svg                  paper-plane.svg
+caret-back-outline.svg                 partly-sunny-outline.svg
+caret-back-sharp.svg                   partly-sunny-sharp.svg
+caret-back.svg                         partly-sunny.svg
+caret-down-circle-outline.svg          pause-circle-outline.svg
+caret-down-circle-sharp.svg            pause-circle-sharp.svg
+caret-down-circle.svg                  pause-circle.svg
+caret-down-outline.svg                 pause-outline.svg
+caret-down-sharp.svg                   pause-sharp.svg
+caret-down.svg                         pause.svg
+caret-forward-circle-outline.svg       paw-outline.svg
+caret-forward-circle-sharp.svg         paw-sharp.svg
+caret-forward-circle.svg               paw.svg
+caret-forward-outline.svg              pencil-outline.svg
+caret-forward-sharp.svg                pencil-sharp.svg
+caret-forward.svg                      pencil.svg
+caret-up-circle-outline.svg            people-circle-outline.svg
+caret-up-circle-sharp.svg              people-circle-sharp.svg
+caret-up-circle.svg                    people-circle.svg
+caret-up-outline.svg                   people-outline.svg
+caret-up-sharp.svg                     people-sharp.svg
+caret-up.svg                           people.svg
+cart-outline.svg                       person-add-outline.svg
+cart-sharp.svg                         person-add-sharp.svg
+cart.svg                               person-add.svg
+cash-outline.svg                       person-circle-outline.svg
+cash-sharp.svg                         person-circle-sharp.svg
+cash.svg                               person-circle.svg
+cellular-outline.svg                   person-outline.svg
+cellular-sharp.svg                     person-remove-outline.svg
+cellular.svg                           person-remove-sharp.svg
+chatbox-ellipses-outline.svg           person-remove.svg
+chatbox-ellipses-sharp.svg             person-sharp.svg
+chatbox-ellipses.svg                   person.svg
+chatbox-outline.svg                    phone-landscape-outline.svg
+chatbox-sharp.svg                      phone-landscape-sharp.svg
+chatbox.svg                            phone-landscape.svg
+chatbubble-ellipses-outline.svg        phone-portrait-outline.svg
+chatbubble-ellipses-sharp.svg          phone-portrait-sharp.svg
+chatbubble-ellipses.svg                phone-portrait.svg
+chatbubble-outline.svg                 pie-chart-outline.svg
+chatbubble-sharp.svg                   pie-chart-sharp.svg
+chatbubble.svg                         pie-chart.svg
+chatbubbles-outline.svg                pin-outline.svg
+chatbubbles-sharp.svg                  pin-sharp.svg
+chatbubbles.svg                        pin.svg
+checkbox-outline.svg                   pint-outline.svg
+checkbox-sharp.svg                     pint-sharp.svg
+checkbox.svg                           pint.svg
+checkmark-circle-outline.svg           pizza-outline.svg
+checkmark-circle-sharp.svg             pizza-sharp.svg
+checkmark-circle.svg                   pizza.svg
+checkmark-done-circle-outline.svg      planet-outline.svg
+checkmark-done-circle-sharp.svg        planet-sharp.svg
+checkmark-done-circle.svg              planet.svg
+checkmark-done-outline.svg             play-back-circle-outline.svg
+checkmark-done-sharp.svg               play-back-circle-sharp.svg
+checkmark-done.svg                     play-back-circle.svg
+checkmark-outline.svg                  play-back-outline.svg
+checkmark-sharp.svg                    play-back-sharp.svg
+checkmark.svg                          play-back.svg
+chevron-back-circle-outline.svg        play-circle-outline.svg
+chevron-back-circle-sharp.svg          play-circle-sharp.svg
+chevron-back-circle.svg                play-circle.svg
+chevron-back-outline.svg               play-forward-circle-outline.svg
+chevron-back-sharp.svg                 play-forward-circle-sharp.svg
+chevron-back.svg                       play-forward-circle.svg
+chevron-collapse-outline.svg           play-forward-outline.svg
+chevron-collapse-sharp.svg             play-forward-sharp.svg
+chevron-collapse.svg                   play-forward.svg
+chevron-down-circle-outline.svg        play-outline.svg
+chevron-down-circle-sharp.svg          play-sharp.svg
+chevron-down-circle.svg                play-skip-back-circle-outline.svg
+chevron-down-outline.svg               play-skip-back-circle-sharp.svg
+chevron-down-sharp.svg                 play-skip-back-circle.svg
+chevron-down.svg                       play-skip-back-outline.svg
+chevron-expand-outline.svg             play-skip-back-sharp.svg
+chevron-expand-sharp.svg               play-skip-back.svg
+chevron-expand.svg                     play-skip-forward-circle-outline.svg
+chevron-forward-circle-outline.svg     play-skip-forward-circle-sharp.svg
+chevron-forward-circle-sharp.svg       play-skip-forward-circle.svg
+chevron-forward-circle.svg             play-skip-forward-outline.svg
+chevron-forward-outline.svg            play-skip-forward-sharp.svg
+chevron-forward-sharp.svg              play-skip-forward.svg
+chevron-forward.svg                    play.svg
+chevron-up-circle-outline.svg          podium-outline.svg
+chevron-up-circle-sharp.svg            podium-sharp.svg
+chevron-up-circle.svg                  podium.svg
+chevron-up-outline.svg                 power-outline.svg
+chevron-up-sharp.svg                   power-sharp.svg
+chevron-up.svg                         power.svg
+clipboard-outline.svg                  pricetag-outline.svg
+clipboard-sharp.svg                    pricetag-sharp.svg
+clipboard.svg                          pricetag.svg
+close-circle-outline.svg               pricetags-outline.svg
+close-circle-sharp.svg                 pricetags-sharp.svg
+close-circle.svg                       pricetags.svg
+close-outline.svg                      print-outline.svg
+close-sharp.svg                        print-sharp.svg
+close.svg                              print.svg
+cloud-circle-outline.svg               prism-outline.svg
+cloud-circle-sharp.svg                 prism-sharp.svg
+cloud-circle.svg                       prism.svg
+cloud-done-outline.svg                 pulse-outline.svg
+cloud-done-sharp.svg                   pulse-sharp.svg
+cloud-done.svg                         pulse.svg
+cloud-download-outline.svg             push-outline.svg
+cloud-download-sharp.svg               push-sharp.svg
+cloud-download.svg                     push.svg
+cloud-offline-outline.svg              qr-code-outline.svg
+cloud-offline-sharp.svg                qr-code-sharp.svg
+cloud-offline.svg                      qr-code.svg
+cloud-outline.svg                      radio-button-off-outline.svg
+cloud-sharp.svg                        radio-button-off-sharp.svg
+cloud-upload-outline.svg               radio-button-off.svg
+cloud-upload-sharp.svg                 radio-button-on-outline.svg
+cloud-upload.svg                       radio-button-on-sharp.svg
+cloud.svg                              radio-button-on.svg
+cloudy-night-outline.svg               radio-outline.svg
+cloudy-night-sharp.svg                 radio-sharp.svg
+cloudy-night.svg                       radio.svg
+cloudy-outline.svg                     rainy-outline.svg
+cloudy-sharp.svg                       rainy-sharp.svg
+cloudy.svg                             rainy.svg
+code-download-outline.svg              reader-outline.svg
+code-download-sharp.svg                reader-sharp.svg
+code-download.svg                      reader.svg
+code-outline.svg                       receipt-outline.svg
+code-sharp.svg                         receipt-sharp.svg
+code-slash-outline.svg                 receipt.svg
+code-slash-sharp.svg                   recording-outline.svg
+code-slash.svg                         recording-sharp.svg
+code-working-outline.svg               recording.svg
+code-working-sharp.svg                 refresh-circle-outline.svg
+code-working.svg                       refresh-circle-sharp.svg
+code.svg                               refresh-circle.svg
+cog-outline.svg                        refresh-outline.svg
+cog-sharp.svg                          refresh-sharp.svg
+cog.svg                                refresh.svg
+color-fill-outline.svg                 reload-circle-outline.svg
+color-fill-sharp.svg                   reload-circle-sharp.svg
+color-fill.svg                         reload-circle.svg
+color-filter-outline.svg               reload-outline.svg
+color-filter-sharp.svg                 reload-sharp.svg
+color-filter.svg                       reload.svg
+color-palette-outline.svg              remove-circle-outline.svg
+color-palette-sharp.svg                remove-circle-sharp.svg
+color-palette.svg                      remove-circle.svg
+color-wand-outline.svg                 remove-outline.svg
+color-wand-sharp.svg                   remove-sharp.svg
+color-wand.svg                         remove.svg
+compass-outline.svg                    reorder-four-outline.svg
+compass-sharp.svg                      reorder-four-sharp.svg
+compass.svg                            reorder-four.svg
+construct-outline.svg                  reorder-three-outline.svg
+construct-sharp.svg                    reorder-three-sharp.svg
+construct.svg                          reorder-three.svg
+contract-outline.svg                   reorder-two-outline.svg
+contract-sharp.svg                     reorder-two-sharp.svg
+contract.svg                           reorder-two.svg
+contrast-outline.svg                   repeat-outline.svg
+contrast-sharp.svg                     repeat-sharp.svg
+contrast.svg                           repeat.svg
+copy-outline.svg                       resize-outline.svg
+copy-sharp.svg                         resize-sharp.svg
+copy.svg                               resize.svg
+create-outline.svg                     restaurant-outline.svg
+create-sharp.svg                       restaurant-sharp.svg
+create.svg                             restaurant.svg
+crop-outline.svg                       return-down-back-outline.svg
+crop-sharp.svg                         return-down-back-sharp.svg
+crop.svg                               return-down-back.svg
+cube-outline.svg                       return-down-forward-outline.svg
+cube-sharp.svg                         return-down-forward-sharp.svg
+cube.svg                               return-down-forward.svg
+cut-outline.svg                        return-up-back-outline.svg
+cut-sharp.svg                          return-up-back-sharp.svg
+cut.svg                                return-up-back.svg
+desktop-outline.svg                    return-up-forward-outline.svg
+desktop-sharp.svg                      return-up-forward-sharp.svg
+desktop.svg                            return-up-forward.svg
+diamond-outline.svg                    ribbon-outline.svg
+diamond-sharp.svg                      ribbon-sharp.svg
+diamond.svg                            ribbon.svg
+dice-outline.svg                       rocket-outline.svg
+dice-sharp.svg                         rocket-sharp.svg
+dice.svg                               rocket.svg
+disc-outline.svg                       rose-outline.svg
+disc-sharp.svg                         rose-sharp.svg
+disc.svg                               rose.svg
+document-attach-outline.svg            sad-outline.svg
+document-attach-sharp.svg              sad-sharp.svg
+document-attach.svg                    sad.svg
+document-lock-outline.svg              save-outline.svg
+document-lock-sharp.svg                save-sharp.svg
+document-lock.svg                      save.svg
+document-outline.svg                   scale-outline.svg
+document-sharp.svg                     scale-sharp.svg
+document-text-outline.svg              scale.svg
+document-text-sharp.svg                scan-circle-outline.svg
+document-text.svg                      scan-circle-sharp.svg
+document.svg                           scan-circle.svg
+documents-outline.svg                  scan-outline.svg
+documents-sharp.svg                    scan-sharp.svg
+documents.svg                          scan.svg
+download-outline.svg                   school-outline.svg
+download-sharp.svg                     school-sharp.svg
+download.svg                           school.svg
+duplicate-outline.svg                  search-circle-outline.svg
+duplicate-sharp.svg                    search-circle-sharp.svg
+duplicate.svg                          search-circle.svg
+ear-outline.svg                        search-outline.svg
+ear-sharp.svg                          search-sharp.svg
+ear.svg                                search.svg
+earth-outline.svg                      send-outline.svg
+earth-sharp.svg                        send-sharp.svg
+earth.svg                              send.svg
+easel-outline.svg                      server-outline.svg
+easel-sharp.svg                        server-sharp.svg
+easel.svg                              server.svg
+egg-outline.svg                        settings-outline.svg
+egg-sharp.svg                          settings-sharp.svg
+egg.svg                                settings.svg
+ellipse-outline.svg                    shapes-outline.svg
+ellipse-sharp.svg                      shapes-sharp.svg
+ellipse.svg                            shapes.svg
+ellipsis-horizontal-circle-outline.svg share-outline.svg
+ellipsis-horizontal-circle-sharp.svg   share-sharp.svg
+ellipsis-horizontal-circle.svg         share-social-outline.svg
+ellipsis-horizontal-outline.svg        share-social-sharp.svg
+ellipsis-horizontal-sharp.svg          share-social.svg
+ellipsis-horizontal.svg                share.svg
+ellipsis-vertical-circle-outline.svg   shield-checkmark-outline.svg
+ellipsis-vertical-circle-sharp.svg     shield-checkmark-sharp.svg
+ellipsis-vertical-circle.svg           shield-checkmark.svg
+ellipsis-vertical-outline.svg          shield-half-outline.svg
+ellipsis-vertical-sharp.svg            shield-half-sharp.svg
+ellipsis-vertical.svg                  shield-half.svg
+enter-outline.svg                      shield-outline.svg
+enter-sharp.svg                        shield-sharp.svg
+enter.svg                              shield.svg
+exit-outline.svg                       shirt-outline.svg
+exit-sharp.svg                         shirt-sharp.svg
+exit.svg                               shirt.svg
+expand-outline.svg                     shuffle-outline.svg
+expand-sharp.svg                       shuffle-sharp.svg
+expand.svg                             shuffle.svg
+extension-puzzle-outline.svg           skull-outline.svg
+extension-puzzle-sharp.svg             skull-sharp.svg
+extension-puzzle.svg                   skull.svg
+eye-off-outline.svg                    snow-outline.svg
+eye-off-sharp.svg                      snow-sharp.svg
+eye-off.svg                            snow.svg
+eye-outline.svg                        sparkles-outline.svg
+eye-sharp.svg                          sparkles-sharp.svg
+eye.svg                                sparkles.svg
+eyedrop-outline.svg                    speedometer-outline.svg
+eyedrop-sharp.svg                      speedometer-sharp.svg
+eyedrop.svg                            speedometer.svg
+fast-food-outline.svg                  square-outline.svg
+fast-food-sharp.svg                    square-sharp.svg
+fast-food.svg                          square.svg
+female-outline.svg                     star-half-outline.svg
+female-sharp.svg                       star-half-sharp.svg
+female.svg                             star-half.svg
+file-tray-full-outline.svg             star-outline.svg
+file-tray-full-sharp.svg               star-sharp.svg
+file-tray-full.svg                     star.svg
+file-tray-outline.svg                  stats-chart-outline.svg
+file-tray-sharp.svg                    stats-chart-sharp.svg
+file-tray-stacked-outline.svg          stats-chart.svg
+file-tray-stacked-sharp.svg            stop-circle-outline.svg
+file-tray-stacked.svg                  stop-circle-sharp.svg
+file-tray.svg                          stop-circle.svg
+film-outline.svg                       stop-outline.svg
+film-sharp.svg                         stop-sharp.svg
+film.svg                               stop.svg
+filter-circle-outline.svg              stopwatch-outline.svg
+filter-circle-sharp.svg                stopwatch-sharp.svg
+filter-circle.svg                      stopwatch.svg
+filter-outline.svg                     storefront-outline.svg
+filter-sharp.svg                       storefront-sharp.svg
+filter.svg                             storefront.svg
+finger-print-outline.svg               subway-outline.svg
+finger-print-sharp.svg                 subway-sharp.svg
+finger-print.svg                       subway.svg
+fish-outline.svg                       sunny-outline.svg
+fish-sharp.svg                         sunny-sharp.svg
+fish.svg                               sunny.svg
+fitness-outline.svg                    swap-horizontal-outline.svg
+fitness-sharp.svg                      swap-horizontal-sharp.svg
+fitness.svg                            swap-horizontal.svg
+flag-outline.svg                       swap-vertical-outline.svg
+flag-sharp.svg                         swap-vertical-sharp.svg
+flag.svg                               swap-vertical.svg
+flame-outline.svg                      sync-circle-outline.svg
+flame-sharp.svg                        sync-circle-sharp.svg
+flame.svg                              sync-circle.svg
+flash-off-outline.svg                  sync-outline.svg
+flash-off-sharp.svg                    sync-sharp.svg
+flash-off.svg                          sync.svg
+flash-outline.svg                      tablet-landscape-outline.svg
+flash-sharp.svg                        tablet-landscape-sharp.svg
+flash.svg                              tablet-landscape.svg
+flashlight-outline.svg                 tablet-portrait-outline.svg
+flashlight-sharp.svg                   tablet-portrait-sharp.svg
+flashlight.svg                         tablet-portrait.svg
+flask-outline.svg                      telescope-outline.svg
+flask-sharp.svg                        telescope-sharp.svg
+flask.svg                              telescope.svg
+flower-outline.svg                     tennisball-outline.svg
+flower-sharp.svg                       tennisball-sharp.svg
+flower.svg                             tennisball.svg
+folder-open-outline.svg                terminal-outline.svg
+folder-open-sharp.svg                  terminal-sharp.svg
+folder-open.svg                        terminal.svg
+folder-outline.svg                     text-outline.svg
+folder-sharp.svg                       text-sharp.svg
+folder.svg                             text.svg
+football-outline.svg                   thermometer-outline.svg
+football-sharp.svg                     thermometer-sharp.svg
+football.svg                           thermometer.svg
+footsteps-outline.svg                  thumbs-down-outline.svg
+footsteps-sharp.svg                    thumbs-down-sharp.svg
+footsteps.svg                          thumbs-down.svg
+funnel-outline.svg                     thumbs-up-outline.svg
+funnel-sharp.svg                       thumbs-up-sharp.svg
+funnel.svg                             thumbs-up.svg
+game-controller-outline.svg            thunderstorm-outline.svg
+game-controller-sharp.svg              thunderstorm-sharp.svg
+game-controller.svg                    thunderstorm.svg
+gift-outline.svg                       ticket-outline.svg
+gift-sharp.svg                         ticket-sharp.svg
+gift.svg                               ticket.svg
+git-branch-outline.svg                 time-outline.svg
+git-branch-sharp.svg                   time-sharp.svg
+git-branch.svg                         time.svg
+git-commit-outline.svg                 timer-outline.svg
+git-commit-sharp.svg                   timer-sharp.svg
+git-commit.svg                         timer.svg
+git-compare-outline.svg                today-outline.svg
+git-compare-sharp.svg                  today-sharp.svg
+git-compare.svg                        today.svg
+git-merge-outline.svg                  toggle-outline.svg
+git-merge-sharp.svg                    toggle-sharp.svg
+git-merge.svg                          toggle.svg
+git-network-outline.svg                trail-sign-outline.svg
+git-network-sharp.svg                  trail-sign-sharp.svg
+git-network.svg                        trail-sign.svg
+git-pull-request-outline.svg           train-outline.svg
+git-pull-request-sharp.svg             train-sharp.svg
+git-pull-request.svg                   train.svg
+glasses-outline.svg                    transgender-outline.svg
+glasses-sharp.svg                      transgender-sharp.svg
+glasses.svg                            transgender.svg
+globe-outline.svg                      trash-bin-outline.svg
+globe-sharp.svg                        trash-bin-sharp.svg
+globe.svg                              trash-bin.svg
+golf-outline.svg                       trash-outline.svg
+golf-sharp.svg                         trash-sharp.svg
+golf.svg                               trash.svg
+grid-outline.svg                       trending-down-outline.svg
+grid-sharp.svg                         trending-down-sharp.svg
+grid.svg                               trending-down.svg
+hammer-outline.svg                     trending-up-outline.svg
+hammer-sharp.svg                       trending-up-sharp.svg
+hammer.svg                             trending-up.svg
+hand-left-outline.svg                  triangle-outline.svg
+hand-left-sharp.svg                    triangle-sharp.svg
+hand-left.svg                          triangle.svg
+hand-right-outline.svg                 trophy-outline.svg
+hand-right-sharp.svg                   trophy-sharp.svg
+hand-right.svg                         trophy.svg
+happy-outline.svg                      tv-outline.svg
+happy-sharp.svg                        tv-sharp.svg
+happy.svg                              tv.svg
+hardware-chip-outline.svg              umbrella-outline.svg
+hardware-chip-sharp.svg                umbrella-sharp.svg
+hardware-chip.svg                      umbrella.svg
+headset-outline.svg                    unlink-outline.svg
+headset-sharp.svg                      unlink-sharp.svg
+headset.svg                            unlink.svg
+heart-circle-outline.svg               videocam-off-outline.svg
+heart-circle-sharp.svg                 videocam-off-sharp.svg
+heart-circle.svg                       videocam-off.svg
+heart-dislike-circle-outline.svg       videocam-outline.svg
+heart-dislike-circle-sharp.svg         videocam-sharp.svg
+heart-dislike-circle.svg               videocam.svg
+heart-dislike-outline.svg              volume-high-outline.svg
+heart-dislike-sharp.svg                volume-high-sharp.svg
+heart-dislike.svg                      volume-high.svg
+heart-half-outline.svg                 volume-low-outline.svg
+heart-half-sharp.svg                   volume-low-sharp.svg
+heart-half.svg                         volume-low.svg
+heart-outline.svg                      volume-medium-outline.svg
+heart-sharp.svg                        volume-medium-sharp.svg
+heart.svg                              volume-medium.svg
+help-buoy-outline.svg                  volume-mute-outline.svg
+help-buoy-sharp.svg                    volume-mute-sharp.svg
+help-buoy.svg                          volume-mute.svg
+help-circle-outline.svg                volume-off-outline.svg
+help-circle-sharp.svg                  volume-off-sharp.svg
+help-circle.svg                        volume-off.svg
+help-outline.svg                       walk-outline.svg
+help-sharp.svg                         walk-sharp.svg
+help.svg                               walk.svg
+home-outline.svg                       wallet-outline.svg
+home-sharp.svg                         wallet-sharp.svg
+home.svg                               wallet.svg
+hourglass-outline.svg                  warning-outline.svg
+hourglass-sharp.svg                    warning-sharp.svg
+hourglass.svg                          warning.svg
+ice-cream-outline.svg                  watch-outline.svg
+ice-cream-sharp.svg                    watch-sharp.svg
+ice-cream.svg                          watch.svg
+id-card-outline.svg                    water-outline.svg
+id-card-sharp.svg                      water-sharp.svg
+id-card.svg                            water.svg
+image-outline.svg                      wifi-outline.svg
+image-sharp.svg                        wifi-sharp.svg
+image.svg                              wifi.svg
+images-outline.svg                     wine-outline.svg
+images-sharp.svg                       wine-sharp.svg
+images.svg                             wine.svg
+infinite-outline.svg                   woman-outline.svg
+infinite-sharp.svg                     woman-sharp.svg
+infinite.svg                           woman.svg
+information-circle-outline.svg

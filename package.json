@@ -29,7 +29,7 @@
     "@capacitor/splash-screen": "^7.0.0",
     "@capacitor/status-bar": "^7.0.0",
     "@ionic/angular": "^8.8.1",
-    "@ionic/storage-angular": "^3.0.6",
+    "@ionic/storage-angular": "^4.0.0",
     "cordova-res": "^0.15.4",
     "cordova-sqlite-storage": "^6.0.0",
     "localforage-cordovasqlitedriver": "^1.8.0",
@@ -66,7 +66,6 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
-    "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "typescript": "~5.8.3"
   },
