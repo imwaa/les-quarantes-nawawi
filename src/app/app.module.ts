@@ -11,22 +11,21 @@ import {Drivers} from '@ionic/storage';
 import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
 
 @NgModule({
-  declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule,
-    IonicModule.forRoot(),
-    AppRoutingModule,
-    IonicStorageModule.forRoot({
-        name: 'mydatabase',
-        driverOrder: [
-          // eslint-disable-next-line no-underscore-dangle
-          CordovaSQLiteDriver._driver,
-          Drivers.IndexedDB,
-          Drivers.LocalStorage]
-      }
-    )],
-  providers: [{provide: RouteReuseStrategy, useClass: IonicRouteStrategy}],
-  bootstrap: [AppComponent],
+    declarations: [AppComponent],
+    imports: [BrowserModule,
+        IonicModule.forRoot(),
+        AppRoutingModule,
+        IonicStorageModule.forRoot({
+            name: 'mydatabase',
+            driverOrder: [
+                // eslint-disable-next-line no-underscore-dangle
+                CordovaSQLiteDriver._driver,
+                Drivers.IndexedDB,
+                Drivers.LocalStorage
+            ]
+        })],
+    providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }
