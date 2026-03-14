@@ -7,9 +7,10 @@ import {ToastController} from '@ionic/angular';
 import {Hadith} from '../../interfaces/Hadith';
 
 @Component({
-  selector: 'app-hadith-page',
-  templateUrl: './hadith-page.page.html',
-  styleUrls: ['./hadith-page.page.scss'],
+    selector: 'app-hadith-page',
+    templateUrl: './hadith-page.page.html',
+    styleUrls: ['./hadith-page.page.scss'],
+    standalone: false
 })
 export class HadithPagePage implements OnInit {
   public hadithFr: Hadith;

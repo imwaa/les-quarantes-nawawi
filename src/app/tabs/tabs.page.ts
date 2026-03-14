@@ -3,9 +3,10 @@ import {ThemeService} from '../services/theme.service';
 import {StorageServiceService} from '../services/storage-service.service';
 
 @Component({
-  selector: 'app-tabs',
-  templateUrl: 'tabs.page.html',
-  styleUrls: ['tabs.page.scss'],
+    selector: 'app-tabs',
+    templateUrl: 'tabs.page.html',
+    styleUrls: ['tabs.page.scss'],
+    standalone: false
 })
 export class TabsPage {
   constructor(

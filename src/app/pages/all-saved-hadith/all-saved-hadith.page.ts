@@ -5,9 +5,10 @@ import {Hadith} from '../../interfaces/Hadith';
 
 
 @Component({
-  selector: 'app-all-saved-hadith',
-  templateUrl: './all-saved-hadith.page.html',
-  styleUrls: ['./all-saved-hadith.page.scss'],
+    selector: 'app-all-saved-hadith',
+    templateUrl: './all-saved-hadith.page.html',
+    styleUrls: ['./all-saved-hadith.page.scss'],
+    standalone: false
 })
 export class AllSavedHadithPage {
   hadithList: Hadith[] = [];

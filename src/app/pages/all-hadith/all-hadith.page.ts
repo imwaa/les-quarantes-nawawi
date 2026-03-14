@@ -6,9 +6,10 @@ import {AuteurComponent} from "../auteur/auteur.component";
 
 
 @Component({
-  selector: 'app-all-hadith',
-  templateUrl: 'all-hadith.page.html',
-  styleUrls: ['all-hadith.page.scss'],
+    selector: 'app-all-hadith',
+    templateUrl: 'all-hadith.page.html',
+    styleUrls: ['all-hadith.page.scss'],
+    standalone: false
 })
 export class AllHadithPage implements OnInit {
   public haditList: Hadith[] = [];

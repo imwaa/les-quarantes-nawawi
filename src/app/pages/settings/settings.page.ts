@@ -4,9 +4,10 @@ import {StorageServiceService} from '../../services/storage-service.service';
 import {Share} from '@capacitor/share';
 
 @Component({
-  selector: 'app-settings',
-  templateUrl: 'settings.page.html',
-  styleUrls: ['settings.page.scss'],
+    selector: 'app-settings',
+    templateUrl: 'settings.page.html',
+    styleUrls: ['settings.page.scss'],
+    standalone: false
 })
 export class SettingsPage {
   themeValue = false;
