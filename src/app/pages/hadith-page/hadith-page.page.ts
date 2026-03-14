@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, effect, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {HadithServiceService} from '../../services/hadith-service.service';
 import {Share} from '@capacitor/share';
@@ -29,17 +29,21 @@ export class HadithPagePage implements OnInit {
     this.hadithNumber = this.route.snapshot.paramMap.get('id');
     this.hadithFr = this.hadithService.getHadithFrById(this.hadithNumber);
     this.hadithAr = this.hadithService.getHadithArById(this.hadithNumber);
-  }
 
-  ngOnInit() {
-    this.storage.savedHadithList$.subscribe((res: number[]) => {
+    effect(() => {
+      const res = this.storage.savedHadithList();
       if (res != null) {
         if (res.includes(this.hadithNumber)) {
           this.isStored = true;
           this.hadithDbIndex = res.indexOf(this.hadithNumber);
+        } else {
+          this.isStored = false;
         }
       }
     });
+  }
+
+  ngOnInit() {
   }
 
   async hadithFavorisToast() {

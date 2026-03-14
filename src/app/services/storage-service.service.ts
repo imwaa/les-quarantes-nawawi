@@ -1,9 +1,8 @@
 /* eslint-disable no-underscore-dangle */
-import {Injectable} from '@angular/core';
+import {Injectable, signal, WritableSignal} from '@angular/core';
 import {Storage} from '@ionic/storage-angular';
 import cordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
-import {BehaviorSubject, from, of} from 'rxjs';
-import {filter, switchMap} from 'rxjs/operators';
+import {from, Observable} from 'rxjs';
 
 const THEME_KEY = 'theme';
 const HADITHFAVORIS_KEY = 'hadithFavoris';
@@ -12,9 +11,9 @@ const HADITHFAVORIS_KEY = 'hadithFavoris';
   providedIn: 'root',
 })
 export class StorageServiceService {
-  public savedHadithList$ = new BehaviorSubject<number[]>([]);
+  public savedHadithList: WritableSignal<number[]> = signal<number[]>([]);
 
-  private isStorageReady = new BehaviorSubject(false);
+  public isStorageReady: WritableSignal<boolean> = signal(false);
 
   constructor(private storage: Storage) {
     this.init().then(() => console.log('DB init'));
@@ -23,17 +22,22 @@ export class StorageServiceService {
   async init() {
     await this.storage.defineDriver(cordovaSQLiteDriver);
     await this.storage.create();
-    this.isStorageReady.next(true);
-    this.getHadithFavorites().subscribe((res: number[]) => {
-      this.savedHadithList$.next(res);
-    });
+    this.isStorageReady.set(true);
+    const res = await this.getHadithFavoritesPromise();
+    this.savedHadithList.set(res || []);
   }
 
-  getThemeData() {
-    return this.isStorageReady.pipe(
-      filter((ready: boolean) => ready),
-      switchMap((() => from(this.storage.get(THEME_KEY)) || of(null)))
-    );
+  getThemeData(): Observable<any> {
+    return from(new Promise(async (resolve) => {
+      const checkReady = async () => {
+        if (this.isStorageReady()) {
+          resolve(await this.storage.get(THEME_KEY));
+        } else {
+          setTimeout(checkReady, 50);
+        }
+      };
+      await checkReady();
+    }));
   }
 
   async setThemeData(value: any) {
@@ -44,24 +48,21 @@ export class StorageServiceService {
     const storedData = (await this.storage.get(HADITHFAVORIS_KEY)) || [];
     storedData.push(item);
     await this.storage.set(HADITHFAVORIS_KEY, storedData);
-    const tmp = this.savedHadithList$.value;
-    tmp.push(item);
-    this.savedHadithList$.next(tmp);
+    this.savedHadithList.update(list => [...list, item]);
   }
 
   async removeHadithFavorites(index) {
     const storedData = (await this.storage.get(HADITHFAVORIS_KEY)) || [];
     storedData.splice(index, 1);
     await this.storage.set(HADITHFAVORIS_KEY, storedData);
-    const tmp = this.savedHadithList$.value;
-    tmp.splice(index, 1);
-    this.savedHadithList$.next(tmp);
+    this.savedHadithList.update(list => {
+      const newList = [...list];
+      newList.splice(index, 1);
+      return newList;
+    });
   }
 
-  private getHadithFavorites() {
-    return this.isStorageReady.pipe(
-      filter((ready: boolean) => ready),
-      switchMap(() => from(this.storage.get(HADITHFAVORIS_KEY) || of([])))
-    );
+  private async getHadithFavoritesPromise() {
+    return await this.storage.get(HADITHFAVORIS_KEY);
   }
 }

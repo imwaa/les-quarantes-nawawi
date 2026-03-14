@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, effect} from '@angular/core';
 import {HadithServiceService} from '../../services/hadith-service.service';
 import {StorageServiceService} from '../../services/storage-service.service';
 import {Hadith} from '../../interfaces/Hadith';
@@ -18,7 +18,8 @@ export class AllSavedHadithPage {
     private hadithService: HadithServiceService,
   ) {
 
-    this.serviceService.savedHadithList$.subscribe((res: number[]) => {
+    effect(() => {
+      const res = this.serviceService.savedHadithList();
       this.hadithList = [];
       if (res != null) {
         res.forEach((n: number) => {
