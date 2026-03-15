@@ -2,12 +2,16 @@ import {Component} from '@angular/core';
 import {ThemeService} from '../../services/theme.service';
 import {StorageServiceService} from '../../services/storage-service.service';
 import {Share} from '@capacitor/share';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, IonList, IonItem, IonIcon, IonLabel, IonToggle, IonChip } from '@ionic/angular/standalone';
+import { FormsModule } from '@angular/forms';
+import { addIcons } from 'ionicons';
+import { moon, people, star, chevronForward } from 'ionicons/icons';
 
 @Component({
     selector: 'app-settings',
     templateUrl: 'settings.page.html',
     styleUrls: ['settings.page.scss'],
-    standalone: false
+    imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, IonList, IonItem, IonIcon, IonLabel, IonToggle, IonChip, FormsModule]
 })
 export class SettingsPage {
   themeValue = false;
@@ -16,6 +20,7 @@ export class SettingsPage {
     private themeService: ThemeService,
     private storage: StorageServiceService
   ) {
+    addIcons({ moon, people, star, chevronForward });
     this.storage.getThemeData().subscribe((res) => {
       this.themeValue = res;
     });

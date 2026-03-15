@@ -1,19 +1,23 @@
-<ion-header class="ion-no-border" mode="ios">
-  <ion-toolbar>
-    <ion-title>Hadith Favoris</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense" mode="ios">
-    <ion-toolbar>
-      <ion-title size="large">Vos favoris</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="after-hero">
+    <div class="after-hero-accent"></div>
+    <div class="after-subtitle">Ma collection</div>
+    <div class="after-title">Hadiths<br><span>Favoris</span></div>
+    <div class="after-meta">{{ hadithList.length }} hadiths enregistrés</div>
+  </div>
 
-  <app-hadith-list [hadithList]="hadithList"></app-hadith-list>
+  <div class="after-section-label">
+    <span>Mes favoris</span>
+  </div>
+
+  <div class="list-container">
+    <app-hadith-list [hadithList]="hadithList"></app-hadith-list>
+  </div>
+
   @if (hadithList.length === 0) {
-    <p class="emptyHadith">Aucun hadith n'a été ajouté dans les favoris</p>
+    <div class="empty-container">
+      <p class="emptyHadith">Aucun hadith n'a été ajouté dans les favoris</p>
+    </div>
   }
 
 </ion-content>

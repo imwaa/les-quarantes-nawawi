@@ -1,9 +1,14 @@
-@for (item of hadithList; track item; let index = $index) {
-  <ion-card button="true" mode="ios"
-    routerLink="/hadith-page/{{item.id}}">
-    <ion-card-header>
-      <ion-card-subtitle color="primary">Hadith {{item.id}}</ion-card-subtitle>
-      <ion-card-title>{{item.titre}}</ion-card-title>
-    </ion-card-header>
-  </ion-card>
+@for (item of hadithList; track item.id; let index = $index) {
+  <div class="after-card" [class.featured]="item.id === 1" [routerLink]="'/hadith-page/' + item.id">
+    <div class="after-card-num" [class.c2]="item.id % 3 === 2" [class.c3]="item.id % 3 === 0">
+      {{ item.id < 10 ? '0' + item.id : item.id }}
+    </div>
+    <div class="after-card-body">
+      <div class="after-card-title">{{ item.titre }}</div>
+      <div class="after-card-meta">An-Nawawi · Hadith n°{{ item.id }}</div>
+    </div>
+    <div class="after-card-tag" [ngClass]="getTagClass(item.id)">
+      {{ getTagName(item.id) }}
+    </div>
+  </div>
 }

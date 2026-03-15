@@ -1,11 +1,75 @@
-ion-card-title {
-  font-size: 20px;
-  font-family: "Merriweather", serif;
-  font-weight: 400;
+:host {
+  --app-background: #0a0a0a;
+  --app-accent-green: #4ade80;
+}
+
+ion-content {
+  --background: var(--app-background);
+}
+
+.after-hero {
+  position: relative;
+  padding: 44px 20px 20px;
+  background: linear-gradient(160deg, #0d1a2d 0%, #0a0a0a 60%);
+}
+
+.after-hero-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.after-subtitle {
+  font-size: 10px;
+  color: #38bdf8;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.after-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+  span {
+    color: #38bdf8;
+  }
+}
+
+.after-meta {
+  font-size: 11px;
+  color: #555;
+  margin-top: 6px;
+}
+
+.after-section-label {
+  padding: 24px 20px 12px;
+  span {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+.list-container {
+  padding: 0 4px 20px;
+}
+
+.empty-container {
+  padding: 40px 20px;
+  text-align: center;
 }
 
 .emptyHadith {
-  margin-top: 30px;
-  text-align: center;
-  color: grey;
+  font-size: 13px;
+  color: #555;
 }

@@ -9,9 +9,8 @@ describe('AuteurComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuteurComponent ],
-      imports: [IonicModule.forRoot()]
-    }).compileComponents();
+    imports: [AuteurComponent]
+}).compileComponents();
 
     fixture = TestBed.createComponent(AuteurComponent);
     component = fixture.componentInstance;

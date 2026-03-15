@@ -10,16 +10,22 @@
   // --ion-color-primary-contrast-rgb: 255, 255, 255;
   // --ion-color-primary-shade: #ad9c00;
   // --ion-color-primary-tint: #ad9c00;
-  --ion-color-primary: #00c182;
-  --ion-color-primary-rgb: 106,
-    100,
-    255;
-  --ion-color-primary-contrast: #ffffff;
-  --ion-color-primary-contrast-rgb: 255,
-    255,
-    255;
-  --ion-color-primary-shade: #00aa72;
-  --ion-color-primary-tint: #1ac78f;
+  --ion-color-primary: #4ade80;
+  --ion-color-primary-rgb: 74, 222, 128;
+  --ion-color-primary-contrast: #000000;
+  --ion-color-primary-contrast-rgb: 0, 0, 0;
+  --ion-color-primary-shade: #41c370;
+  --ion-color-primary-tint: #5cf292;
+
+  /* Custom colors for redesign */
+  --app-background: #0a0a0a;
+  --app-card-background: #141414;
+  --app-card-border: #1f1f1f;
+  --app-text-main: #ffffff;
+  --app-text-secondary: #888888;
+  --app-accent-green: #4ade80;
+  --app-accent-blue: #38bdf8;
+  --app-accent-purple: #a78bfa;
 
   /** secondary **/
   --ion-color-secondary: #3dc2ff;

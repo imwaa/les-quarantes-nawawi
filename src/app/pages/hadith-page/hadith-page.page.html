@@ -1,76 +1,66 @@
-<ion-header class="ion-no-border" mode="ios">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button text=""></ion-back-button>
-    </ion-buttons>
-    <ion-title slot="start">Hadith {{hadithFr.id}}</ion-title>
-    @if (isStored) {
-      <ion-buttons (click)="savedHadithManage(hadithNumber)" slot="primary">
-        <ion-button>
-          <ion-icon name="star"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    }
-    @if (!isStored) {
-      <ion-buttons (click)="savedHadithManage(hadithNumber)" slot="primary">
-        <ion-button>
-          <ion-icon name="star-outline"></ion-icon>
-        </ion-button>
-      </ion-buttons>
-    }
-  </ion-toolbar>
-</ion-header>
-@if (hadithFr) {
-  <ion-content>
-    <div class="french_section">
-      <div class="hadith-title">
-        <p style="white-space: pre-line">{{hadithFr.titre}}</p>
+<ion-content [fullscreen]="true">
+  <div class="detail-inner">
+    <div class="detail-topbar">
+      <div class="detail-back">
+        <ion-back-button text="" defaultHref="/"></ion-back-button>
       </div>
-      <div class="hadith-content">
-        <ion-card mode="ios">
-          <ion-card-content style="white-space: pre-line">
-            {{hadithFr.contenu}}
-            <div>
-              <ion-button
-                (click)="shareHadith(0)"
-                class="ion-float-right"
-                fill="outline"
-                mode="md"
-                shape="round"
-                size="small"
-                style="font-size: 18px; margin: 10px 0"
-                >
-                <ion-icon name="share-social-sharp"></ion-icon>
-              </ion-button>
-            </div>
-          </ion-card-content>
-        </ion-card>
+      <div class="detail-topbar-title">Hadith {{hadithNumber}} / 42</div>
+      <div class="detail-share" (click)="shareHadith()">
+        <ion-icon name="share-social-sharp"></ion-icon>
       </div>
     </div>
-    <div class="arab_section">
-      <div class="hadith-title">
-        <p style="white-space: pre-line">{{hadithAr.titre}}</p>
-      </div>
-      <div class="hadith-content">
-        <ion-card mode="ios">
-          <ion-card-content style="white-space: pre-line">
-            {{hadithAr.contenu}}
-            <div>
-              <ion-button
-                (click)="shareHadith(1)"
-                class="ion-float-right"
-                fill="outline"
-                mode="md"
-                shape="round"
-                size="small"
-                style="font-size: 18px; margin: 10px 0"
-                >
-                <ion-icon name="share-social-sharp"></ion-icon>
-              </ion-button>
-            </div>
-          </ion-card-content>
-        </ion-card>
+
+    <div class="detail-num-pill">
+      <div class="detail-num-dot"></div>
+      {{ getTagName(hadithNumber) }} · Collection
+    </div>
+
+    <div class="detail-main-title">{{ hadithFr.titre }}</div>
+
+    <div class="detail-tabs">
+      <div class="detail-tab" [class.active]="activeTab === 'Texte'" (click)="activeTab = 'Texte'">Texte</div>
+      <div class="detail-tab" [class.active]="activeTab === 'Sharh'" (click)="activeTab = 'Sharh'">Sharh</div>
+      <div class="detail-tab" [class.active]="activeTab === 'Mémoriser'" (click)="activeTab = 'Mémoriser'">Mémoriser</div>
+    </div>
+
+    <div class="detail-content" *ngIf="activeTab === 'Texte'">
+      <div class="detail-arabic">{{ hadithAr.contenu }}</div>
+      <div class="detail-text">{{ hadithFr.contenu }}</div>
+
+      <div class="detail-sharh-preview">
+        <div class="detail-sharh-label">Commentaire (Sharh)</div>
+        <div class="detail-sharh-text">
+          Ce hadith est le fondement de l'islam. Il traite de l'importance de l'intention dans chaque action...
+        </div>
+        <div class="detail-sharh-lock">
+          <div class="detail-sharh-lock-badge">✦ Premium</div>
+        </div>
       </div>
     </div>
-  </ion-content>
-}
+
+    <div class="detail-content" *ngIf="activeTab === 'Sharh'">
+      <div class="detail-sharh-preview featured">
+        <div class="detail-sharh-label">Explication Complète</div>
+        <div class="detail-sharh-text">
+          Le Sharh complet de ce hadith est disponible dans la version Premium.
+        </div>
+        <div class="detail-sharh-lock">
+          <div class="detail-sharh-lock-badge">Débloquer maintenant</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-content" *ngIf="activeTab === 'Mémoriser'">
+      <div class="detail-text">
+        Fonctionnalité de mémorisation bientôt disponible.
+      </div>
+    </div>
+
+    <div class="detail-actions">
+      <div class="detail-btn detail-btn-primary" (click)="nextHadith()">Hadith suivant →</div>
+      <div class="detail-btn detail-btn-secondary" (click)="savedHadithManage(hadithNumber)">
+        <ion-icon [name]="isStored ? 'star' : 'star-outline'"></ion-icon>
+      </div>
+    </div>
+  </div>
+</ion-content>

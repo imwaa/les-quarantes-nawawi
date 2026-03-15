@@ -1,6 +1,130 @@
-ion-card-title {
-  font-size: 20px;
-  font-family: 'Merriweather',
-  serif;
-  font-weight: 400;
+:host {
+  --app-background: #0a0a0a;
+  --app-card-background: #141414;
+  --app-card-border: #1f1f1f;
+  --app-accent-green: #4ade80;
+}
+
+ion-content {
+  --background: var(--app-background);
+}
+
+/* Gradient hero */
+.after-hero {
+  position: relative;
+  padding: 44px 20px 20px;
+  background: linear-gradient(160deg, #0d2d1a 0%, #0a0a0a 60%);
+}
+
+.after-hero-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at top right, rgba(22, 163, 74, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.after-subtitle {
+  font-size: 10px;
+  color: var(--app-accent-green);
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.after-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+  span {
+    color: var(--app-accent-green);
+  }
+}
+
+.after-meta {
+  font-size: 11px;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* Progress ring */
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.ring-wrap {
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+
+.ring-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--app-accent-green);
+}
+
+.progress-text {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.5;
+  strong {
+    color: #ccc;
+    font-weight: 600;
+  }
+}
+
+/* Search bar */
+.search-container {
+  padding: 12px 12px 0;
+}
+
+.after-search {
+  --background: #1a1a1a;
+  --border-radius: 14px;
+  --placeholder-color: #555;
+  --color: #ccc;
+  --icon-color: #555;
+  --box-shadow: none;
+  padding: 0;
+  height: 44px;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
+}
+
+/* Section label */
+.after-section-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 20px 12px;
+  span:first-child {
+    font-size: 11px;
+    font-weight: 600;
+    color: #888;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  span:last-child {
+    font-size: 11px;
+    color: var(--app-accent-green);
+    font-weight: 500;
+  }
+}
+
+.list-container {
+  padding: 0 4px 20px;
 }

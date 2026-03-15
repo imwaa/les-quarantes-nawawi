@@ -1,0 +1,39 @@
+.after-nav {
+  --background: #0d0d0d;
+  --border-top: 1px solid #1e1e1e;
+  padding: 8px 0;
+  height: 60px;
+}
+
+.after-nav-item {
+  --color: #444;
+  --color-selected: #4ade80;
+  --ripple-color: transparent;
+
+  ion-label {
+    font-size: 9px;
+    font-weight: 500;
+    margin-top: 2px;
+  }
+
+  .after-nav-icon {
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
+
+  .nav-dot {
+    width: 4px;
+    height: 4px;
+    background: #4ade80;
+    border-radius: 50%;
+    margin: 4px auto 0;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  &.tab-selected {
+    .nav-dot {
+      opacity: 1;
+    }
+  }
+}

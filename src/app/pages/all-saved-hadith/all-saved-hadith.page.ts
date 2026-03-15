@@ -2,13 +2,15 @@ import {Component, effect} from '@angular/core';
 import {HadithServiceService} from '../../services/hadith-service.service';
 import {StorageServiceService} from '../../services/storage-service.service';
 import {Hadith} from '../../interfaces/Hadith';
+import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
+import { HadithListComponent } from '../hadith-list/hadith-list.component';
 
 
 @Component({
     selector: 'app-all-saved-hadith',
     templateUrl: './all-saved-hadith.page.html',
     styleUrls: ['./all-saved-hadith.page.scss'],
-    standalone: false
+    imports: [IonHeader, IonToolbar, IonTitle, IonContent, HadithListComponent]
 })
 export class AllSavedHadithPage {
   hadithList: Hadith[] = [];

@@ -1,24 +1,45 @@
-<ion-header class="ion-no-border" mode="ios">
-  <ion-toolbar>
-    <ion-title>Les Quarantes Al-Nawawi</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense" mode="ios">
-    <ion-toolbar>
-      <ion-title size="large">Les 40 Al-Nawawi</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="after-hero">
+    <div class="after-hero-accent"></div>
+    <div class="after-subtitle">Collection complète</div>
+    <div class="after-title">40 Hadiths<br><span>An-Nawawi</span></div>
+    <div class="after-meta">Imam Yahya ibn Sharaf al-Nawawi · XIIIe siècle</div>
 
-  <ion-card (click)="openModal()" button="true" class="auteurCard" mode="ios">
-    <img alt="Silhouette of mountains" src="assets/img.png"/>
-    <ion-card-header>
-      <ion-card-subtitle color="primary">Biographie de l'auteur</ion-card-subtitle>
-      <ion-card-title>Imam Al-Nawawi</ion-card-title>
-    </ion-card-header>
-  </ion-card>
+    <div class="progress-row">
+      <div class="ring-wrap">
+        <svg width="44" height="44" viewBox="0 0 44 44">
+          <circle cx="22" cy="22" r="17" fill="none" stroke="#1f1f1f" stroke-width="3"/>
+          <circle cx="22" cy="22" r="17" fill="none" stroke="#4ade80" stroke-width="3"
+            [attr.stroke-dasharray]="getDashArray()"
+            [attr.stroke-dashoffset]="getDashOffset()"
+            stroke-linecap="round"
+            transform="rotate(-90 22 22)"/>
+        </svg>
+        <div class="ring-label">{{ progress }}</div>
+      </div>
+      <div class="progress-text">
+        <strong>{{ progress }} / {{ totalHadith }} hadiths</strong> lus<br>
+        Dernier : Hadith 7
+      </div>
+    </div>
+  </div>
 
-  <app-hadith-list [hadithList]="haditList"></app-hadith-list>
+  <div class="search-container">
+    <ion-searchbar
+      mode="ios"
+      placeholder="Rechercher un hadith..."
+      (ionInput)="handleSearch($event)"
+      class="after-search">
+    </ion-searchbar>
+  </div>
+
+  <div class="after-section-label">
+    <span>Tous les hadiths</span>
+    <span (click)="openModal()">Biographie →</span>
+  </div>
+
+  <div class="list-container">
+    <app-hadith-list [hadithList]="filteredHadithList"></app-hadith-list>
+  </div>
 
 </ion-content>
