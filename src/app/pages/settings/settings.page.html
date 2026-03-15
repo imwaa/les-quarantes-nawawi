@@ -1,63 +1,81 @@
-<ion-header class="ion-no-border" mode="ios">
-  <ion-toolbar>
-    <ion-title> Tab 3</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="after-hero">
+    <div class="after-hero-accent"></div>
+    <div class="after-subtitle">Configuration</div>
+    <div class="after-title">Réglages<br><span>Généraux</span></div>
+    <div class="after-meta">Personnalisez votre expérience de lecture</div>
+  </div>
 
-<ion-content [fullscreen]="true" mode="ios">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Paramètres</ion-title>
-    </ion-toolbar>
-  </ion-header>
-  <ion-card>
-    <ion-card-content>
-      <ion-list lines="none">
-        <ion-item>
-          <ion-icon icon="moon" slot="start"></ion-icon>
-          <ion-label> Mode Sombre</ion-label>
-          <ion-toggle
-            (ionChange)="toggleTheme($event)"
-            [(ngModel)]="themeValue"
-            color="primary"
-            slot="end"
-          ></ion-toggle>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+  <div class="after-section-label">
+    <span>Apparence</span>
+  </div>
 
-  <ion-card>
-    <ion-card-content>
-      <ion-list lines="none">
-        <ion-item (click)="shareApp()">
-          <ion-icon name="people" slot="start"></ion-icon>
-          <ion-icon
-            color="primary"
-            name="chevron-forward"
-            slot="end"
-          ></ion-icon>
-          <ion-label>Partager l'application</ion-label>
-        </ion-item>
-        <ion-item
-          (click)="openBrowser('https://play.google.com/store/apps/details?id=com.walid.nawawi')"
-        >
-          <ion-icon name="star" slot="start"></ion-icon>
-          <ion-icon
-            color="primary"
-            name="chevron-forward"
-            slot="end"
-          ></ion-icon>
-          <ion-label>Donner un avis</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+  <div class="settings-list">
+    <div class="after-card">
+      <div class="after-card-num">
+        <ion-icon name="moon"></ion-icon>
+      </div>
+      <div class="after-card-body">
+        <div class="after-card-title">Mode Sombre</div>
+        <div class="after-card-meta">Activer le thème nuit</div>
+      </div>
+      <ion-toggle
+        (ionChange)="toggleTheme($event)"
+        [(ngModel)]="themeValue"
+        mode="ios"
+        color="primary"
+        slot="end"
+      ></ion-toggle>
+    </div>
+  </div>
+
+  <div class="after-section-label">
+    <span>Application</span>
+  </div>
+
+  <div class="settings-list">
+    <div class="after-card c2" (click)="shareApp()">
+      <div class="after-card-num c2">
+        <ion-icon name="share-social-outline"></ion-icon>
+      </div>
+      <div class="after-card-body">
+        <div class="after-card-title">Partager l'application</div>
+        <div class="after-card-meta">Faire connaître l'app à vos proches</div>
+      </div>
+      <ion-icon name="chevron-forward" class="after-card-chevron"></ion-icon>
+    </div>
+
+    <div class="after-card c3" (click)="openBrowser('https://play.google.com/store/apps/details?id=com.walid.nawawi')">
+      <div class="after-card-num c3">
+        <ion-icon name="star-outline"></ion-icon>
+      </div>
+      <div class="after-card-body">
+        <div class="after-card-title">Donner un avis</div>
+        <div class="after-card-meta">Soutenir le développement</div>
+      </div>
+      <ion-icon name="chevron-forward" class="after-card-chevron"></ion-icon>
+    </div>
+  </div>
+
+  <div class="after-section-label">
+    <span>Soutien</span>
+  </div>
+
+  <div class="settings-list">
+    <div class="after-card c1" (click)="openBrowser('https://www.paypal.me/walidsalhi')">
+      <div class="after-card-num c1">
+        <ion-icon name="heart"></ion-icon>
+      </div>
+      <div class="after-card-body">
+        <div class="after-card-title">Faire un don</div>
+        <div class="after-card-meta">Aidez-nous à maintenir l'application gratuite</div>
+      </div>
+      <ion-icon name="chevron-forward" class="after-card-chevron"></ion-icon>
+    </div>
+  </div>
 
   <div class="footer">
-    <ion-chip color="primary">
-      <ion-label>Version 4.0.0</ion-label>
-    </ion-chip>
-    <p class="author">Walid Salhi Belkacem</p>
+    <div class="version-badge">Version 4.0.0</div>
+    <p class="author">Développé par <span>Walid Salhi Belkacem</span></p>
   </div>
 </ion-content>

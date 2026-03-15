@@ -1,28 +1,183 @@
-.footer {
-  margin-top: 20px;
-  text-align: center;
+ion-content {
+  --background: #0a0a0a;
+}
 
-  .app-title {
+/* Gradient hero */
+.after-hero {
+  position: relative;
+  padding: 44px 20px 20px;
+  background: linear-gradient(160deg, #1e1b4b 0%, #0a0a0a 60%);
+}
+
+.after-hero-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at top right, rgba(167, 139, 250, 0.2), transparent 70%);
+  pointer-events: none;
+}
+
+.after-subtitle {
+  font-size: 10px;
+  color: #a78bfa;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.after-title {
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin: 0;
+  span {
+    color: #a78bfa;
+  }
+}
+
+.after-meta {
+  font-size: 11px;
+  color: #555;
+  margin-top: 6px;
+}
+
+/* Section label */
+.after-section-label {
+  padding: 24px 20px 12px;
+  span {
+    font-size: 11px;
     font-weight: 600;
+    color: #888;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
 
-    span {
-      font-weight: 400;
-      font-size: 13px;
-    }
+/* Settings Cards */
+.settings-list {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.after-card {
+  background: #141414;
+  border: 1px solid #1f1f1f;
+  border-radius: 14px;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:active {
+    background: #1c1c1c;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    border-radius: 2px 0 0 2px;
+    background: #4ade80;
+  }
+
+  &.c2::before { background: #38bdf8; }
+  &.c3::before { background: #a78bfa; }
+}
+
+.after-card-num {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #14291a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #4ade80;
+  flex-shrink: 0;
+
+  &.c2 {
+    color: #38bdf8;
+    background: #0c1e2e;
+  }
+  &.c3 {
+    color: #a78bfa;
+    background: #1a1525;
+  }
+
+  &.c1 {
+    color: #4ade80;
+    background: #14291a;
+  }
+}
+
+.after-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.after-card-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #e5e5e5;
+}
+
+.after-card-meta {
+  font-size: 11px;
+  color: #555;
+  margin-top: 2px;
+}
+
+.after-card-chevron {
+  font-size: 18px;
+  color: #333;
+}
+
+ion-toggle {
+  --handle-background: #fff;
+  --handle-background-checked: #fff;
+  --background: #2a2a2a;
+  --background-checked: #4ade80;
+  margin: 0;
+}
+
+.footer {
+  margin: 40px 0 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+
+  .version-badge {
+    background: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    color: #888;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
   }
 
   .author {
-    font-size: 15px;
-    color: rgb(180, 180, 180);
-  }
-
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-
-    ion-icon {
-      font-size: 25px;
+    font-size: 11px;
+    color: #555;
+    span {
+      color: #888;
+      font-weight: 500;
     }
   }
 }

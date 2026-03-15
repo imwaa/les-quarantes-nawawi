@@ -5,7 +5,7 @@ import {Share} from '@capacitor/share';
 import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, IonList, IonItem, IonIcon, IonLabel, IonToggle, IonChip } from '@ionic/angular/standalone';
 import { FormsModule } from '@angular/forms';
 import { addIcons } from 'ionicons';
-import { moon, people, star, chevronForward } from 'ionicons/icons';
+import { moon, people, star, heart, chevronForward, shareSocialOutline, starOutline } from 'ionicons/icons';
 
 @Component({
     selector: 'app-settings',
@@ -20,7 +20,7 @@ export class SettingsPage {
     private themeService: ThemeService,
     private storage: StorageServiceService
   ) {
-    addIcons({ moon, people, star, chevronForward });
+    addIcons({ moon, people, star, heart, chevronForward, shareSocialOutline, starOutline });
     this.storage.getThemeData().subscribe((res) => {
       this.themeValue = res;
     });

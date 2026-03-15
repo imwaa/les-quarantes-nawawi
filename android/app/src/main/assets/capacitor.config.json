@@ -2,5 +2,8 @@
 	"appId": "com.walid.nawawi",
 	"appName": "40 Nawawi",
 	"webDir": "www/browser",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"server": {
+		"url": "http://192.168.0.190:8101"
+	}
 }
