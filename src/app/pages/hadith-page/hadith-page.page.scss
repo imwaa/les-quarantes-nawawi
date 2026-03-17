@@ -167,20 +167,32 @@ ion-content {
   line-height: 1.6;
 }
 
-.detail-sharh-lock {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 10px;
+.detail-lecons-list {
+  margin: 8px 0 0;
+  padding-left: 20px;
+  li {
+    font-size: 11px;
+    color: #bbb;
+    margin-bottom: 6px;
+    &::marker {
+      color: #4ade80;
+    }
+  }
 }
 
-.detail-sharh-lock-badge {
-  background: rgba(74, 222, 128, 0.15);
+.detail-sharh-full-text {
+  font-size: 12px;
+  color: #bbb;
+  line-height: 1.7;
+  margin-top: 8px;
+}
+
+.detail-sharh-more {
+  display: inline-block;
   color: #4ade80;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 600;
-  padding: 4px 12px;
-  border-radius: 20px;
+  margin-top: 10px;
 }
 
 .detail-actions {

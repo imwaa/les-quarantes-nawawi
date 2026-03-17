@@ -27,27 +27,41 @@
       <div class="detail-arabic">{{ hadithAr.contenu }}</div>
       <div class="detail-text">{{ hadithFr.contenu }}</div>
 
-      <div class="detail-sharh-preview">
-        <div class="detail-sharh-label">Commentaire (Sharh)</div>
+      <div class="detail-sharh-preview" *ngIf="sharh" (click)="activeTab = 'Sharh'">
+        <div class="detail-sharh-label">Résumé du Sharh</div>
         <div class="detail-sharh-text">
-          Ce hadith est le fondement de l'islam. Il traite de l'importance de l'intention dans chaque action...
+          {{ sharh.resume }}
         </div>
-        <div class="detail-sharh-lock">
-          <div class="detail-sharh-lock-badge">✦ Premium</div>
-        </div>
+        <div class="detail-sharh-more">Voir l'explication complète →</div>
       </div>
     </div>
 
     <div class="detail-content" *ngIf="activeTab === 'Sharh'">
-      <div class="detail-sharh-preview featured">
-        <div class="detail-sharh-label">Explication Complète</div>
-        <div class="detail-sharh-text">
-          Le Sharh complet de ce hadith est disponible dans la version Premium.
+      <ng-container *ngIf="sharh; else noSharh">
+        <div class="detail-sharh-preview featured">
+          <div class="detail-sharh-label">Résumé</div>
+          <div class="detail-sharh-text">
+            {{ sharh.resume }}
+          </div>
         </div>
-        <div class="detail-sharh-lock">
-          <div class="detail-sharh-lock-badge">Débloquer maintenant</div>
+
+        <div class="detail-text">
+          <div class="detail-sharh-label">Leçons à retenir</div>
+          <ul class="detail-lecons-list">
+            <li *ngFor="let lecon of sharh.lecons">{{ lecon }}</li>
+          </ul>
         </div>
-      </div>
+
+        <div class="detail-text">
+          <div class="detail-sharh-label">Explication détaillée</div>
+          <div class="detail-sharh-full-text">{{ sharh.sharh }}</div>
+        </div>
+      </ng-container>
+      <ng-template #noSharh>
+        <div class="detail-text">
+          L'explication pour ce hadith arrive bientôt.
+        </div>
+      </ng-template>
     </div>
 
     <div class="detail-content" *ngIf="activeTab === 'Mémoriser'">

@@ -5,6 +5,7 @@ import {Share} from '@capacitor/share';
 import {StorageServiceService} from '../../services/storage-service.service';
 import { ToastController, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonButton, IonIcon, IonContent, IonCard, IonCardContent } from '@ionic/angular/standalone';
 import {Hadith} from '../../interfaces/Hadith';
+import {Sharh} from '../../interfaces/Sharh';
 import { addIcons } from 'ionicons';
 import { star, starOutline, shareSocialSharp } from 'ionicons/icons';
 
@@ -20,6 +21,7 @@ import { CommonModule } from '@angular/common';
 export class HadithPagePage implements OnInit {
   public hadithFr: Hadith;
   public hadithAr: Hadith;
+  public sharh: Sharh | undefined;
   public hadithNumber: any;
   public isStored = false;
   public hadithDbIndex: number;
@@ -35,6 +37,7 @@ export class HadithPagePage implements OnInit {
     this.hadithNumber = this.route.snapshot.paramMap.get('id');
     this.hadithFr = this.hadithService.getHadithFrById(this.hadithNumber);
     this.hadithAr = this.hadithService.getHadithArById(this.hadithNumber);
+    this.sharh = this.hadithService.getSharhFrById(this.hadithNumber);
 
     effect(() => {
       const res = this.storage.savedHadithList();
