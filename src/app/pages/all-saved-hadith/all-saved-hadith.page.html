@@ -1,13 +1,13 @@
 <ion-content [fullscreen]="true">
   <div class="after-hero">
     <div class="after-hero-accent"></div>
-    <div class="after-subtitle">Ma collection</div>
-    <div class="after-title">Hadiths<br><span>Favoris</span></div>
-    <div class="after-meta">{{ hadithList.length }} hadiths enregistrés</div>
+    <div class="after-subtitle">{{ 'favorites.subtitle' | transloco }}</div>
+    <div class="after-title">{{ 'favorites.title' | transloco }}<br><span>{{ 'favorites.title_accent' | transloco }}</span></div>
+    <div class="after-meta">{{ 'favorites.meta' | transloco: { count: hadithList.length } }}</div>
   </div>
 
   <div class="after-section-label">
-    <span>Mes favoris</span>
+    <span>{{ 'favorites.section' | transloco }}</span>
   </div>
 
   <div class="list-container">
@@ -16,7 +16,7 @@
 
   @if (hadithList.length === 0) {
     <div class="empty-container">
-      <p class="emptyHadith">Aucun hadith n'a été ajouté dans les favoris</p>
+      <p class="emptyHadith">{{ 'favorites.empty' | transloco }}</p>
     </div>
   }
 

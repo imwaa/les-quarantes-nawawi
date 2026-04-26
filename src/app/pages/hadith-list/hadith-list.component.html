@@ -5,7 +5,7 @@
     </div>
     <div class="after-card-body">
       <div class="after-card-title">{{ item.titre }}</div>
-      <div class="after-card-meta">An-Nawawi · Hadith n°{{ item.id }}</div>
+      <div class="after-card-meta">{{ 'hadith.nawawi_credit' | transloco: { id: item.id } }}</div>
     </div>
     <div class="after-card-tag" [ngClass]="getTagClass(item.id)">
       {{ getTagName(item.id) }}

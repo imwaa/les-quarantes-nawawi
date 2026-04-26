@@ -154,6 +154,36 @@ ion-toggle {
   margin: 0;
 }
 
+.lang-card {
+  cursor: default;
+  &:active { background: #141414; }
+}
+
+.lang-selector {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.lang-btn {
+  background: #1f1f1f;
+  border: 1px solid #2a2a2a;
+  color: #666;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.04em;
+
+  &.active {
+    background: #4ade80;
+    border-color: #4ade80;
+    color: #0a0a0a;
+  }
+}
+
 .footer {
   margin: 40px 0 30px;
   text-align: center;

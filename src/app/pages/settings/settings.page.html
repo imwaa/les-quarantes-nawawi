@@ -1,13 +1,13 @@
 <ion-content [fullscreen]="true">
   <div class="after-hero">
     <div class="after-hero-accent"></div>
-    <div class="after-subtitle">Configuration</div>
-    <div class="after-title">Réglages<br><span>Généraux</span></div>
-    <div class="after-meta">Personnalisez votre expérience de lecture</div>
+    <div class="after-subtitle">{{ 'settings.subtitle' | transloco }}</div>
+    <div class="after-title">{{ 'settings.title' | transloco }}<br><span>{{ 'settings.title_accent' | transloco }}</span></div>
+    <div class="after-meta">{{ 'settings.meta' | transloco }}</div>
   </div>
 
   <div class="after-section-label">
-    <span>Apparence</span>
+    <span>{{ 'settings.appearance' | transloco }}</span>
   </div>
 
   <div class="settings-list">
@@ -16,8 +16,8 @@
         <ion-icon name="moon"></ion-icon>
       </div>
       <div class="after-card-body">
-        <div class="after-card-title">Mode Sombre</div>
-        <div class="after-card-meta">Activer le thème nuit</div>
+        <div class="after-card-title">{{ 'settings.dark_mode' | transloco }}</div>
+        <div class="after-card-meta">{{ 'settings.dark_mode_meta' | transloco }}</div>
       </div>
       <ion-toggle
         (ionChange)="toggleTheme($event)"
@@ -30,7 +30,37 @@
   </div>
 
   <div class="after-section-label">
-    <span>Application</span>
+    <span>{{ 'settings.language_section' | transloco }}</span>
+  </div>
+
+  <div class="settings-list">
+    <div class="after-card lang-card">
+      <div class="after-card-num">
+        <ion-icon name="language"></ion-icon>
+      </div>
+      <div class="after-card-body">
+        <div class="after-card-title">{{ 'settings.select_language' | transloco }}</div>
+        <div class="after-card-meta">{{ 'settings.select_language_meta' | transloco }}</div>
+      </div>
+      <div class="lang-selector">
+        <button
+          class="lang-btn"
+          [class.active]="langService.currentLang() === 'fr'"
+          (click)="setLanguage('fr')">
+          FR
+        </button>
+        <button
+          class="lang-btn"
+          [class.active]="langService.currentLang() === 'en'"
+          (click)="setLanguage('en')">
+          EN
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="after-section-label">
+    <span>{{ 'settings.app_section' | transloco }}</span>
   </div>
 
   <div class="settings-list">
@@ -39,8 +69,8 @@
         <ion-icon name="share-social-outline"></ion-icon>
       </div>
       <div class="after-card-body">
-        <div class="after-card-title">Partager l'application</div>
-        <div class="after-card-meta">Faire connaître l'app à vos proches</div>
+        <div class="after-card-title">{{ 'settings.share_app' | transloco }}</div>
+        <div class="after-card-meta">{{ 'settings.share_app_meta' | transloco }}</div>
       </div>
       <ion-icon name="chevron-forward" class="after-card-chevron"></ion-icon>
     </div>
@@ -50,15 +80,15 @@
         <ion-icon name="star-outline"></ion-icon>
       </div>
       <div class="after-card-body">
-        <div class="after-card-title">Donner un avis</div>
-        <div class="after-card-meta">Soutenir le développement</div>
+        <div class="after-card-title">{{ 'settings.rate' | transloco }}</div>
+        <div class="after-card-meta">{{ 'settings.rate_meta' | transloco }}</div>
       </div>
       <ion-icon name="chevron-forward" class="after-card-chevron"></ion-icon>
     </div>
   </div>
 
   <div class="after-section-label">
-    <span>Soutien</span>
+    <span>{{ 'settings.support' | transloco }}</span>
   </div>
 
   <div class="settings-list">
@@ -67,15 +97,15 @@
         <ion-icon name="heart"></ion-icon>
       </div>
       <div class="after-card-body">
-        <div class="after-card-title">Faire un don</div>
-        <div class="after-card-meta">Aidez-nous à maintenir l'application gratuite</div>
+        <div class="after-card-title">{{ 'settings.donate' | transloco }}</div>
+        <div class="after-card-meta">{{ 'settings.donate_meta' | transloco }}</div>
       </div>
       <ion-icon name="chevron-forward" class="after-card-chevron"></ion-icon>
     </div>
   </div>
 
   <div class="footer">
-    <div class="version-badge">Version 4.0.0</div>
-    <p class="author">Développé par <span>Walid Salhi Belkacem</span></p>
+    <div class="version-badge">{{ 'settings.version' | transloco }}</div>
+    <p class="author">{{ 'settings.author' | transloco }} <span>{{ 'settings.author_name' | transloco }}</span></p>
   </div>
 </ion-content>

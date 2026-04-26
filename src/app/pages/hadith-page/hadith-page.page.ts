@@ -1,22 +1,22 @@
-import {Component, effect, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
-import {HadithServiceService} from '../../services/hadith-service.service';
-import {Share} from '@capacitor/share';
-import {StorageServiceService} from '../../services/storage-service.service';
+import { Component, effect, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HadithServiceService } from '../../services/hadith-service.service';
+import { LanguageService } from '../../services/language.service';
+import { Share } from '@capacitor/share';
+import { StorageServiceService } from '../../services/storage-service.service';
 import { ToastController, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonButton, IonIcon, IonContent, IonCard, IonCardContent } from '@ionic/angular/standalone';
-import {Hadith} from '../../interfaces/Hadith';
-import {Sharh} from '../../interfaces/Sharh';
+import { Hadith } from '../../interfaces/Hadith';
+import { Sharh } from '../../interfaces/Sharh';
 import { addIcons } from 'ionicons';
 import { star, starOutline, shareSocialSharp } from 'ionicons/icons';
-
 import { CommonModule } from '@angular/common';
-
+import { TranslocoService, TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
-    selector: 'app-hadith-page',
-    templateUrl: './hadith-page.page.html',
-    styleUrls: ['./hadith-page.page.scss'],
-    imports: [IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonButton, IonIcon, IonContent, IonCard, IonCardContent, CommonModule]
+  selector: 'app-hadith-page',
+  templateUrl: './hadith-page.page.html',
+  styleUrls: ['./hadith-page.page.scss'],
+  imports: [IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonButton, IonIcon, IonContent, IonCard, IonCardContent, CommonModule, TranslocoPipe]
 })
 export class HadithPagePage implements OnInit {
   public hadithFr: Hadith;
@@ -25,19 +25,24 @@ export class HadithPagePage implements OnInit {
   public hadithNumber: any;
   public isStored = false;
   public hadithDbIndex: number;
-  public activeTab: string = 'Texte';
+  public activeTab: string = 'text';
 
   constructor(
     private route: ActivatedRoute,
     private hadithService: HadithServiceService,
+    private langService: LanguageService,
     private storage: StorageServiceService,
-    public toastController: ToastController
+    public toastController: ToastController,
+    private translocoService: TranslocoService
   ) {
     addIcons({ star, starOutline, shareSocialSharp });
     this.hadithNumber = this.route.snapshot.paramMap.get('id');
-    this.hadithFr = this.hadithService.getHadithFrById(this.hadithNumber);
-    this.hadithAr = this.hadithService.getHadithArById(this.hadithNumber);
-    this.sharh = this.hadithService.getSharhFrById(this.hadithNumber);
+    this.loadHadithContent();
+
+    effect(() => {
+      this.langService.currentLang();
+      this.loadHadithContent();
+    });
 
     effect(() => {
       const res = this.storage.savedHadithList();
@@ -52,19 +57,25 @@ export class HadithPagePage implements OnInit {
     });
   }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+  private loadHadithContent() {
+    this.hadithFr = this.hadithService.getHadithById(this.hadithNumber);
+    this.hadithAr = this.hadithService.getHadithArById(this.hadithNumber);
+    this.sharh = this.hadithService.getSharhById(this.hadithNumber);
   }
 
   async hadithFavorisToast() {
     const toast = await this.toastController.create({
-      message: this.isStored ? 'Hadith ajouté dans les favoris' : 'Hadith supprimé des favoris',
+      message: this.isStored
+        ? this.translocoService.translate('toast.added')
+        : this.translocoService.translate('toast.removed'),
       mode: 'ios',
       color: this.isStored ? 'primary' : 'danger',
       duration: 1000
     });
     await toast.present();
   }
-
 
   savedHadithManage(index) {
     if (this.isStored) {
@@ -90,7 +101,7 @@ export class HadithPagePage implements OnInit {
     await Share.share({
       title: this.hadithFr.titre,
       text: `${this.hadithFr.titre}\n\n${this.hadithFr.contenu}\n\n${this.hadithAr.contenu}`,
-      dialogTitle: 'Partager un Hadith',
+      dialogTitle: this.translocoService.translate('share.hadith_dialog'),
     });
   }
 
@@ -103,8 +114,8 @@ export class HadithPagePage implements OnInit {
 
   getTagName(id: any) {
     const num = parseInt(id);
-    if (num % 3 === 1) return 'Niyyah';
-    if (num % 3 === 2) return 'Foi';
-    return 'Ibadah';
+    if (num % 3 === 1) return this.translocoService.translate('hadith.tags.niyyah');
+    if (num % 3 === 2) return this.translocoService.translate('hadith.tags.foi');
+    return this.translocoService.translate('hadith.tags.ibadah');
   }
 }

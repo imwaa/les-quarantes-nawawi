@@ -4,7 +4,7 @@
       <div class="detail-back">
         <ion-back-button text="" defaultHref="/"></ion-back-button>
       </div>
-      <div class="detail-topbar-title">Hadith {{hadithNumber}} / 42</div>
+      <div class="detail-topbar-title">{{ 'hadith.counter' | transloco: { num: hadithNumber } }}</div>
       <div class="detail-share" (click)="shareHadith()">
         <ion-icon name="share-social-sharp"></ion-icon>
       </div>
@@ -12,66 +12,66 @@
 
     <div class="detail-num-pill">
       <div class="detail-num-dot"></div>
-      {{ getTagName(hadithNumber) }} · Collection
+      {{ getTagName(hadithNumber) }} · {{ 'hadith.collection' | transloco }}
     </div>
 
-    <div class="detail-main-title">{{ hadithFr.titre }}</div>
+    <div class="detail-main-title">{{ hadithFr?.titre }}</div>
 
     <div class="detail-tabs">
-      <div class="detail-tab" [class.active]="activeTab === 'Texte'" (click)="activeTab = 'Texte'">Texte</div>
-      <div class="detail-tab" [class.active]="activeTab === 'Sharh'" (click)="activeTab = 'Sharh'">Sharh</div>
-      <div class="detail-tab" [class.active]="activeTab === 'Mémoriser'" (click)="activeTab = 'Mémoriser'">Mémoriser</div>
+      <div class="detail-tab" [class.active]="activeTab === 'text'" (click)="activeTab = 'text'">{{ 'hadith.tabs.text' | transloco }}</div>
+      <div class="detail-tab" [class.active]="activeTab === 'sharh'" (click)="activeTab = 'sharh'">{{ 'hadith.tabs.sharh' | transloco }}</div>
+      <div class="detail-tab" [class.active]="activeTab === 'memorize'" (click)="activeTab = 'memorize'">{{ 'hadith.tabs.memorize' | transloco }}</div>
     </div>
 
-    <div class="detail-content" *ngIf="activeTab === 'Texte'">
-      <div class="detail-arabic">{{ hadithAr.contenu }}</div>
-      <div class="detail-text">{{ hadithFr.contenu }}</div>
+    <div class="detail-content" *ngIf="activeTab === 'text'">
+      <div class="detail-arabic">{{ hadithAr?.contenu }}</div>
+      <div class="detail-text">{{ hadithFr?.contenu }}</div>
 
-      <div class="detail-sharh-preview" *ngIf="sharh" (click)="activeTab = 'Sharh'">
-        <div class="detail-sharh-label">Résumé du Sharh</div>
+      <div class="detail-sharh-preview" *ngIf="sharh" (click)="activeTab = 'sharh'">
+        <div class="detail-sharh-label">{{ 'hadith.sharh_summary' | transloco }}</div>
         <div class="detail-sharh-text">
           {{ sharh.resume }}
         </div>
-        <div class="detail-sharh-more">Voir l'explication complète →</div>
+        <div class="detail-sharh-more">{{ 'hadith.sharh_more' | transloco }}</div>
       </div>
     </div>
 
-    <div class="detail-content" *ngIf="activeTab === 'Sharh'">
+    <div class="detail-content" *ngIf="activeTab === 'sharh'">
       <ng-container *ngIf="sharh; else noSharh">
         <div class="detail-sharh-preview featured">
-          <div class="detail-sharh-label">Résumé</div>
+          <div class="detail-sharh-label">{{ 'hadith.sharh_resume' | transloco }}</div>
           <div class="detail-sharh-text">
             {{ sharh.resume }}
           </div>
         </div>
 
         <div class="detail-text">
-          <div class="detail-sharh-label">Leçons à retenir</div>
+          <div class="detail-sharh-label">{{ 'hadith.sharh_lessons' | transloco }}</div>
           <ul class="detail-lecons-list">
             <li *ngFor="let lecon of sharh.lecons">{{ lecon }}</li>
           </ul>
         </div>
 
         <div class="detail-text">
-          <div class="detail-sharh-label">Explication détaillée</div>
+          <div class="detail-sharh-label">{{ 'hadith.sharh_detail' | transloco }}</div>
           <div class="detail-sharh-full-text">{{ sharh.sharh }}</div>
         </div>
       </ng-container>
       <ng-template #noSharh>
         <div class="detail-text">
-          L'explication pour ce hadith arrive bientôt.
+          {{ 'hadith.sharh_soon' | transloco }}
         </div>
       </ng-template>
     </div>
 
-    <div class="detail-content" *ngIf="activeTab === 'Mémoriser'">
+    <div class="detail-content" *ngIf="activeTab === 'memorize'">
       <div class="detail-text">
-        Fonctionnalité de mémorisation bientôt disponible.
+        {{ 'hadith.memorize_soon' | transloco }}
       </div>
     </div>
 
     <div class="detail-actions">
-      <div class="detail-btn detail-btn-primary" (click)="nextHadith()">Hadith suivant →</div>
+      <div class="detail-btn detail-btn-primary" (click)="nextHadith()">{{ 'hadith.next' | transloco }}</div>
       <div class="detail-btn detail-btn-secondary" (click)="savedHadithManage(hadithNumber)">
         <ion-icon [name]="isStored ? 'star' : 'star-outline'"></ion-icon>
       </div>

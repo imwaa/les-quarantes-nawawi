@@ -1,17 +1,18 @@
-import {Component, OnInit} from '@angular/core';
-import {HadithServiceService} from '../../services/hadith-service.service';
-import {Hadith} from '../../interfaces/Hadith';
-import { ModalController, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonSearchbar, IonLabel } from "@ionic/angular/standalone";
-import {AuteurComponent} from "../auteur/auteur.component";
+import { Component, OnInit, effect } from '@angular/core';
+import { HadithServiceService } from '../../services/hadith-service.service';
+import { LanguageService } from '../../services/language.service';
+import { Hadith } from '../../interfaces/Hadith';
+import { ModalController, IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonSearchbar, IonLabel } from '@ionic/angular/standalone';
+import { AuteurComponent } from '../auteur/auteur.component';
 import { HadithListComponent } from '../hadith-list/hadith-list.component';
 import { CommonModule } from '@angular/common';
-
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
-    selector: 'app-all-hadith',
-    templateUrl: 'all-hadith.page.html',
-    styleUrls: ['all-hadith.page.scss'],
-    imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonSearchbar, IonLabel, HadithListComponent, CommonModule]
+  selector: 'app-all-hadith',
+  templateUrl: 'all-hadith.page.html',
+  styleUrls: ['all-hadith.page.scss'],
+  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonSearchbar, IonLabel, HadithListComponent, CommonModule, TranslocoPipe]
 })
 export class AllHadithPage implements OnInit {
   public haditList: Hadith[] = [];
@@ -21,12 +22,18 @@ export class AllHadithPage implements OnInit {
 
   constructor(
     private hadithService: HadithServiceService,
+    private langService: LanguageService,
     private modalCtrl: ModalController
   ) {
+    effect(() => {
+      this.langService.currentLang();
+      this.haditList = this.hadithService.getHadithList();
+      this.filteredHadithList = [...this.haditList];
+    });
   }
 
   ngOnInit(): void {
-    this.haditList = this.hadithService.hadithFrList;
+    this.haditList = this.hadithService.getHadithList();
     this.filteredHadithList = [...this.haditList];
   }
 

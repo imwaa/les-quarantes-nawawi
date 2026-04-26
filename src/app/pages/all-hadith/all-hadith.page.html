@@ -1,9 +1,9 @@
 <ion-content [fullscreen]="true">
   <div class="after-hero">
     <div class="after-hero-accent"></div>
-    <div class="after-subtitle">Collection complète</div>
-    <div class="after-title">40 Hadiths<br><span>An-Nawawi</span></div>
-    <div class="after-meta">Imam Yahya ibn Sharaf al-Nawawi · XIIIe siècle</div>
+    <div class="after-subtitle">{{ 'home.subtitle' | transloco }}</div>
+    <div class="after-title">{{ 'home.title' | transloco }}<br><span>{{ 'home.title_accent' | transloco }}</span></div>
+    <div class="after-meta">{{ 'home.meta' | transloco }}</div>
 
     <div class="progress-row">
       <div class="ring-wrap">
@@ -18,8 +18,8 @@
         <div class="ring-label">{{ progress }}</div>
       </div>
       <div class="progress-text">
-        <strong>{{ progress }} / {{ totalHadith }} hadiths</strong> lus<br>
-        Dernier : Hadith 7
+        <strong>{{ progress }} / {{ totalHadith }} hadiths</strong> {{ 'home.read' | transloco }}<br>
+        {{ 'home.last' | transloco }}
       </div>
     </div>
   </div>
@@ -27,15 +27,15 @@
   <div class="search-container">
     <ion-searchbar
       mode="ios"
-      placeholder="Rechercher un hadith..."
+      [placeholder]="'home.search_placeholder' | transloco"
       (ionInput)="handleSearch($event)"
       class="after-search">
     </ion-searchbar>
   </div>
 
   <div class="after-section-label">
-    <span>Tous les hadiths</span>
-    <span (click)="openModal()">Biographie →</span>
+    <span>{{ 'home.all_hadiths' | transloco }}</span>
+    <span (click)="openModal()">{{ 'home.biography' | transloco }}</span>
   </div>
 
   <div class="list-container">
