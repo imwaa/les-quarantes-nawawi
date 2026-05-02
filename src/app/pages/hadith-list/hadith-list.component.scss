@@ -6,8 +6,8 @@
 }
 
 .after-card {
-  background: #141414;
-  border: 1px solid #1f1f1f;
+  background: var(--app-bg-card);
+  border: 1px solid var(--app-border);
   border-radius: 14px;
   padding: 12px 14px;
   display: flex;
@@ -19,12 +19,12 @@
   transition: background 0.2s ease;
 
   &:active {
-    background: #1c1c1c;
+    background: var(--app-bg-card-hover);
   }
 
   &.featured {
-    border-color: rgba(22, 163, 74, 0.2);
-    background: linear-gradient(100deg, #0d1f10, #141414);
+    border-color: var(--app-sharh-featured-border);
+    background: var(--app-sharh-bg);
   }
 
   &::before {
@@ -35,33 +35,33 @@
     bottom: 0;
     width: 3px;
     border-radius: 2px 0 0 2px;
-    background: #4ade80; /* Default */
+    background: var(--app-accent-green);
   }
 
-  &.c2::before { background: #38bdf8; }
-  &.c3::before { background: #a78bfa; }
+  &.c2::before { background: var(--app-accent-blue); }
+  &.c3::before { background: var(--app-accent-purple); }
 }
 
 .after-card-num {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: #1e1e1e;
+  background: var(--app-bg-icon);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 11px;
   font-weight: 700;
-  color: #4ade80;
+  color: var(--app-accent-green);
   flex-shrink: 0;
 
   &.c2 {
-    color: #38bdf8;
-    background: #0c1e2e;
+    color: var(--app-accent-blue);
+    background: var(--app-icon-blue-bg);
   }
   &.c3 {
-    color: #a78bfa;
-    background: #1a1525;
+    color: var(--app-accent-purple);
+    background: var(--app-icon-purple-bg);
   }
 }
 
@@ -73,7 +73,7 @@
 .after-card-title {
   font-size: 13px;
   font-weight: 600;
-  color: #e5e5e5;
+  color: var(--app-text-secondary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -81,7 +81,7 @@
 
 .after-card-meta {
   font-size: 10px;
-  color: #555;
+  color: var(--app-text-dim);
   margin-top: 2px;
 }
 
@@ -94,7 +94,7 @@
   border-radius: 6px;
   flex-shrink: 0;
 
-  &.tag-foi { background: #0c1e2e; color: #38bdf8; }
-  &.tag-ibad { background: #1a1525; color: #a78bfa; }
-  &.tag-niyya { background: #14291a; color: #4ade80; }
+  &.tag-foi  { background: var(--app-tag-blue-bg);   color: var(--app-accent-blue); }
+  &.tag-ibad { background: var(--app-tag-purple-bg); color: var(--app-accent-purple); }
+  &.tag-niyya { background: var(--app-tag-green-bg); color: var(--app-accent-green); }
 }

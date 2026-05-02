@@ -1,16 +1,11 @@
-:host {
-  --app-background: #0a0a0a;
-  --app-accent-green: #4ade80;
-}
-
 ion-content {
-  --background: var(--app-background);
+  --background: var(--app-bg);
 }
 
 .after-hero {
   position: relative;
   padding: 44px 20px 20px;
-  background: linear-gradient(160deg, #0d1a2d 0%, #0a0a0a 60%);
+  background: var(--app-hero-blue);
 }
 
 .after-hero-accent {
@@ -19,13 +14,13 @@ ion-content {
   right: 0;
   width: 120px;
   height: 120px;
-  background: radial-gradient(circle at top right, rgba(56, 189, 248, 0.2), transparent 70%);
+  background: var(--app-hero-accent-blue);
   pointer-events: none;
 }
 
 .after-subtitle {
   font-size: 10px;
-  color: #38bdf8;
+  color: var(--app-accent-blue);
   letter-spacing: 0.12em;
   font-weight: 600;
   text-transform: uppercase;
@@ -35,17 +30,17 @@ ion-content {
 .after-title {
   font-size: 26px;
   font-weight: 700;
-  color: #fff;
+  color: var(--app-text-main);
   line-height: 1.2;
   margin: 0;
   span {
-    color: #38bdf8;
+    color: var(--app-accent-blue);
   }
 }
 
 .after-meta {
   font-size: 11px;
-  color: #555;
+  color: var(--app-text-dim);
   margin-top: 6px;
 }
 
@@ -54,7 +49,7 @@ ion-content {
   span {
     font-size: 11px;
     font-weight: 600;
-    color: #888;
+    color: var(--app-section-label);
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
@@ -71,5 +66,5 @@ ion-content {
 
 .emptyHadith {
   font-size: 13px;
-  color: #555;
+  color: var(--app-text-dim);
 }

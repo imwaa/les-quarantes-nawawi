@@ -1,13 +1,13 @@
 .after-nav {
-  --background: #0d0d0d;
-  --border-top: 1px solid #1e1e1e;
+  --background: var(--app-nav-bg);
+  --border-top: var(--app-nav-border);
   padding: 8px 0;
   height: 60px;
 }
 
 .after-nav-item {
-  --color: #444;
-  --color-selected: #4ade80;
+  --color: var(--app-nav-color);
+  --color-selected: var(--app-nav-selected);
   --ripple-color: transparent;
 
   ion-label {
@@ -24,7 +24,7 @@
   .nav-dot {
     width: 4px;
     height: 4px;
-    background: #4ade80;
+    background: var(--app-nav-selected);
     border-radius: 50%;
     margin: 4px auto 0;
     opacity: 0;

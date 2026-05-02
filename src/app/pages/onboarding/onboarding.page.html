@@ -1,0 +1,141 @@
+<ion-content [fullscreen]="true" [scrollY]="false" class="ob-content">
+
+  <!-- Skip button (hidden on last slide) -->
+  @if (currentSlide < totalSlides - 1) {
+    <button class="ob-skip" (click)="skip()">
+      {{ 'onboarding.skip' | transloco }}
+    </button>
+  }
+
+  <!-- Slides track -->
+  <div class="ob-track" [style.transform]="slideTransform">
+
+    <!-- ── Slide 1 : Bienvenue ── -->
+    <div class="ob-slide slide-green">
+      <div class="ob-bg-glow green-glow"></div>
+      <div class="ob-inner">
+
+        <div class="ob-icon-wrap green">
+          <div class="ob-icon-halo"></div>
+          <ion-icon name="library-outline" class="ob-icon float"></ion-icon>
+        </div>
+
+        <div class="ob-label green">{{ 'onboarding.slide1_label' | transloco }}</div>
+
+        <h1 class="ob-title">
+          {{ 'onboarding.slide1_title' | transloco }}<br>
+          <span class="green">{{ 'onboarding.slide1_accent' | transloco }}</span>
+        </h1>
+
+        <p class="ob-desc">{{ 'onboarding.slide1_desc' | transloco }}</p>
+
+        <div class="ob-pills">
+          <span class="ob-pill green">42 hadiths</span>
+          <span class="ob-pill blue">Sharh</span>
+          <span class="ob-pill purple">FR · EN</span>
+          <span class="ob-pill green">Mémorisation</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Slide 2 : Notifications ── -->
+    <div class="ob-slide slide-blue">
+      <div class="ob-bg-glow blue-glow"></div>
+      <div class="ob-inner">
+
+        <div class="ob-icon-wrap blue">
+          <div class="ob-icon-halo"></div>
+          <ion-icon name="notifications-outline" class="ob-icon pulse"></ion-icon>
+        </div>
+
+        <div class="ob-label blue">{{ 'onboarding.slide2_label' | transloco }}</div>
+
+        <h1 class="ob-title">
+          {{ 'onboarding.slide2_title' | transloco }}<br>
+          <span class="green">{{ 'onboarding.slide2_accent' | transloco }}</span>
+        </h1>
+
+        <p class="ob-desc">{{ 'onboarding.slide2_desc' | transloco }}</p>
+
+        <!-- Mock notification preview -->
+        <div class="ob-notif-card">
+          <div class="ob-notif-header">
+            <ion-icon name="notifications-outline" class="ob-notif-app-icon"></ion-icon>
+            <span class="ob-notif-app-name">40 Nawawi</span>
+            <span class="ob-notif-time">08:00</span>
+          </div>
+          <div class="ob-notif-title">{{ 'onboarding.slide2_preview_title' | transloco }}</div>
+          <div class="ob-notif-body">{{ 'onboarding.slide2_preview_body' | transloco }}</div>
+        </div>
+
+        <!-- Toggle row -->
+        <div class="ob-toggle-row" [class.active]="notifEnabled" (click)="notifEnabled = !notifEnabled">
+          <span class="ob-toggle-label">{{ 'onboarding.slide2_notif_toggle' | transloco }}</span>
+          <div class="ob-toggle" [class.on]="notifEnabled">
+            <div class="ob-toggle-thumb"></div>
+          </div>
+        </div>
+
+        <p class="ob-hint">{{ 'onboarding.slide2_notif_hint' | transloco }}</p>
+
+      </div>
+    </div>
+
+    <!-- ── Slide 3 : Prêt ── -->
+    <div class="ob-slide slide-purple">
+      <div class="ob-bg-glow purple-glow"></div>
+      <div class="ob-inner">
+
+        <div class="ob-icon-wrap purple">
+          <div class="ob-icon-halo"></div>
+          <ion-icon name="checkmark-circle-outline" class="ob-icon float"></ion-icon>
+        </div>
+
+        <div class="ob-label purple">{{ 'onboarding.slide3_label' | transloco }}</div>
+
+        <h1 class="ob-title">
+          {{ 'onboarding.slide3_title' | transloco }}<br>
+          <span class="purple">{{ 'onboarding.slide3_accent' | transloco }}</span>
+        </h1>
+
+        <p class="ob-desc">{{ 'onboarding.slide3_desc' | transloco }}</p>
+
+        <div class="ob-ready-badges">
+          <div class="ob-badge green">
+            <ion-icon name="library-outline"></ion-icon>
+            <span>42 hadiths</span>
+          </div>
+          <div class="ob-badge blue">
+            <ion-icon name="notifications-outline"></ion-icon>
+            <span>{{ notifEnabled ? ('onboarding.ready_notif_on' | transloco) : ('onboarding.ready_notif_off' | transloco) }}</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom nav (fixed) -->
+  <div class="ob-bottom">
+    <div class="ob-dots">
+      @for (i of [0, 1, 2]; track i) {
+        <div class="ob-dot" [class.active]="currentSlide === i"></div>
+      }
+    </div>
+
+    <button class="ob-cta" (click)="next()">
+      @if (currentSlide === 2) {
+        {{ 'onboarding.start' | transloco }} →
+      } @else if (currentSlide === 1 && notifEnabled) {
+        {{ 'onboarding.slide2_cta_on' | transloco }} →
+      } @else if (currentSlide === 1 && !notifEnabled) {
+        {{ 'onboarding.slide2_cta_off' | transloco }} →
+      } @else {
+        {{ 'onboarding.next' | transloco }} →
+      }
+    </button>
+  </div>
+
+</ion-content>

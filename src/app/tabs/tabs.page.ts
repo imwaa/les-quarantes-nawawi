@@ -1,9 +1,7 @@
 import { Component } from '@angular/core';
-import { ThemeService } from '../services/theme.service';
-import { StorageServiceService } from '../services/storage-service.service';
 import { IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { book, bookmark, extensionPuzzle, settings, star } from 'ionicons/icons';
+import { book, bookmark, extensionPuzzle, settings } from 'ionicons/icons';
 import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
@@ -13,17 +11,7 @@ import { TranslocoPipe } from '@jsverse/transloco';
   imports: [IonTabs, IonTabBar, IonTabButton, IonIcon, IonLabel, TranslocoPipe]
 })
 export class TabsPage {
-  constructor(
-    private themeService: ThemeService,
-    private storage: StorageServiceService
-  ) {
-    addIcons({ book, bookmark, extensionPuzzle, settings, star });
-    this.storage.getThemeData().subscribe((res) => {
-      if (res === null) {
-        this.themeService.setAppTheme(false, true);
-      } else {
-        this.themeService.setAppTheme(res, false);
-      }
-    });
+  constructor() {
+    addIcons({ book, bookmark, extensionPuzzle, settings });
   }
 }

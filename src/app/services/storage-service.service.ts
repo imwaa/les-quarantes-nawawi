@@ -6,6 +6,8 @@ import {from, Observable} from 'rxjs';
 
 const THEME_KEY = 'theme';
 const HADITHFAVORIS_KEY = 'hadithFavoris';
+const NOTIF_ENABLED_KEY = 'notifEnabled';
+const NOTIF_TIME_KEY = 'notifTime';
 
 @Injectable({
   providedIn: 'root',
@@ -64,5 +66,21 @@ export class StorageServiceService {
 
   private async getHadithFavoritesPromise() {
     return await this.storage.get(HADITHFAVORIS_KEY);
+  }
+
+  async getNotifEnabled(): Promise<boolean> {
+    return (await this.storage.get(NOTIF_ENABLED_KEY)) ?? false;
+  }
+
+  async setNotifEnabled(value: boolean): Promise<void> {
+    await this.storage.set(NOTIF_ENABLED_KEY, value);
+  }
+
+  async getNotifTime(): Promise<string> {
+    return (await this.storage.get(NOTIF_TIME_KEY)) ?? '08:00';
+  }
+
+  async setNotifTime(value: string): Promise<void> {
+    await this.storage.set(NOTIF_TIME_KEY, value);
   }
 }

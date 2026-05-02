@@ -60,6 +60,57 @@
   </div>
 
   <div class="after-section-label">
+    <span>{{ 'settings.notif_section' | transloco }}</span>
+  </div>
+
+  <div class="settings-list">
+    <div class="after-card notif-card">
+      <div class="after-card-num notif-icon">
+        <ion-icon name="notifications"></ion-icon>
+      </div>
+      <div class="after-card-body">
+        <div class="after-card-title">{{ 'settings.notif_daily' | transloco }}</div>
+        <div class="after-card-meta">{{ 'settings.notif_daily_meta' | transloco }}</div>
+      </div>
+      <ion-toggle
+        (ionChange)="toggleNotifications($event)"
+        [(ngModel)]="notifEnabled"
+        mode="ios"
+        color="primary"
+        slot="end"
+      ></ion-toggle>
+    </div>
+
+    @if (notifEnabled) {
+      <div class="after-card time-card">
+        <div class="after-card-num time-icon">
+          <ion-icon name="time-outline"></ion-icon>
+        </div>
+        <div class="after-card-body">
+          <div class="after-card-title">{{ 'settings.notif_time' | transloco }}</div>
+          <div class="after-card-meta">{{ 'settings.notif_time_meta' | transloco }}</div>
+        </div>
+        <input
+          type="time"
+          class="time-input"
+          [value]="notifTime"
+          (change)="onTimeChange($event)"
+        />
+      </div>
+
+      <div class="after-card test-card" (click)="sendTestNotification()">
+        <div class="after-card-num test-icon">
+          <ion-icon name="flask-outline"></ion-icon>
+        </div>
+        <div class="after-card-body">
+          <div class="after-card-title">{{ 'settings.notif_test' | transloco }}</div>
+          <div class="after-card-meta">{{ 'settings.notif_test_meta' | transloco }}</div>
+        </div>
+      </div>
+    }
+  </div>
+
+  <div class="after-section-label">
     <span>{{ 'settings.app_section' | transloco }}</span>
   </div>
 

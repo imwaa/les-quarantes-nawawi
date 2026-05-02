@@ -1,12 +1,12 @@
 ion-content {
-  --background: #0a0a0a;
+  --background: var(--app-bg);
 }
 
 /* Gradient hero */
 .after-hero {
   position: relative;
   padding: 44px 20px 20px;
-  background: linear-gradient(160deg, #1e1b4b 0%, #0a0a0a 60%);
+  background: var(--app-hero-purple);
 }
 
 .after-hero-accent {
@@ -15,13 +15,13 @@ ion-content {
   right: 0;
   width: 120px;
   height: 120px;
-  background: radial-gradient(circle at top right, rgba(167, 139, 250, 0.2), transparent 70%);
+  background: var(--app-hero-accent-purple);
   pointer-events: none;
 }
 
 .after-subtitle {
   font-size: 10px;
-  color: #a78bfa;
+  color: var(--app-accent-purple);
   letter-spacing: 0.12em;
   font-weight: 600;
   text-transform: uppercase;
@@ -31,17 +31,17 @@ ion-content {
 .after-title {
   font-size: 26px;
   font-weight: 700;
-  color: #fff;
+  color: var(--app-text-main);
   line-height: 1.2;
   margin: 0;
   span {
-    color: #a78bfa;
+    color: var(--app-accent-purple);
   }
 }
 
 .after-meta {
   font-size: 11px;
-  color: #555;
+  color: var(--app-text-dim);
   margin-top: 6px;
 }
 
@@ -51,7 +51,7 @@ ion-content {
   span {
     font-size: 11px;
     font-weight: 600;
-    color: #888;
+    color: var(--app-section-label);
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
@@ -66,8 +66,8 @@ ion-content {
 }
 
 .after-card {
-  background: #141414;
-  border: 1px solid #1f1f1f;
+  background: var(--app-bg-card);
+  border: 1px solid var(--app-border);
   border-radius: 14px;
   padding: 12px 14px;
   display: flex;
@@ -79,7 +79,7 @@ ion-content {
   transition: background 0.2s ease;
 
   &:active {
-    background: #1c1c1c;
+    background: var(--app-bg-card-hover);
   }
 
   &::before {
@@ -90,37 +90,37 @@ ion-content {
     bottom: 0;
     width: 3px;
     border-radius: 2px 0 0 2px;
-    background: #4ade80;
+    background: var(--app-accent-green);
   }
 
-  &.c2::before { background: #38bdf8; }
-  &.c3::before { background: #a78bfa; }
+  &.c2::before { background: var(--app-accent-blue); }
+  &.c3::before { background: var(--app-accent-purple); }
 }
 
 .after-card-num {
   width: 38px;
   height: 38px;
   border-radius: 10px;
-  background: #14291a;
+  background: var(--app-icon-green-bg);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  color: #4ade80;
+  color: var(--app-accent-green);
   flex-shrink: 0;
 
   &.c2 {
-    color: #38bdf8;
-    background: #0c1e2e;
+    color: var(--app-accent-blue);
+    background: var(--app-icon-blue-bg);
   }
   &.c3 {
-    color: #a78bfa;
-    background: #1a1525;
+    color: var(--app-accent-purple);
+    background: var(--app-icon-purple-bg);
   }
 
   &.c1 {
-    color: #4ade80;
-    background: #14291a;
+    color: var(--app-accent-green);
+    background: var(--app-icon-green-bg);
   }
 }
 
@@ -132,31 +132,74 @@ ion-content {
 .after-card-title {
   font-size: 14px;
   font-weight: 600;
-  color: #e5e5e5;
+  color: var(--app-text-secondary);
 }
 
 .after-card-meta {
   font-size: 11px;
-  color: #555;
+  color: var(--app-text-dim);
   margin-top: 2px;
 }
 
 .after-card-chevron {
   font-size: 18px;
-  color: #333;
+  color: var(--app-text-muted);
 }
 
 ion-toggle {
   --handle-background: #fff;
   --handle-background-checked: #fff;
-  --background: #2a2a2a;
-  --background-checked: #4ade80;
+  --background: var(--app-border-subtle);
+  --background-checked: var(--app-accent-green);
   margin: 0;
+}
+
+.notif-icon {
+  color: var(--app-accent-green);
+  background: var(--app-icon-green-bg);
+}
+
+.time-card {
+  cursor: default;
+  &:active { background: var(--app-bg-card); }
+}
+
+.time-icon {
+  color: var(--app-accent-green);
+  background: var(--app-icon-green-bg);
+}
+
+.time-input {
+  background: var(--app-bg-input);
+  border: 1px solid var(--app-border-subtle);
+  color: var(--app-text-secondary);
+  font-size: 14px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 8px;
+  outline: none;
+  flex-shrink: 0;
+  width: 92px;
+
+  &::-webkit-calendar-picker-indicator {
+    filter: invert(0.5);
+    cursor: pointer;
+  }
+}
+
+.test-card {
+  border-color: var(--app-border);
+  &::before { background: #facc15; }
+}
+
+.test-icon {
+  color: #facc15;
+  background: var(--app-icon-green-bg);
 }
 
 .lang-card {
   cursor: default;
-  &:active { background: #141414; }
+  &:active { background: var(--app-bg-card); }
 }
 
 .lang-selector {
@@ -166,9 +209,9 @@ ion-toggle {
 }
 
 .lang-btn {
-  background: #1f1f1f;
-  border: 1px solid #2a2a2a;
-  color: #666;
+  background: var(--app-bg-input);
+  border: 1px solid var(--app-border-subtle);
+  color: var(--app-text-muted);
   font-size: 12px;
   font-weight: 700;
   padding: 6px 12px;
@@ -178,9 +221,9 @@ ion-toggle {
   letter-spacing: 0.04em;
 
   &.active {
-    background: #4ade80;
-    border-color: #4ade80;
-    color: #0a0a0a;
+    background: var(--app-accent-green);
+    border-color: var(--app-accent-green);
+    color: #fff;
   }
 }
 
@@ -193,9 +236,9 @@ ion-toggle {
   gap: 12px;
 
   .version-badge {
-    background: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    color: #888;
+    background: var(--app-bg-input);
+    border: 1px solid var(--app-border-subtle);
+    color: var(--app-text-muted);
     padding: 4px 12px;
     border-radius: 20px;
     font-size: 11px;
@@ -204,9 +247,9 @@ ion-toggle {
 
   .author {
     font-size: 11px;
-    color: #555;
+    color: var(--app-text-dim);
     span {
-      color: #888;
+      color: var(--app-text-muted);
       font-weight: 500;
     }
   }

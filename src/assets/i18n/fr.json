@@ -1,0 +1,115 @@
+{
+  "tabs": {
+    "hadiths": "Hadiths",
+    "favoris": "Favoris",
+    "quiz": "Quiz",
+    "reglages": "Réglages"
+  },
+  "home": {
+    "subtitle": "Collection complète",
+    "title": "40 Hadiths",
+    "title_accent": "An-Nawawi",
+    "meta": "Imam Yahya ibn Sharaf al-Nawawi · XIIIe siècle",
+    "read": "lus",
+    "last": "Dernier : Hadith 7",
+    "search_placeholder": "Rechercher un hadith...",
+    "all_hadiths": "Tous les hadiths",
+    "biography": "Biographie →"
+  },
+  "favorites": {
+    "subtitle": "Ma collection",
+    "title": "Hadiths",
+    "title_accent": "Favoris",
+    "meta": "{{ count }} hadiths enregistrés",
+    "section": "Mes favoris",
+    "empty": "Aucun hadith n'a été ajouté dans les favoris"
+  },
+  "hadith": {
+    "counter": "Hadith {{ num }} / 42",
+    "collection": "Collection",
+    "tabs": {
+      "text": "Texte",
+      "sharh": "Sharh",
+      "memorize": "Mémoriser"
+    },
+    "tags": {
+      "niyyah": "Niyyah",
+      "foi": "Foi",
+      "ibadah": "Ibadah"
+    },
+    "sharh_summary": "Résumé du Sharh",
+    "sharh_more": "Voir l'explication complète →",
+    "sharh_resume": "Résumé",
+    "sharh_lessons": "Leçons à retenir",
+    "sharh_detail": "Explication détaillée",
+    "sharh_soon": "L'explication pour ce hadith arrive bientôt.",
+    "memorize_soon": "Fonctionnalité de mémorisation bientôt disponible.",
+    "next": "Hadith suivant →",
+    "nawawi_credit": "An-Nawawi · Hadith n°{{ id }}"
+  },
+  "settings": {
+    "subtitle": "Configuration",
+    "title": "Réglages",
+    "title_accent": "Généraux",
+    "meta": "Personnalisez votre expérience de lecture",
+    "appearance": "Apparence",
+    "dark_mode": "Mode Sombre",
+    "dark_mode_meta": "Activer le thème nuit",
+    "app_section": "Application",
+    "share_app": "Partager l'application",
+    "share_app_meta": "Faire connaître l'app à vos proches",
+    "rate": "Donner un avis",
+    "rate_meta": "Soutenir le développement",
+    "support": "Soutien",
+    "donate": "Faire un don",
+    "donate_meta": "Aidez-nous à maintenir l'application gratuite",
+    "notif_section": "Notifications",
+    "notif_daily": "Hadith du Jour",
+    "notif_daily_meta": "Recevoir un hadith chaque jour",
+    "notif_time": "Heure de notification",
+    "notif_time_meta": "Choisissez l'heure de réception",
+    "notif_test": "Tester la notification",
+    "notif_test_meta": "Envoie une notification dans 10 secondes",
+    "language_section": "Langue",
+    "select_language": "Langue de l'application",
+    "select_language_meta": "Contenu disponible en français et anglais",
+    "version": "Version 4.0.0",
+    "author": "Développé par",
+    "author_name": "Walid Salhi Belkacem"
+  },
+  "toast": {
+    "added": "Hadith ajouté dans les favoris",
+    "removed": "Hadith supprimé des favoris"
+  },
+  "onboarding": {
+    "skip": "Passer",
+    "next": "Suivant",
+    "start": "Commencer",
+    "slide1_label": "Bienvenue",
+    "slide1_title": "40 Hadiths",
+    "slide1_accent": "An-Nawawi",
+    "slide1_desc": "La collection complète d'Imam Nawawi — 42 hadiths fondamentaux avec explication (sharh) et mémorisation guidée.",
+    "slide2_label": "Ne rien manquer",
+    "slide2_title": "Hadith",
+    "slide2_accent": "du Jour",
+    "slide2_desc": "Recevez un hadith chaque matin à 8h. Une minute par jour pour renforcer votre connaissance.",
+    "slide2_notif_toggle": "Activer les notifications",
+    "slide2_notif_hint": "Modifiable à tout moment dans Réglages",
+    "slide2_cta_on": "Activer et continuer",
+    "slide2_cta_off": "Continuer sans notifications",
+    "slide2_preview_title": "Hadith du Jour",
+    "slide2_preview_body": "Les actes ne valent que par leurs intentions, et chacun n'obtient que selon son intention...",
+    "slide3_label": "Tout est prêt",
+    "slide3_title": "Bonne",
+    "slide3_accent": "lecture !",
+    "slide3_desc": "Que cette collection vous apporte connaissance, sagesse et sérénité. Qu'Allah vous accorde la baraka.",
+    "ready_notif_on": "Notifications activées",
+    "ready_notif_off": "Sans notifications"
+  },
+  "share": {
+    "hadith_dialog": "Partager un Hadith",
+    "app_title": "Téléchargez l'application Les 40 Hadith Nawawi",
+    "app_text": "Dans cette app vous y trouverez les 42 hadith rapportés par Al-Nawawi en français et arabe!",
+    "app_dialog": "Partager l'application Les 40 Nawawi"
+  }
+}

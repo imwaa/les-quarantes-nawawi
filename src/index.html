@@ -25,6 +25,12 @@
 </head>
 
 <body>
+  <script>
+    (function() {
+      var t = localStorage.getItem('appTheme');
+      if (t !== 'light') { document.body.setAttribute('color-theme', 'dark'); }
+    })();
+  </script>
   <app-root></app-root>
   <noscript>Please enable JavaScript to continue using this application.</noscript>
 </body>

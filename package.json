@@ -25,6 +25,7 @@
     "@capacitor/core": "^7.0.0",
     "@capacitor/haptics": "^7.0.0",
     "@capacitor/keyboard": "^7.0.0",
+    "@capacitor/local-notifications": "^7.0.6",
     "@capacitor/share": "^7.0.0",
     "@capacitor/splash-screen": "^7.0.0",
     "@capacitor/status-bar": "^7.0.0",

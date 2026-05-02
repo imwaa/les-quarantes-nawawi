@@ -4,7 +4,7 @@ const config: CapacitorConfig = {
   appId: 'com.walid.nawawi',
   appName: '40 Nawawi',
   webDir: 'www/browser',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
 };
 
 export default config;

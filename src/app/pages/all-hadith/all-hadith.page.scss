@@ -1,19 +1,12 @@
-:host {
-  --app-background: #0a0a0a;
-  --app-card-background: #141414;
-  --app-card-border: #1f1f1f;
-  --app-accent-green: #4ade80;
-}
-
 ion-content {
-  --background: var(--app-background);
+  --background: var(--app-bg);
 }
 
 /* Gradient hero */
 .after-hero {
   position: relative;
   padding: 44px 20px 20px;
-  background: linear-gradient(160deg, #0d2d1a 0%, #0a0a0a 60%);
+  background: var(--app-hero-green);
 }
 
 .after-hero-accent {
@@ -22,7 +15,7 @@ ion-content {
   right: 0;
   width: 120px;
   height: 120px;
-  background: radial-gradient(circle at top right, rgba(22, 163, 74, 0.2), transparent 70%);
+  background: var(--app-hero-accent-green);
   pointer-events: none;
 }
 
@@ -38,7 +31,7 @@ ion-content {
 .after-title {
   font-size: 26px;
   font-weight: 700;
-  color: #fff;
+  color: var(--app-text-main);
   line-height: 1.2;
   margin: 0;
   span {
@@ -48,7 +41,7 @@ ion-content {
 
 .after-meta {
   font-size: 11px;
-  color: #555;
+  color: var(--app-text-dim);
   margin-top: 6px;
 }
 
@@ -77,12 +70,20 @@ ion-content {
   color: var(--app-accent-green);
 }
 
+.ring-track {
+  stroke: var(--app-ring-track);
+}
+
+.ring-progress {
+  stroke: var(--app-accent-green);
+}
+
 .progress-text {
   font-size: 11px;
-  color: #888;
+  color: var(--app-text-muted);
   line-height: 1.5;
   strong {
-    color: #ccc;
+    color: var(--app-text-strong);
     font-weight: 600;
   }
 }
@@ -93,15 +94,15 @@ ion-content {
 }
 
 .after-search {
-  --background: #1a1a1a;
+  --background: var(--app-searchbar-bg);
   --border-radius: 14px;
-  --placeholder-color: #555;
-  --color: #ccc;
-  --icon-color: #555;
+  --placeholder-color: var(--app-searchbar-placeholder);
+  --color: var(--app-searchbar-color);
+  --icon-color: var(--app-searchbar-icon);
   --box-shadow: none;
   padding: 0;
   height: 44px;
-  border: 1px solid #2a2a2a;
+  border: var(--app-searchbar-border);
   border-radius: 14px;
 }
 
@@ -114,13 +115,13 @@ ion-content {
   span:first-child {
     font-size: 11px;
     font-weight: 600;
-    color: #888;
+    color: var(--app-section-label);
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
   span:last-child {
     font-size: 11px;
-    color: var(--app-accent-green);
+    color: var(--app-section-link);
     font-weight: 500;
   }
 }
