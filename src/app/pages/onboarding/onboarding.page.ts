@@ -1,13 +1,21 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { IonContent } from '@ionic/angular/standalone';
+import { IonContent, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { libraryOutline, notificationsOutline, checkmarkCircleOutline, sparklesOutline } from 'ionicons/icons';
-import { IonIcon } from '@ionic/angular/standalone';
+import {
+  globeOutline,
+  bookOutline,
+  libraryOutline,
+  notificationsOutline,
+  checkmarkCircleOutline,
+  checkmarkCircle,
+  chevronBackOutline
+} from 'ionicons/icons';
 import { TranslocoPipe } from '@jsverse/transloco';
 import { NotificationService } from '../../services/notification.service';
 import { StorageServiceService } from '../../services/storage-service.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-onboarding',
@@ -17,23 +25,41 @@ import { StorageServiceService } from '../../services/storage-service.service';
 })
 export class OnboardingPage {
   currentSlide = 0;
-  readonly totalSlides = 3;
+  readonly totalSlides = 4;
+
+  // Slide 0 — language
+  selectedLang: string;
+
+  // Slide 2 — notifications
   notifEnabled = true;
 
   constructor(
     private router: Router,
     private notifService: NotificationService,
-    private storage: StorageServiceService
+    private storage: StorageServiceService,
+    public langService: LanguageService
   ) {
-    addIcons({ libraryOutline, notificationsOutline, checkmarkCircleOutline, sparklesOutline });
+    addIcons({ globeOutline, bookOutline, libraryOutline, notificationsOutline, checkmarkCircleOutline, checkmarkCircle, chevronBackOutline });
+    this.selectedLang = this.langService.currentLang();
   }
 
   get slideTransform(): string {
     return `translateX(calc(${this.currentSlide} * -100vw))`;
   }
 
+  selectLang(lang: string) {
+    this.selectedLang = lang;
+    this.langService.setLanguage(lang);
+  }
+
+  prev() {
+    if (this.currentSlide > 0) {
+      this.currentSlide--;
+    }
+  }
+
   async next() {
-    if (this.currentSlide === 1) {
+    if (this.currentSlide === 2) {
       await this.handleNotifSlide();
     }
     if (this.currentSlide < this.totalSlides - 1) {
