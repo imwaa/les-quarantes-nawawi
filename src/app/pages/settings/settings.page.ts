@@ -8,7 +8,7 @@ import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, I
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { addIcons } from 'ionicons';
-import { moon, people, star, heart, chevronForward, shareSocialOutline, starOutline, language, notifications, timeOutline, flaskOutline } from 'ionicons/icons';
+import { moon, people, star, heart, chevronForward, chevronDownOutline, checkmarkOutline, shareSocialOutline, starOutline, language, notifications, timeOutline, flaskOutline } from 'ionicons/icons';
 import { TranslocoService, TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
@@ -21,6 +21,18 @@ export class SettingsPage implements OnInit {
   themeValue = false;
   notifEnabled = false;
   notifTime = '08:00';
+  langDropdownOpen = false;
+
+  readonly langs = [
+    { code: 'fr', flag: '🇫🇷', name: 'Français' },
+    { code: 'en', flag: '🇬🇧', name: 'English' },
+    { code: 'es', flag: '🇪🇸', name: 'Español' },
+    { code: 'ar', flag: '🇸🇦', name: 'العربية' },
+  ];
+
+  get currentLang() {
+    return this.langs.find(l => l.code === this.langService.currentLang()) ?? this.langs[0];
+  }
 
   constructor(
     private themeService: ThemeService,
@@ -29,7 +41,7 @@ export class SettingsPage implements OnInit {
     private notifService: NotificationService,
     private translocoService: TranslocoService
   ) {
-    addIcons({ moon, people, star, heart, chevronForward, shareSocialOutline, starOutline, language, notifications, timeOutline, flaskOutline });
+    addIcons({ moon, people, star, heart, chevronForward, chevronDownOutline, checkmarkOutline, shareSocialOutline, starOutline, language, notifications, timeOutline, flaskOutline });
     this.storage.getThemeData().subscribe((res) => {
       this.themeValue = res ?? true;
     });
@@ -46,6 +58,15 @@ export class SettingsPage implements OnInit {
 
   toggleTheme(event) {
     this.themeService.setAppTheme(event.detail.checked, true);
+  }
+
+  toggleLangDropdown() {
+    this.langDropdownOpen = !this.langDropdownOpen;
+  }
+
+  pickLang(code: string) {
+    this.langService.setLanguage(code);
+    this.langDropdownOpen = false;
   }
 
   setLanguage(lang: string) {

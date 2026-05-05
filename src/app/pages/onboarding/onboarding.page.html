@@ -57,6 +57,20 @@
               <span class="ob-lang-flag">🇬🇧</span>
               <span class="ob-lang-name">English</span>
             </div>
+            <div class="ob-lang-card" [class.selected]="selectedLang === 'es'" (click)="selectLang('es')">
+              @if (selectedLang === 'es') {
+                <ion-icon name="checkmark-circle" class="ob-lang-check"></ion-icon>
+              }
+              <span class="ob-lang-flag">🇪🇸</span>
+              <span class="ob-lang-name">Español</span>
+            </div>
+            <div class="ob-lang-card" [class.selected]="selectedLang === 'ar'" (click)="selectLang('ar')">
+              @if (selectedLang === 'ar') {
+                <ion-icon name="checkmark-circle" class="ob-lang-check"></ion-icon>
+              }
+              <span class="ob-lang-flag">🇸🇦</span>
+              <span class="ob-lang-name">العربية</span>
+            </div>
           </div>
 
         </div>
@@ -83,7 +97,7 @@
 
           <div class="ob-pills">
             <span class="ob-pill green">42 hadiths</span>
-            <span class="ob-pill blue">Sharh</span>
+            <span class="ob-pill blue">{{ 'onboarding.pill_sharh' | transloco }}</span>
             <span class="ob-pill purple">FR · EN</span>
             <span class="ob-pill green">{{ 'onboarding.pill_memorize' | transloco }}</span>
           </div>

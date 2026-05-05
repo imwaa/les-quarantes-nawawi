@@ -30,7 +30,7 @@ export class HadithPagePage implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private hadithService: HadithServiceService,
-    private langService: LanguageService,
+    public langService: LanguageService,
     private storage: StorageServiceService,
     public toastController: ToastController,
     private translocoService: TranslocoService
@@ -57,7 +57,9 @@ export class HadithPagePage implements OnInit {
     });
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.storage.markHadithAsRead(parseInt(this.hadithNumber));
+  }
 
   private loadHadithContent() {
     this.hadithFr = this.hadithService.getHadithById(this.hadithNumber);

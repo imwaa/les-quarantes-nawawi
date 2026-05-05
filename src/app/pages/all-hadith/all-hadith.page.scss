@@ -45,18 +45,59 @@ ion-content {
   margin-top: 6px;
 }
 
+/* Hero bottom row: progress + bio button */
+.hero-bottom-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  gap: 12px;
+}
+
+.bio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 7px 12px 7px 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--app-text-main);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background 0.2s, border-color 0.2s;
+
+  ion-icon:first-child {
+    font-size: 16px;
+    color: var(--app-accent-green);
+  }
+
+  ion-icon:last-child {
+    font-size: 13px;
+    color: var(--app-text-muted);
+    margin-left: 2px;
+  }
+
+  &:active {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.28);
+  }
+}
+
 /* Progress ring */
 .progress-row {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-top: 18px;
+  gap: 10px;
 }
 
 .ring-wrap {
   position: relative;
-  width: 44px;
-  height: 44px;
+  width: 40px;
+  height: 40px;
 }
 
 .ring-label {
@@ -88,22 +129,145 @@ ion-content {
   }
 }
 
-/* Search bar */
-.search-container {
-  padding: 12px 12px 0;
+.search-toggle {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--app-text-muted);
+  font-size: 17px;
+  transition: color 0.2s;
+
+  &.active { color: var(--app-accent-green); }
+  &:active { opacity: 0.6; }
 }
 
-.after-search {
-  --background: var(--app-searchbar-bg);
-  --border-radius: 14px;
-  --placeholder-color: var(--app-searchbar-placeholder);
-  --color: var(--app-searchbar-color);
-  --icon-color: var(--app-searchbar-icon);
-  --box-shadow: none;
-  padding: 0;
-  height: 44px;
-  border: var(--app-searchbar-border);
+/* ── Collapsible search ── */
+.search-collapse {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &.open { max-height: 90px; }
+}
+
+.search-inner {
+  padding: 0 16px 12px;
+}
+
+.search-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--app-searchbar-bg);
+  border: 1.5px solid var(--app-border-subtle);
   border-radius: 14px;
+  padding: 0 14px;
+  height: 42px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &.focused {
+    border-color: var(--app-accent-green);
+    box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.1);
+
+    .search-icon { color: var(--app-accent-green); }
+  }
+}
+
+.search-icon {
+  font-size: 16px;
+  color: var(--app-searchbar-icon);
+  flex-shrink: 0;
+  transition: color 0.2s;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: var(--app-searchbar-color);
+  font-family: inherit;
+  min-width: 0;
+
+  &::placeholder { color: var(--app-searchbar-placeholder); }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button { display: none; }
+}
+
+.search-clear {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: var(--app-text-muted);
+  font-size: 17px;
+  flex-shrink: 0;
+  opacity: 0.6;
+  transition: opacity 0.15s;
+
+  &:active { opacity: 0.3; }
+}
+
+.search-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 2px 0;
+}
+
+.search-count {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--app-accent-green);
+  background: var(--app-tag-green-bg);
+  padding: 2px 8px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.search-query {
+  font-size: 11px;
+  color: var(--app-text-muted);
+  font-style: italic;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Empty state ── */
+.search-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 32px;
+  text-align: center;
+
+  .empty-icon {
+    font-size: 44px;
+    color: var(--app-border);
+    margin-bottom: 16px;
+  }
+
+  .empty-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--app-text-secondary);
+    margin: 0 0 6px;
+  }
+
+  .empty-sub {
+    font-size: 13px;
+    color: var(--app-text-muted);
+    margin: 0;
+    line-height: 1.55;
+  }
 }
 
 /* Section label */

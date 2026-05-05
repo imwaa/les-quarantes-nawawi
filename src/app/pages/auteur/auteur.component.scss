@@ -1,0 +1,234 @@
+ion-content {
+  --background: var(--app-bg);
+}
+
+.auteur-inner {
+  min-height: 100%;
+}
+
+/* Topbar */
+.auteur-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  padding: 12px 8px;
+  display: flex;
+  align-items: center;
+}
+
+.auteur-back {
+  ion-back-button {
+    --color: rgba(255, 255, 255, 0.9);
+    --icon-font-size: 22px;
+  }
+}
+
+/* Hero */
+.auteur-hero {
+  position: relative;
+  padding: 72px 20px 28px;
+  background: var(--app-hero-purple);
+  overflow: hidden;
+}
+
+.auteur-hero-accent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 160px;
+  height: 160px;
+  background: var(--app-hero-accent-purple);
+  pointer-events: none;
+}
+
+.auteur-badge {
+  font-size: 10px;
+  color: var(--app-accent-purple);
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.auteur-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--app-text-main);
+  line-height: 1.15;
+  margin: 0 0 8px;
+
+  span {
+    color: var(--app-accent-purple);
+  }
+}
+
+.auteur-dates {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--app-text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 4px;
+}
+
+.auteur-meta {
+  font-size: 12px;
+  color: var(--app-text-dim);
+}
+
+/* Section label */
+.auteur-section-label {
+  padding: 24px 20px 10px;
+
+  span {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--app-section-label);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+}
+
+/* Cards container */
+.auteur-cards {
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Info card (key/value rows) */
+.auteur-info-card {
+  background: var(--app-bg-card);
+  border: 1px solid var(--app-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.auteur-info-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--app-border-subtle);
+  }
+}
+
+.auteur-info-icon {
+  font-size: 20px;
+  width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.auteur-info-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.auteur-info-title {
+  font-size: 11px;
+  color: var(--app-text-dim);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 2px;
+}
+
+.auteur-info-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--app-text-secondary);
+}
+
+/* Text card (biography paragraphs) */
+.auteur-text-card {
+  background: var(--app-bg-card);
+  border: 1px solid var(--app-border);
+  border-radius: 14px;
+  padding: 16px;
+
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--app-text-secondary);
+    margin: 0 0 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* Works card */
+.auteur-works-card {
+  background: var(--app-bg-card);
+  border: 1px solid var(--app-border);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.auteur-work-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 16px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--app-border-subtle);
+  }
+}
+
+.auteur-work-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--app-accent-green);
+  flex-shrink: 0;
+  margin-top: 5px;
+
+  &.c2 { background: var(--app-accent-blue); }
+  &.c3 { background: var(--app-accent-purple); }
+}
+
+.auteur-work-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--app-text-secondary);
+  margin-bottom: 2px;
+}
+
+.auteur-work-meta {
+  font-size: 12px;
+  color: var(--app-text-dim);
+}
+
+/* Dua */
+.auteur-dua {
+  background: var(--app-bg-card);
+  border: 1px solid var(--app-border);
+  border-radius: 14px;
+  padding: 20px 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.auteur-dua-icon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.auteur-dua-text {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--app-text-dim);
+  line-height: 1.6;
+}
+
+.auteur-footer {
+  height: 40px;
+}

@@ -20,11 +20,10 @@
     <div class="detail-tabs">
       <div class="detail-tab" [class.active]="activeTab === 'text'" (click)="activeTab = 'text'">{{ 'hadith.tabs.text' | transloco }}</div>
       <div class="detail-tab" [class.active]="activeTab === 'sharh'" (click)="activeTab = 'sharh'">{{ 'hadith.tabs.sharh' | transloco }}</div>
-      <div class="detail-tab" [class.active]="activeTab === 'memorize'" (click)="activeTab = 'memorize'">{{ 'hadith.tabs.memorize' | transloco }}</div>
     </div>
 
     <div class="detail-content" *ngIf="activeTab === 'text'">
-      <div class="detail-arabic">{{ hadithAr?.contenu }}</div>
+      <div class="detail-arabic" *ngIf="langService.currentLang() !== 'ar'">{{ hadithAr?.contenu }}</div>
       <div class="detail-text">{{ hadithFr?.contenu }}</div>
 
       <div class="detail-sharh-preview" *ngIf="sharh" (click)="activeTab = 'sharh'">
@@ -62,12 +61,6 @@
           {{ 'hadith.sharh_soon' | transloco }}
         </div>
       </ng-template>
-    </div>
-
-    <div class="detail-content" *ngIf="activeTab === 'memorize'">
-      <div class="detail-text">
-        {{ 'hadith.memorize_soon' | transloco }}
-      </div>
     </div>
 
     <div class="detail-actions">

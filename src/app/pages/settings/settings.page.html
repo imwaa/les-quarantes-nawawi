@@ -34,7 +34,7 @@
   </div>
 
   <div class="settings-list">
-    <div class="after-card lang-card">
+    <div class="after-card lang-card" [class.dropdown-open]="langDropdownOpen">
       <div class="after-card-num">
         <ion-icon name="language"></ion-icon>
       </div>
@@ -42,20 +42,27 @@
         <div class="after-card-title">{{ 'settings.select_language' | transloco }}</div>
         <div class="after-card-meta">{{ 'settings.select_language_meta' | transloco }}</div>
       </div>
-      <div class="lang-selector">
-        <button
-          class="lang-btn"
-          [class.active]="langService.currentLang() === 'fr'"
-          (click)="setLanguage('fr')">
-          FR
-        </button>
-        <button
-          class="lang-btn"
-          [class.active]="langService.currentLang() === 'en'"
-          (click)="setLanguage('en')">
-          EN
-        </button>
-      </div>
+
+      <button class="lang-select-btn" (click)="toggleLangDropdown()" type="button">
+        <span class="lang-flag-current">{{ currentLang.flag }}</span>
+        <span class="lang-name-current">{{ currentLang.name }}</span>
+        <ion-icon name="chevron-down-outline" class="lang-chevron" [class.rotated]="langDropdownOpen"></ion-icon>
+      </button>
+
+      @if (langDropdownOpen) {
+        <div class="lang-dropdown">
+          @for (lang of langs; track lang.code) {
+            <button class="lang-option" [class.active]="langService.currentLang() === lang.code"
+                    (click)="pickLang(lang.code)" type="button">
+              <span class="lang-flag">{{ lang.flag }}</span>
+              <span class="lang-option-name">{{ lang.name }}</span>
+              @if (langService.currentLang() === lang.code) {
+                <ion-icon name="checkmark-outline" class="lang-check"></ion-icon>
+              }
+            </button>
+          }
+        </div>
+      }
     </div>
   </div>
 

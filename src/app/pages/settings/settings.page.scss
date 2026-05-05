@@ -199,32 +199,101 @@ ion-toggle {
 
 .lang-card {
   cursor: default;
+  overflow: visible;
+  position: relative;
   &:active { background: var(--app-bg-card); }
 }
 
-.lang-selector {
+.lang-select-btn {
   display: flex;
+  align-items: center;
   gap: 6px;
-  flex-shrink: 0;
-}
-
-.lang-btn {
   background: var(--app-bg-input);
   border: 1px solid var(--app-border-subtle);
-  color: var(--app-text-muted);
-  font-size: 12px;
-  font-weight: 700;
-  padding: 6px 12px;
-  border-radius: 8px;
+  border-radius: 10px;
+  padding: 7px 10px;
   cursor: pointer;
-  transition: all 0.2s ease;
-  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  transition: border-color 0.2s;
 
-  &.active {
-    background: var(--app-accent-green);
+  &:active { opacity: 0.7; }
+
+  .dropdown-open & {
     border-color: var(--app-accent-green);
-    color: #fff;
   }
+}
+
+.lang-flag-current {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.lang-name-current {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--app-text-secondary);
+}
+
+.lang-chevron {
+  font-size: 14px;
+  color: var(--app-text-muted);
+  transition: transform 0.22s ease;
+
+  &.rotated { transform: rotate(180deg); }
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  background: var(--app-bg-card);
+  border: 1px solid var(--app-border);
+  border-radius: 14px;
+  z-index: 100;
+  min-width: 170px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  padding: 13px 16px;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--app-border-subtle);
+  }
+
+  &:active { background: var(--app-bg-card-hover); }
+
+  &.active .lang-option-name {
+    color: var(--app-accent-green);
+    font-weight: 700;
+  }
+}
+
+.lang-flag {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.lang-option-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--app-text-secondary);
+  flex: 1;
+  text-align: left;
+}
+
+.lang-check {
+  font-size: 16px;
+  color: var(--app-accent-green);
 }
 
 .footer {

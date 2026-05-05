@@ -6,6 +6,7 @@ import {from, Observable} from 'rxjs';
 
 const THEME_KEY = 'theme';
 const HADITHFAVORIS_KEY = 'hadithFavoris';
+const HADITH_READ_KEY = 'hadithRead';
 const NOTIF_ENABLED_KEY = 'notifEnabled';
 const NOTIF_TIME_KEY = 'notifTime';
 
@@ -14,6 +15,7 @@ const NOTIF_TIME_KEY = 'notifTime';
 })
 export class StorageServiceService {
   public savedHadithList: WritableSignal<number[]> = signal<number[]>([]);
+  public readHadithIds: WritableSignal<Set<number>> = signal(new Set<number>());
 
   public isStorageReady: WritableSignal<boolean> = signal(false);
 
@@ -27,6 +29,8 @@ export class StorageServiceService {
     this.isStorageReady.set(true);
     const res = await this.getHadithFavoritesPromise();
     this.savedHadithList.set(res || []);
+    const readArr: number[] = (await this.storage.get(HADITH_READ_KEY)) || [];
+    this.readHadithIds.set(new Set(readArr));
   }
 
   getThemeData(): Observable<any> {
@@ -66,6 +70,15 @@ export class StorageServiceService {
 
   private async getHadithFavoritesPromise() {
     return await this.storage.get(HADITHFAVORIS_KEY);
+  }
+
+  async markHadithAsRead(id: number): Promise<void> {
+    const current = this.readHadithIds();
+    if (current.has(id)) return;
+    const updated = new Set(current);
+    updated.add(id);
+    this.readHadithIds.set(updated);
+    await this.storage.set(HADITH_READ_KEY, Array.from(updated));
   }
 
   async getNotifEnabled(): Promise<boolean> {

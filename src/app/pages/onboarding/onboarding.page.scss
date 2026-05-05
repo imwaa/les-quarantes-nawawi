@@ -213,10 +213,11 @@ ion-content.ob-content {
 }
 
 .ob-lang-cards {
-  display: flex;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   width: 100%;
-  max-width: 290px;
+  max-width: 300px;
 }
 
 .ob-lang-card {

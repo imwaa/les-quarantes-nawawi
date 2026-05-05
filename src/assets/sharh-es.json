@@ -1,0 +1,548 @@
+[
+  {
+    "id": 1,
+    "resume": "Las acciones dependen de las intenciones.",
+    "themes": ["intención", "sinceridad", "acción"],
+    "lecons": [
+      "Toda acción se juzga por la intención que la acompaña.",
+      "La intención debe ser sincera y orientada hacia Allah.",
+      "Una misma acción puede ser recompensada o no según la intención.",
+      "La emigración por Allah vale más que la realizada por beneficios mundanos.",
+      "La sinceridad es el fundamento de toda obra."
+    ],
+    "sharh": "Este es el primer hadith de la colección y uno de los más importantes del Islam. El Profeta ﷺ enseña que el valor de una acción no reside únicamente en su forma exterior, sino en la intención que la motiva. Una misma acción puede ser un acto de adoración si se realiza por Allah, o un simple acto mundano si la intención es otra. Este principio es la base de toda la espiritualidad islámica."
+  },
+  {
+    "id": 2,
+    "resume": "Los pilares del Islam, la fe y el ihsan en un solo hadith.",
+    "themes": ["islam", "fe", "ihsan", "Ángel Yibril"],
+    "lecons": [
+      "El Islam tiene cinco pilares fundamentales.",
+      "La fe (Iman) implica creer en seis artículos.",
+      "El ihsan es adorar a Allah como si Lo vieras.",
+      "El conocimiento de la Hora pertenece solo a Allah.",
+      "La religión tiene dimensiones externas e internas."
+    ],
+    "sharh": "Este hadith, conocido como el 'hadith de Yibril', es una síntesis completa de la religión islámica. El ángel Yibril vino en forma humana para enseñar a los Compañeros los fundamentos del Islam: la práctica exterior (Islam), la fe interior (Iman) y la excelencia espiritual (Ihsan). Este hadith es llamado por los estudiosos 'la madre de la Sunna'."
+  },
+  {
+    "id": 3,
+    "resume": "El Islam se construye sobre cinco pilares.",
+    "themes": ["pilares", "Islam", "práctica"],
+    "lecons": [
+      "La shahada es la declaración de fe.",
+      "La oración es la columna vertebral de la práctica.",
+      "El Zakat purifica los bienes y ayuda a los necesitados.",
+      "El Ramadán es un mes de purificación espiritual.",
+      "El Haj es obligatorio para quien tiene los medios."
+    ],
+    "sharh": "Este hadith enumera los cinco pilares que estructuran la vida del musulmán. Cada pilar tiene una dimensión espiritual y social: la shahada confirma la fe, la oración mantiene la conexión con Allah, el Zakat fortalece la solidaridad, el ayuno purifica el alma, y el Haj es el encuentro de la comunidad musulmana."
+  },
+  {
+    "id": 4,
+    "resume": "El alma es insuflada en el feto a los ciento veinte días.",
+    "themes": ["creación", "alma", "destino"],
+    "lecons": [
+      "El ser humano pasa por etapas de creación en el vientre materno.",
+      "El alma es insuflada a los ciento veinte días.",
+      "El ángel escribe el destino: sustento, vida, obras, paraíso o infierno.",
+      "El destino está escrito pero la responsabilidad persiste.",
+      "Nunca se debe desesperar de la misericordia de Allah."
+    ],
+    "sharh": "Este hadith describe las etapas de creación del ser humano y el momento en que el alma es insuflada. Enseña el concepto de qadar (destino divino) sin eliminar la responsabilidad humana. El hecho de que el destino esté escrito no exime al hombre de esforzarse: quien vive y actúa bien, confirma su destino favorable."
+  },
+  {
+    "id": 5,
+    "resume": "Toda innovación no fundamentada en el Islam es rechazada.",
+    "themes": ["innovación", "bid'a", "sunna"],
+    "lecons": [
+      "La religión está completa y no necesita añadidos.",
+      "Toda innovación sin base en el Corán o la Sunna es rechazada.",
+      "La sinceridad no basta si el acto no tiene fundamento.",
+      "Seguir la Sunna es una protección contra el extravío.",
+      "La religión es un depósito que hay que preservar."
+    ],
+    "sharh": "Este hadith establece un principio fundamental: solo son aceptables los actos de adoración que tienen base en la revelación. No basta con la buena intención si el acto en sí no está prescrito. Este principio protege la religión de desviaciones y garantiza la autenticidad de la práctica islámica."
+  },
+  {
+    "id": 6,
+    "resume": "El corazón es la sede de la rectitud o de la corrupción.",
+    "themes": ["halal", "haram", "corazón", "duda"],
+    "lecons": [
+      "Lo lícito es claro, lo ilícito también.",
+      "Entre ambos existen zonas ambiguas.",
+      "Evitar lo dudoso protege la religión y el honor.",
+      "El corazón sano es la clave de la rectitud general.",
+      "Es preciso proteger el corazón de las tentaciones."
+    ],
+    "sharh": "Este hadith aborda el concepto de halal y haram, y subraya la existencia de una zona gris entre ambos. La metáfora del pastor que se acerca al límite prohibido ilustra perfectamente el riesgo de acercarse a lo dudoso. La imagen del corazón al final recuerda que la rectitud interior es condición de la rectitud exterior."
+  },
+  {
+    "id": 7,
+    "resume": "La religión se resume en el consejo sincero.",
+    "themes": ["consejo", "sinceridad", "responsabilidad"],
+    "lecons": [
+      "El consejo sincero es un pilar de la religión.",
+      "Debe dirigirse a Allah, Su Libro, Su Mensajero.",
+      "También a los gobernantes y al pueblo.",
+      "El consejo es un acto de amor y responsabilidad.",
+      "Guardar silencio ante el error es una falta."
+    ],
+    "sharh": "La nasiha (consejo sincero) es aquí presentada como la esencia de la religión. No se trata de crítica destructiva, sino de un deseo genuino de bien para el otro. El consejo se dirige tanto a Allah (obediencia sincera) como a las criaturas (rectitud en las relaciones). Es un acto de amor que sostiene a la comunidad."
+  },
+  {
+    "id": 8,
+    "resume": "Aceptar el Islam protege la vida y los bienes.",
+    "themes": ["vida", "bienes", "Islam", "justicia"],
+    "lecons": [
+      "La declaración de fe protege la vida y los bienes.",
+      "Los derechos del hombre están garantizados en el Islam.",
+      "La justicia interna del Islam se aplica por igual.",
+      "La vida humana es sagrada.",
+      "El juicio final pertenece a Allah."
+    ],
+    "sharh": "Este hadith establece que quien entra en el Islam ve su vida y bienes protegidos. No se trata de un llamado a la guerra, sino de un principio de protección: quien pronuncia la shahada entra en la comunidad de creyentes cuyos derechos son inviolables. El juicio de las intenciones y los actos ocultos pertenece a Allah."
+  },
+  {
+    "id": 9,
+    "resume": "Actuar sin exceso de preguntas ni contradicción.",
+    "themes": ["obediencia", "moderación", "pregunta"],
+    "lecons": [
+      "Cumplir las órdenes según las propias capacidades.",
+      "El exceso de preguntas puede llevar al extravío.",
+      "Las comunidades anteriores se perdieron por contradecir a sus profetas.",
+      "La moderación y la sencillez son signos de madurez espiritual.",
+      "La obediencia a Allah es la clave del éxito."
+    ],
+    "sharh": "Este hadith enseña la moderación en la práctica religiosa. El exceso de preguntas sobre cosas no preguntadas puede llevar a complicaciones innecesarias. La historia de las comunidades anteriores ilustra cómo el exceso de cuestionamiento y la contradicción con los profetas condujeron a su perdición."
+  },
+  {
+    "id": 10,
+    "resume": "La súplica solo es aceptada con sustento lícito.",
+    "themes": ["pureza", "halal", "súplica", "sinceridad"],
+    "lecons": [
+      "Allah es Puro y solo acepta lo puro.",
+      "Los creyentes tienen las mismas obligaciones que los mensajeros.",
+      "El sustento lícito es condición para la aceptación de la súplica.",
+      "La ropa y los bienes también deben ser lícitos.",
+      "La apariencia exterior de devoción no basta sin pureza interior."
+    ],
+    "sharh": "Este hadith enseña que la aceptación de la súplica (du'a) está condicionada por la pureza del sustento. La imagen del hombre con aspecto de peregrino pero alimentado con lo ilícito ilustra la contradicción entre la forma exterior y la realidad interior. Allah es Puro y exige pureza de Sus siervos."
+  },
+  {
+    "id": 11,
+    "resume": "Evitar lo dudoso es protección para la conciencia.",
+    "themes": ["duda", "precaución", "conciencia"],
+    "lecons": [
+      "La duda es una señal de alarma espiritual.",
+      "Abandonar lo dudoso preserva la fe y la tranquilidad.",
+      "La certeza es preferible a la duda.",
+      "El creyente cuida su corazón de la confusión.",
+      "La precaución es una forma de sabiduría."
+    ],
+    "sharh": "Este conciso hadith, transmitido por Al-Hassan ibn 'Ali, enseña un principio práctico: siempre que haya duda sobre la licitud de algo, es preferible dejarlo. No actuar según lo dudoso preserva la paz interior y la integridad espiritual del creyante."
+  },
+  {
+    "id": 12,
+    "resume": "Ocuparse solo de lo que nos concierne es signo de buen Islam.",
+    "themes": ["Islam", "discreción", "concentración"],
+    "lecons": [
+      "Inmiscuirse en lo ajeno indica debilidad espiritual.",
+      "Concentrarse en lo propio es una señal de madurez.",
+      "El tiempo es precioso y no debe malgastarse.",
+      "La discreción fortalece las relaciones.",
+      "El creyante cuida su lengua y sus actos."
+    ],
+    "sharh": "Este breve pero profundo hadith resume una actitud fundamental: el creyante que ha alcanzado madurez espiritual se ocupa de sus propios asuntos y no interfiere en lo que no le incumbe. Esto no significa indiferencia, sino sabiduría: saber distinguir lo esencial de lo superfluo."
+  },
+  {
+    "id": 13,
+    "resume": "La fe perfecta implica desear para los demás lo que deseamos para nosotros.",
+    "themes": ["fe", "amor", "fraternidad"],
+    "lecons": [
+      "La fe completa implica amar para el prójimo lo que amamos para nosotros.",
+      "El amor al prójimo es un pilar de la fe.",
+      "Este principio abarca todos los aspectos de la vida.",
+      "La generosidad y el altruismo son expresiones de fe.",
+      "El creyante genuino desea el bien para los demás."
+    ],
+    "sharh": "Este hadith plantea un criterio exigente de la fe: quien solo desea el bien para sí mismo y no para su hermano no ha alcanzado la plenitud de la fe. El amor fraternal en el Islam va más allá de la simple tolerancia: implica un deseo activo y sincero del bien ajeno en todos los aspectos de la vida."
+  },
+  {
+    "id": 14,
+    "resume": "La sangre del musulmán es sagrada salvo en tres casos.",
+    "themes": ["vida", "justicia", "ley islámica"],
+    "lecons": [
+      "La vida humana es sagrada en el Islam.",
+      "Solo tres casos justifican la pena capital.",
+      "El adulterio de la persona casada, el homicidio voluntario y la apostasía.",
+      "La justicia debe aplicarse con equidad.",
+      "La vida es un don divino que hay que proteger."
+    ],
+    "sharh": "Este hadith establece la inviolabilidad de la vida del creyante. Las tres excepciones mencionadas corresponden a crímenes graves que amenazan el tejido de la sociedad islámica. Su aplicación está sujeta a condiciones estrictas y a un sistema judicial justo. El objetivo del Islam es siempre preservar la vida humana."
+  },
+  {
+    "id": 15,
+    "resume": "La generosidad con el vecino y el huésped es expresión de fe.",
+    "themes": ["fe", "vecino", "huésped", "hospitalidad"],
+    "lecons": [
+      "La fe se expresa a través de las acciones cotidianas.",
+      "El buen trato al vecino es signo de fe.",
+      "La hospitalidad con el huésped es obligatoria.",
+      "Hablar bien o guardar silencio es un deber.",
+      "Las relaciones sociales forman parte de la práctica religiosa."
+    ],
+    "sharh": "Este hadith vincula la fe con el comportamiento social concreto. No basta con declarar la fe: esta debe manifestarse en las relaciones con el vecino, el huésped y la palabra. La hospitalidad es un valor profundamente arraigado en el Islam, y este hadith le da un fundamento espiritual explícito."
+  },
+  {
+    "id": 16,
+    "resume": "La excelencia (ihsan) debe aplicarse en todos los actos.",
+    "themes": ["excelencia", "ihsan", "compasión"],
+    "lecons": [
+      "Allah ha prescrito el ihsan en cada cosa.",
+      "Incluso en el sacrificio se debe actuar con misericordia.",
+      "La excelencia no es solo espiritual sino también práctica.",
+      "Aliviar el sufrimiento es un deber moral.",
+      "La calidad del acto importa tanto como su realización."
+    ],
+    "sharh": "Este hadith extiende el concepto de ihsan (excelencia) a todos los ámbitos de la vida, incluyendo los actos cotidianos como el sacrificio. La instrucción de afilar el cuchillo y aliviar el sufrimiento del animal muestra que la compasión islámica no se limita a los seres humanos, sino que se extiende a todos los seres vivos."
+  },
+  {
+    "id": 17,
+    "resume": "La ira es fuente de muchos males; hay que evitarla.",
+    "themes": ["ira", "autocontrol", "sabiduría"],
+    "lecons": [
+      "La ira puede destruir relaciones y obras.",
+      "Controlar la ira es una forma de fortaleza.",
+      "El Profeta ﷺ repitió el consejo tres veces para subrayar su importancia.",
+      "La ira puede llevar a cometer injusticias.",
+      "La paciencia y la serenidad son virtudes esenciales."
+    ],
+    "sharh": "Este hadith condensa un consejo de gran alcance: no enfadarse. La repetición del consejo subraya su importancia capital. La ira es la madre de muchos pecados: las palabras hirientes, las decisiones injustas, los actos irreparables. Dominar la ira es, por tanto, una condición de rectitud en todas las esferas de la vida."
+  },
+  {
+    "id": 18,
+    "resume": "Temer a Allah, seguir el bien y tratar bien a los demás.",
+    "themes": ["taqwa", "moral", "relaciones"],
+    "lecons": [
+      "El taqwa (temor de Allah) es un pilar de la vida espiritual.",
+      "Las buenas obras borran las malas.",
+      "El buen comportamiento con los demás es esencial.",
+      "Estos tres consejos resumen la práctica islámica.",
+      "El creyente trabaja constantemente en su mejora."
+    ],
+    "sharh": "Mu'adh ibn Yabal recibió del Profeta ﷺ tres consejos que resumen la ética islámica: el taqwa como relación con Allah, la reparación de errores mediante buenas obras, y el buen trato a los demás. Estos tres pilares abarcan la espiritualidad, la moral personal y las relaciones sociales."
+  },
+  {
+    "id": 19,
+    "resume": "Confiar solo en Allah y respetar Sus límites da lugar a Su protección.",
+    "themes": ["tawakul", "protección", "destino"],
+    "lecons": [
+      "Solo Allah puede proteger y beneficiar verdaderamente.",
+      "La comunidad no puede modificar el destino escrito.",
+      "Las plumas se han levantado: el destino está fijado.",
+      "Reconocer a Allah en la facilidad lleva a su apoyo en la dificultad.",
+      "La victoria viene con la paciencia."
+    ],
+    "sharh": "Este hadith enseña la confianza total en Allah (tawakul). El Profeta ﷺ explica a Ibn 'Abbas que ni la comunidad entera puede beneficiar o perjudicar más de lo que Allah ha decretado. Esta certeza libera al creyente del miedo y le da una paz profunda. La segunda versión añade enseñanzas sobre la resiliencia y la esperanza."
+  },
+  {
+    "id": 20,
+    "resume": "La modestia es el freno moral del ser humano.",
+    "themes": ["haya", "modestia", "ética"],
+    "lecons": [
+      "La modestia (haya) es un freno moral natural.",
+      "Sin modestia el ser humano cae en cualquier exceso.",
+      "La modestia protege el honor personal y social.",
+      "Es una herencia de todos los profetas.",
+      "Su ausencia es señal de degradación moral."
+    ],
+    "sharh": "Esta sentencia, transmitida desde los antiguos profetas, resume la función de la modestia (haya): es la conciencia moral que frena al ser humano en el mal. No es timidez ni debilidad, sino un escudo espiritual. Cuando la modestia desaparece, el ser humano es capaz de cualquier exceso."
+  },
+  {
+    "id": 21,
+    "resume": "La fe en Allah y la firmeza son el núcleo del Islam.",
+    "themes": ["fe", "istiqama", "firmeza"],
+    "lecons": [
+      "La fe comienza con la declaración interior.",
+      "La firmeza (istiqama) en la obediencia es esencial.",
+      "Este consejo es suficiente para toda la vida.",
+      "La sencillez del mensaje es su grandeza.",
+      "Seguir el camino recto tras declarar la fe es el verdadero reto."
+    ],
+    "sharh": "Este hadith ofrece la esencia de la práctica islámica en dos pasos: creer en Allah y ser firme en ello. La istiqama (firmeza) implica perseverancia en la obediencia, la paciencia ante las pruebas y la coherencia entre palabras y actos. Es un programa de vida completo."
+  },
+  {
+    "id": 22,
+    "resume": "Cumplir los deberes básicos es suficiente para entrar en el Paraíso.",
+    "themes": ["Paraíso", "obligaciones", "suficiencia"],
+    "lecons": [
+      "Cumplir los deberes religiosos garantiza la entrada al Paraíso.",
+      "No es necesario sobrecargar la práctica para salvarse.",
+      "Los pilares del Islam son la base mínima y suficiente.",
+      "Allah no pide lo imposible.",
+      "La simplicidad y la regularidad son preferibles a la intensidad irregular."
+    ],
+    "sharh": "Este hadith tranquiliza al creyente: cumplir con las obligaciones fundamentales —oración, ayuno, halal/haram— es suficiente para merecer el Paraíso. No se requiere perfección heroica. Este mensaje de misericordia y accesibilidad es característico del Islam: la religión no es una carga insoportable."
+  },
+  {
+    "id": 23,
+    "resume": "Cada día el ser humano elige entre liberar o arruinar su alma.",
+    "themes": ["pureza", "oración", "alma", "responsabilidad"],
+    "lecons": [
+      "La pureza ritual es la mitad de la fe.",
+      "Las dhikr (recuerdos de Allah) tienen peso en la balanza.",
+      "La oración es luz, la caridad es prueba, la paciencia es claridad.",
+      "El Corán puede interceder o acusar.",
+      "Cada día es una elección: liberar o arruinar el alma."
+    ],
+    "sharh": "Este hadith presenta las virtudes del Islam como herramientas espirituales: la pureza purifica, el dhikr llena la balanza, la oración ilumina, la caridad prueba la fe, y la paciencia da claridad. La metáfora del comercio al final indica que cada día es una oportunidad: cada uno elige si eleva o hunde su alma."
+  },
+  {
+    "id": 24,
+    "resume": "Allah se ha prohibido la injusticia y la prohíbe entre Sus siervos.",
+    "themes": ["injusticia", "justicia", "Allah", "súplica"],
+    "lecons": [
+      "Allah ha prohibido la injusticia para Él mismo y para Sus siervos.",
+      "Todos los seres humanos necesitan la guía divina.",
+      "La obediencia de todos no aumenta el reino de Allah.",
+      "Las súplicas no disminuyen las riquezas de Allah.",
+      "Cada uno será juzgado según sus obras."
+    ],
+    "sharh": "Este hadith qudsi (divino) es uno de los más completos: Allah habla directamente a Sus siervos para recordarles Su absoluta soberanía y Su infinita misericordia. Se prohíbe la injusticia, se ofrece la guía, el sustento, el perdón. El mensaje central: no hay límite en la misericordia de Allah para quien se vuelve hacia Él."
+  },
+  {
+    "id": 25,
+    "resume": "Todo acto bueno, incluso el más íntimo, puede ser caridad.",
+    "themes": ["caridad", "sadaqa", "recompensa"],
+    "lecons": [
+      "El dhikr es caridad.",
+      "Ordenar el bien y prohibir el mal es caridad.",
+      "El acto conyugal lícito es también caridad.",
+      "No hay excusa para no dar caridad.",
+      "La recompensa depende del contexto lícito o ilícito del acto."
+    ],
+    "sharh": "Este hadith amplía extraordinariamente el concepto de sadaqa (caridad). No se limita al dinero: cada acto bueno, cada palabra de dhikr, cada gesto de justicia o cada relación conyugal lícita son formas de caridad. El Profeta ﷺ demuestra que todos pueden acceder a grandes recompensas, sean ricos o pobres."
+  },
+  {
+    "id": 26,
+    "resume": "Cada articulación del cuerpo tiene su caridad diaria.",
+    "themes": ["caridad", "cuerpo", "gratitud"],
+    "lecons": [
+      "El cuerpo humano es un don que exige gratitud.",
+      "Cada articulación puede ser fuente de caridad.",
+      "La justicia, la ayuda, la buena palabra son caridades.",
+      "La oración y el dhikr también son caridades.",
+      "Incluso retirar un obstáculo del camino es una caridad."
+    ],
+    "sharh": "Este hadith enseña que el cuerpo humano, con todas sus articulaciones, es un don que exige reconocimiento mediante actos de caridad. Cada día que amanece, cada articulación debe 'pagar su deuda' mediante un acto bueno. Este marco convierte las acciones cotidianas en actos espirituales cargados de significado."
+  },
+  {
+    "id": 27,
+    "resume": "La piedad es lo que tranquiliza el alma.",
+    "themes": ["piedad", "pecado", "conciencia"],
+    "lecons": [
+      "La piedad es el buen comportamiento.",
+      "El pecado es lo que turba la conciencia.",
+      "El corazón es la mejor brújula moral.",
+      "No hay que ignorar la voz interior.",
+      "La opinión de los demás no basta si el corazón vacila."
+    ],
+    "sharh": "Este hadith, completado por la historia de Wabisa, propone una definición interiorista de la piedad: es lo que tranquiliza el alma. El corazón del creyente es una brújula moral. Incluso si los jurisperitos aprueban algo, si el corazón duda, es mejor abstenerse. Esta sensibilidad espiritual es la verdadera piedad."
+  },
+  {
+    "id": 28,
+    "resume": "Aferrarse a la Sunna y evitar las innovaciones es el camino recto.",
+    "themes": ["sunna", "bid'a", "obediencia", "unidad"],
+    "lecons": [
+      "El taqwa y la obediencia al gobernante son esenciales.",
+      "Las discordias son una prueba para la comunidad.",
+      "La Sunna del Profeta ﷺ y de los califas bien guiados es la referencia.",
+      "Toda innovación sin base es un extravío.",
+      "La firmeza en la Sunna protege de las desviaciones."
+    ],
+    "sharh": "Este hadith, pronunciado como un sermón de despedida, instruye a los Compañeros sobre cómo navegar los tiempos de discordia. La receta es clara: aferrarse a la Sunna del Profeta ﷺ y de los califas bien guiados. Toda novedad en la religión sin base es un extravío. La unidad de la comunidad pasa por esta fidelidad."
+  },
+  {
+    "id": 29,
+    "resume": "La lengua es la causa principal de la entrada al Infierno.",
+    "themes": ["lengua", "oración", "ayuno", "jihad"],
+    "lecons": [
+      "Los pilares del Islam son el camino al Paraíso.",
+      "El ayuno, la caridad y la oración nocturna son puertas del bien.",
+      "El Islam, la oración y el jihad son la cabeza, el pilar y la cima.",
+      "Controlar la lengua es la llave de todo.",
+      "Las palabras maliciosas son la causa principal de la condenación."
+    ],
+    "sharh": "Este extenso hadith condensa toda la enseñanza práctica del Islam. Mu'adh pregunta por el camino al Paraíso y recibe una respuesta exhaustiva. Al final, el Profeta ﷺ sorprende a su Compañero señalando la lengua como el principal peligro. Las calumnias y difamaciones son la causa más frecuente de la perdición eterna."
+  },
+  {
+    "id": 30,
+    "resume": "Respetar los límites fijados por Allah.",
+    "themes": ["límites", "ley", "obediencia"],
+    "lecons": [
+      "Allah ha fijado obligaciones e interdiciones.",
+      "No hay que transgredir los límites.",
+      "Ciertas cosas han sido dejadas por misericordia.",
+      "No hay que hacer demasiadas preguntas inútiles.",
+      "La religión es equilibrada."
+    ],
+    "sharh": "Allah ha fijado reglas claras: obligaciones, prohibiciones y límites. También ha dejado ciertas cosas sin especificar por misericordia. Este hadith enseña el equilibrio y advierte contra la exageración o las complicaciones innecesarias."
+  },
+  {
+    "id": 31,
+    "resume": "Desapegarse del mundo para ser amado por Allah.",
+    "themes": ["desapego", "mundo", "espiritualidad"],
+    "lecons": [
+      "El desapego del mundo conduce al amor de Allah.",
+      "No codiciar lo que poseen los demás.",
+      "La sencillez es un valor.",
+      "La riqueza del corazón supera a la de los bienes.",
+      "La satisfacción aporta paz."
+    ],
+    "sharh": "El Profeta ﷺ enseña que el desapego del mundo (zuhd) atrae el amor de Allah. No se trata de abandonarlo todo, sino de no apegarse excesivamente a los bienes materiales ni envidiar a los demás."
+  },
+  {
+    "id": 32,
+    "resume": "No se debe causar daño ni responder al mal con el mal.",
+    "themes": ["justicia", "ética", "relación"],
+    "lecons": [
+      "Está prohibido causar daño.",
+      "No se debe responder al mal con el mal.",
+      "La justicia debe ser respetada.",
+      "El perjuicio debe evitarse.",
+      "La sociedad se basa en el respeto mutuo."
+    ],
+    "sharh": "Este hadith establece una regla fundamental: no perjudicar a los demás. Prohíbe la injusticia y anima a adoptar un comportamiento equitativo y respetuoso. Es un principio central del derecho islámico."
+  },
+  {
+    "id": 33,
+    "resume": "La prueba incumbe al que afirma.",
+    "themes": ["justicia", "prueba", "derecho"],
+    "lecons": [
+      "La prueba es necesaria para cualquier acusación.",
+      "Se respeta la presunción de inocencia.",
+      "El juramento es una prueba en ausencia de elementos.",
+      "La justicia reposa en principios claros.",
+      "Los derechos deben ser protegidos."
+    ],
+    "sharh": "Este hadith establece una regla jurídica: quien afirma debe aportar la prueba, de lo contrario el otro presta juramento. Protege contra acusaciones injustificadas y garantiza la equidad en los litigios."
+  },
+  {
+    "id": 34,
+    "resume": "Cambiar el mal según las propias capacidades.",
+    "themes": ["responsabilidad", "sociedad", "reforma"],
+    "lecons": [
+      "Hay que luchar contra el mal.",
+      "Los medios varían según la capacidad.",
+      "La palabra es un medio de acción.",
+      "El corazón sigue siendo el último nivel.",
+      "La fe incluye el compromiso."
+    ],
+    "sharh": "El Profeta ﷺ enseña que el mal debe combatirse según las propias capacidades: con la mano, con la palabra o con el corazón. Este hadith muestra que el creyente tiene un papel activo en la sociedad."
+  },
+  {
+    "id": 35,
+    "resume": "Prohibición de la injusticia y de los comportamientos dañinos.",
+    "themes": ["fraternidad", "ética", "sociedad"],
+    "lecons": [
+      "No se debe envidiar ni engañar.",
+      "Los musulmanes son hermanos.",
+      "El honor y los bienes son sagrados.",
+      "Hay que evitar el desprecio.",
+      "La solidaridad es esencial."
+    ],
+    "sharh": "Este hadith enumera varios comportamientos a evitar: celos, engaño, odio. Recuerda que los musulmanes son hermanos y que su dignidad debe ser respetada."
+  },
+  {
+    "id": 36,
+    "resume": "Ayudar a los demás atrae la ayuda de Allah.",
+    "themes": ["ayuda mutua", "comunidad", "recompensa"],
+    "lecons": [
+      "Ayudar a los demás trae la ayuda divina.",
+      "Aliviar una dificultad es recompensado.",
+      "Allah facilita al que facilita.",
+      "La fraternidad es alentada.",
+      "La solidaridad es un valor central."
+    ],
+    "sharh": "Este hadith anima a ayudar a los demás. Quien alivie una dificultad será ayudado por Allah. Muestra la importancia de la solidaridad y la ayuda mutua en la comunidad."
+  },
+  {
+    "id": 37,
+    "resume": "Las buenas acciones son multiplicadas por Allah.",
+    "themes": ["recompensa", "misericordia", "intención"],
+    "lecons": [
+      "Las buenas acciones son multiplicadas.",
+      "Las malas acciones son limitadas.",
+      "La intención es tomada en cuenta.",
+      "La misericordia de Allah es inmensa.",
+      "Cada esfuerzo es recompensado."
+    ],
+    "sharh": "Este hadith qudsi muestra la generosidad de Allah: las buenas acciones son multiplicadas, mientras que las malas no lo son. Incluso la intención de hacer el bien es recompensada."
+  },
+  {
+    "id": 38,
+    "resume": "Acercarse a Allah mediante los actos obligatorios y supererogatorios.",
+    "themes": ["proximidad", "adoración", "espiritualidad"],
+    "lecons": [
+      "Las obligaciones son prioritarias.",
+      "Los actos supererogatorios acercan a Allah.",
+      "Allah ama a Sus siervos piadosos.",
+      "La protección divina es concedida.",
+      "El amor de Allah es una alta estación."
+    ],
+    "sharh": "Allah explica que ama a quien se acerca a Él mediante las obligaciones y luego mediante los actos supererogatorios. Este hadith describe la progresión espiritual del creyente."
+  },
+  {
+    "id": 39,
+    "resume": "Allah perdona los errores involuntarios.",
+    "themes": ["perdón", "misericordia", "error"],
+    "lecons": [
+      "Los errores involuntarios son perdonados.",
+      "El olvido es excusado.",
+      "La coacción es tomada en cuenta.",
+      "Allah es misericordioso.",
+      "La responsabilidad depende de la intención."
+    ],
+    "sharh": "Este hadith muestra la misericordia de Allah hacia Sus siervos. Los errores involuntarios, el olvido y la coacción no son contados como pecados."
+  },
+  {
+    "id": 40,
+    "resume": "Vivir en este mundo como un extranjero.",
+    "themes": ["desapego", "mundo", "espiritualidad"],
+    "lecons": [
+      "La vida es temporal.",
+      "Hay que prepararse para el Más Allá.",
+      "No apegarse excesivamente al mundo.",
+      "El tiempo es precioso.",
+      "La conciencia de la muerte es beneficiosa."
+    ],
+    "sharh": "El Profeta ﷺ aconseja vivir como un extranjero o un viajero. Este hadith invita a no apegarse excesivamente a este mundo y a prepararse para el Más Allá."
+  },
+  {
+    "id": 41,
+    "resume": "La fe implica seguir las enseñanzas del Profeta.",
+    "themes": ["fe", "sunna", "obediencia"],
+    "lecons": [
+      "La fe implica seguir al Profeta ﷺ.",
+      "Las pasiones no deben predominar.",
+      "La Sunna es una referencia.",
+      "La obediencia es una prueba de fe.",
+      "La guía está en la revelación."
+    ],
+    "sharh": "Este hadith muestra que la fe completa requiere conformar los deseos propios a la revelación. El creyente debe seguir las enseñanzas del Profeta ﷺ antes que sus propias pasiones."
+  },
+  {
+    "id": 42,
+    "resume": "Allah perdona a quien se arrepiente sinceramente.",
+    "themes": ["arrepentimiento", "misericordia", "Allah"],
+    "lecons": [
+      "Allah perdona todos los pecados.",
+      "El arrepentimiento sincero es aceptado.",
+      "No hay que desesperar.",
+      "Allah es misericordioso.",
+      "La puerta del arrepentimiento siempre está abierta."
+    ],
+    "sharh": "Este hadith qudsi muestra la inmensa misericordia de Allah. Aunque los pecados sean numerosos, Allah perdona a quien vuelve a Él sinceramente. Anima a no desesperar jamás y a arrepentirse siempre."
+  }
+]

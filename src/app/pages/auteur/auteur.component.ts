@@ -1,22 +1,11 @@
-import {Component, OnInit} from '@angular/core';
-import {ModalController, IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent} from "@ionic/angular/standalone";
+import { Component } from '@angular/core';
+import { IonContent, IonBackButton } from '@ionic/angular/standalone';
+import { TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
-    selector: 'app-auteur',
-    templateUrl: './auteur.component.html',
-    styleUrls: ['./auteur.component.scss'],
-    imports: [IonHeader, IonToolbar, IonButtons, IonButton, IonTitle, IonContent, IonCard, IonCardHeader, IonCardSubtitle, IonCardTitle, IonCardContent]
+  selector: 'app-auteur',
+  templateUrl: './auteur.component.html',
+  styleUrls: ['./auteur.component.scss'],
+  imports: [IonContent, IonBackButton, TranslocoPipe]
 })
-export class AuteurComponent implements OnInit {
-
-  constructor(private modalCtrl: ModalController) {
-  }
-
-  ngOnInit() {
-  }
-
-  close() {
-    return this.modalCtrl.dismiss(null, 'cancel');
-  }
-
-}
+export class AuteurComponent {}

@@ -5,41 +5,81 @@
     <div class="after-title">{{ 'home.title' | transloco }}<br><span>{{ 'home.title_accent' | transloco }}</span></div>
     <div class="after-meta">{{ 'home.meta' | transloco }}</div>
 
-    <div class="progress-row">
-      <div class="ring-wrap">
-        <svg width="44" height="44" viewBox="0 0 44 44">
-          <circle class="ring-track" cx="22" cy="22" r="17" fill="none" stroke-width="3"/>
-          <circle class="ring-progress" cx="22" cy="22" r="17" fill="none" stroke-width="3"
-            [attr.stroke-dasharray]="getDashArray()"
-            [attr.stroke-dashoffset]="getDashOffset()"
-            stroke-linecap="round"
-            transform="rotate(-90 22 22)"/>
-        </svg>
-        <div class="ring-label">{{ progress }}</div>
-      </div>
-      <div class="progress-text">
-        <strong>{{ progress }} / {{ totalHadith }} hadiths</strong> {{ 'home.read' | transloco }}<br>
-        {{ 'home.last' | transloco }}
+    <div class="hero-bottom-row">
+      <a routerLink="/auteur" class="bio-btn">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <span>{{ 'home.biography' | transloco }}</span>
+        <ion-icon name="chevron-forward"></ion-icon>
+      </a>
+
+      <div class="progress-row">
+        <div class="ring-wrap">
+          <svg width="40" height="40" viewBox="0 0 44 44">
+            <circle class="ring-track" cx="22" cy="22" r="17" fill="none" stroke-width="3"/>
+            <circle class="ring-progress" cx="22" cy="22" r="17" fill="none" stroke-width="3"
+              [attr.stroke-dasharray]="getDashArray()"
+              [attr.stroke-dashoffset]="getDashOffset()"
+              stroke-linecap="round"
+              transform="rotate(-90 22 22)"/>
+          </svg>
+          <div class="ring-label">{{ progress() }}</div>
+        </div>
+        <div class="progress-text">
+          <strong>{{ progress() }} / {{ totalHadith }}</strong> {{ 'home.read' | transloco }}
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="search-container">
-    <ion-searchbar
-      mode="ios"
-      [placeholder]="'home.search_placeholder' | transloco"
-      (ionInput)="handleSearch($event)"
-      class="after-search">
-    </ion-searchbar>
-  </div>
-
   <div class="after-section-label">
     <span>{{ 'home.all_hadiths' | transloco }}</span>
-    <span (click)="openModal()">{{ 'home.biography' | transloco }}</span>
+    <button class="search-toggle" [class.active]="searchVisible" (click)="toggleSearch()" type="button">
+      <ion-icon [name]="searchVisible ? 'close-outline' : 'search-outline'"></ion-icon>
+    </button>
+  </div>
+
+  <div class="search-collapse" [class.open]="searchVisible">
+    <div class="search-inner">
+      <div class="search-wrap" [class.focused]="searchFocused">
+        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+        <input
+          #searchInput
+          type="search"
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+          class="search-input"
+          [placeholder]="'home.search_placeholder' | transloco"
+          [value]="searchQuery"
+          (input)="onSearchInput($event)"
+          (focus)="searchFocused = true"
+          (blur)="searchFocused = false"
+        />
+        @if (searchQuery.length > 0) {
+          <button class="search-clear" (click)="clearSearch()" type="button">
+            <ion-icon name="close-circle"></ion-icon>
+          </button>
+        }
+      </div>
+      @if (searchQuery.length > 0) {
+        <div class="search-meta">
+          <span class="search-count">{{ filteredHadithList.length }} / {{ totalHadith }}</span>
+          <span class="search-query">«&nbsp;{{ searchQuery }}&nbsp;»</span>
+        </div>
+      }
+    </div>
   </div>
 
   <div class="list-container">
-    <app-hadith-list [hadithList]="filteredHadithList"></app-hadith-list>
+    @if (filteredHadithList.length === 0 && searchQuery.length > 0) {
+      <div class="search-empty">
+        <ion-icon name="search-outline" class="empty-icon"></ion-icon>
+        <p class="empty-title">{{ 'home.search_empty' | transloco }}</p>
+        <p class="empty-sub">{{ 'home.search_empty_sub' | transloco }}</p>
+      </div>
+    } @else {
+      <app-hadith-list [hadithList]="filteredHadithList"></app-hadith-list>
+    }
   </div>
 
 </ion-content>
