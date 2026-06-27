@@ -1,14 +1,15 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { NgClass } from '@angular/common';
 import { Hadith } from '../../interfaces/Hadith';
 import { RouterLink } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { TranslocoService, TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-hadith-list',
   templateUrl: './hadith-list.component.html',
   styleUrls: ['./hadith-list.component.scss'],
-  imports: [RouterLink, CommonModule, TranslocoPipe]
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [RouterLink, TranslocoPipe, NgClass]
 })
 export class HadithListComponent {
   @Input() hadithList: Hadith[];

@@ -1,22 +1,22 @@
-import { Component, effect, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, effect, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HadithServiceService } from '../../services/hadith-service.service';
 import { LanguageService } from '../../services/language.service';
 import { Share } from '@capacitor/share';
 import { StorageServiceService } from '../../services/storage-service.service';
-import { ToastController, IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonButton, IonIcon, IonContent, IonCard, IonCardContent } from '@ionic/angular/standalone';
+import { ToastController, IonBackButton, IonIcon, IonContent } from '@ionic/angular/standalone';
 import { Hadith } from '../../interfaces/Hadith';
 import { Sharh } from '../../interfaces/Sharh';
 import { addIcons } from 'ionicons';
 import { star, starOutline, shareSocialSharp } from 'ionicons/icons';
-import { CommonModule } from '@angular/common';
 import { TranslocoService, TranslocoPipe } from '@jsverse/transloco';
 
 @Component({
   selector: 'app-hadith-page',
   templateUrl: './hadith-page.page.html',
   styleUrls: ['./hadith-page.page.scss'],
-  imports: [IonHeader, IonToolbar, IonButtons, IonBackButton, IonTitle, IonButton, IonIcon, IonContent, IonCard, IonCardContent, CommonModule, TranslocoPipe]
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [IonBackButton, IonIcon, IonContent, TranslocoPipe]
 })
 export class HadithPagePage implements OnInit {
   public hadithFr: Hadith;
@@ -24,16 +24,17 @@ export class HadithPagePage implements OnInit {
   public sharh: Sharh | undefined;
   public hadithNumber: any;
   public isStored = false;
-  public hadithDbIndex: number;
   public activeTab: string = 'text';
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private hadithService: HadithServiceService,
     public langService: LanguageService,
     private storage: StorageServiceService,
     public toastController: ToastController,
-    private translocoService: TranslocoService
+    private translocoService: TranslocoService,
+    private cdr: ChangeDetectorRef
   ) {
     addIcons({ star, starOutline, shareSocialSharp });
     this.hadithNumber = this.route.snapshot.paramMap.get('id');
@@ -42,18 +43,13 @@ export class HadithPagePage implements OnInit {
     effect(() => {
       this.langService.currentLang();
       this.loadHadithContent();
+      this.cdr.markForCheck();
     });
 
     effect(() => {
       const res = this.storage.savedHadithList();
-      if (res != null) {
-        if (res.includes(this.hadithNumber)) {
-          this.isStored = true;
-          this.hadithDbIndex = res.indexOf(this.hadithNumber);
-        } else {
-          this.isStored = false;
-        }
-      }
+      this.isStored = res?.includes(Number(this.hadithNumber)) ?? false;
+      this.cdr.markForCheck();
     });
   }
 
@@ -94,7 +90,7 @@ export class HadithPagePage implements OnInit {
   }
 
   async removeHadith() {
-    await this.storage.removeHadithFavorites(this.hadithDbIndex);
+    await this.storage.removeHadithFavorites(this.hadithNumber);
     this.isStored = false;
     await this.hadithFavorisToast();
   }
@@ -110,8 +106,12 @@ export class HadithPagePage implements OnInit {
   nextHadith() {
     const nextId = parseInt(this.hadithNumber) + 1;
     if (nextId <= 42) {
-      window.location.href = `/hadith-page/${nextId}`;
+      this.router.navigate(['/hadith-page', nextId]);
     }
+  }
+
+  trackByIndex(index: number) {
+    return index;
   }
 
   getTagName(id: any) {

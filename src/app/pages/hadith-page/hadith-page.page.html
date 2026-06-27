@@ -22,46 +22,53 @@
       <div class="detail-tab" [class.active]="activeTab === 'sharh'" (click)="activeTab = 'sharh'">{{ 'hadith.tabs.sharh' | transloco }}</div>
     </div>
 
-    <div class="detail-content" *ngIf="activeTab === 'text'">
-      <div class="detail-arabic" *ngIf="langService.currentLang() !== 'ar'">{{ hadithAr?.contenu }}</div>
-      <div class="detail-text">{{ hadithFr?.contenu }}</div>
+    @if (activeTab === 'text') {
+      <div class="detail-content">
+        @if (langService.currentLang() !== 'ar') {
+          <div class="detail-text">{{ hadithFr?.contenu }}</div>
+          <div class="detail-arabic">{{ hadithAr?.contenu }}</div>
+        } @else {
+          <div class="detail-text">{{ hadithFr?.contenu }}</div>
+        }
 
-      <div class="detail-sharh-preview" *ngIf="sharh" (click)="activeTab = 'sharh'">
-        <div class="detail-sharh-label">{{ 'hadith.sharh_summary' | transloco }}</div>
-        <div class="detail-sharh-text">
-          {{ sharh.resume }}
-        </div>
-        <div class="detail-sharh-more">{{ 'hadith.sharh_more' | transloco }}</div>
-      </div>
-    </div>
-
-    <div class="detail-content" *ngIf="activeTab === 'sharh'">
-      <ng-container *ngIf="sharh; else noSharh">
-        <div class="detail-sharh-preview featured">
-          <div class="detail-sharh-label">{{ 'hadith.sharh_resume' | transloco }}</div>
-          <div class="detail-sharh-text">
-            {{ sharh.resume }}
+        @if (sharh) {
+          <div class="detail-sharh-preview" (click)="activeTab = 'sharh'">
+            <div class="detail-sharh-label">{{ 'hadith.sharh_summary' | transloco }}</div>
+            <div class="detail-sharh-text">{{ sharh.resume }}</div>
+            <div class="detail-sharh-more">{{ 'hadith.sharh_more' | transloco }}</div>
           </div>
-        </div>
+        }
+      </div>
+    }
 
-        <div class="detail-text">
-          <div class="detail-sharh-label">{{ 'hadith.sharh_lessons' | transloco }}</div>
-          <ul class="detail-lecons-list">
-            <li *ngFor="let lecon of sharh.lecons">{{ lecon }}</li>
-          </ul>
-        </div>
+    @if (activeTab === 'sharh') {
+      <div class="detail-content">
+        @if (sharh) {
+          <div class="detail-sharh-preview featured">
+            <div class="detail-sharh-label">{{ 'hadith.sharh_resume' | transloco }}</div>
+            <div class="detail-sharh-text">{{ sharh.resume }}</div>
+          </div>
 
-        <div class="detail-text">
-          <div class="detail-sharh-label">{{ 'hadith.sharh_detail' | transloco }}</div>
-          <div class="detail-sharh-full-text">{{ sharh.sharh }}</div>
-        </div>
-      </ng-container>
-      <ng-template #noSharh>
-        <div class="detail-text">
-          {{ 'hadith.sharh_soon' | transloco }}
-        </div>
-      </ng-template>
-    </div>
+          <div class="detail-text">
+            <div class="detail-sharh-label">{{ 'hadith.sharh_lessons' | transloco }}</div>
+            <ul class="detail-lecons-list">
+              @for (lecon of sharh.lecons; track $index) {
+                <li>{{ lecon }}</li>
+              }
+            </ul>
+          </div>
+
+          <div class="detail-text">
+            <div class="detail-sharh-label">{{ 'hadith.sharh_detail' | transloco }}</div>
+            <div class="detail-sharh-full-text">{{ sharh.sharh }}</div>
+          </div>
+        } @else {
+          <div class="detail-text">
+            {{ 'hadith.sharh_soon' | transloco }}
+          </div>
+        }
+      </div>
+    }
 
     <div class="detail-actions">
       <div class="detail-btn detail-btn-primary" (click)="nextHadith()">{{ 'hadith.next' | transloco }}</div>

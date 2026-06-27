@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { CommonModule } from '@angular/common';
 import { IonContent, IonIcon } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
 import {
@@ -21,16 +20,14 @@ import { LanguageService } from '../../services/language.service';
   selector: 'app-onboarding',
   templateUrl: 'onboarding.page.html',
   styleUrls: ['onboarding.page.scss'],
-  imports: [IonContent, IonIcon, CommonModule, TranslocoPipe]
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [IonContent, IonIcon, TranslocoPipe]
 })
 export class OnboardingPage {
   currentSlide = 0;
   readonly totalSlides = 4;
 
-  // Slide 0 — language
   selectedLang: string;
-
-  // Slide 2 — notifications
   notifEnabled = true;
 
   constructor(

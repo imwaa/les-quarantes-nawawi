@@ -45,6 +45,7 @@ ion-content.ob-content {
   inset: 0;
   overflow: hidden;
   z-index: 1;
+  direction: ltr;
 }
 
 /* ── Track ── */
@@ -135,6 +136,7 @@ ion-content.ob-content {
   font-size: 48px;
   position: relative;
   z-index: 1;
+  will-change: transform;
 }
 
 /* Smaller icon inside ob-icon-sm */

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { StatusBar, Style } from '@capacitor/status-bar';
 import { SplashScreen } from '@capacitor/splash-screen';
@@ -12,6 +12,7 @@ import { ThemeService } from './services/theme.service';
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [IonApp, IonRouterOutlet]
 })
 export class AppComponent {
@@ -28,9 +29,7 @@ export class AppComponent {
     await SplashScreen.hide();
     await StatusBar.setStyle({ style: Style.Default });
 
-    // Restore theme from persistent storage (localStorage handles the instant case)
     this.storage.getThemeData().subscribe((isDark) => {
-      // null means first launch → default to dark
       this.themeService.setAppTheme(isDark ?? true, false);
     });
 

@@ -60,8 +60,8 @@ ion-content {
   gap: 6px;
   flex-shrink: 0;
   padding: 7px 12px 7px 10px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--app-bg-topbar-btn);
+  border: 1px solid var(--app-border-subtle);
   border-radius: 20px;
   text-decoration: none;
   color: var(--app-text-main);
@@ -82,8 +82,8 @@ ion-content {
   }
 
   &:active {
-    background: rgba(255, 255, 255, 0.14);
-    border-color: rgba(255, 255, 255, 0.28);
+    background: var(--app-bg-card-hover);
+    border-color: var(--app-accent-green);
   }
 }
 

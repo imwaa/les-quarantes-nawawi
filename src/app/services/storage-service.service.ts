@@ -20,7 +20,7 @@ export class StorageServiceService {
   public isStorageReady: WritableSignal<boolean> = signal(false);
 
   constructor(private storage: Storage) {
-    this.init().then(() => console.log('DB init'));
+    this.init();
   }
 
   async init() {
@@ -28,7 +28,7 @@ export class StorageServiceService {
     await this.storage.create();
     this.isStorageReady.set(true);
     const res = await this.getHadithFavoritesPromise();
-    this.savedHadithList.set(res || []);
+    this.savedHadithList.set((res || []).map(Number));
     const readArr: number[] = (await this.storage.get(HADITH_READ_KEY)) || [];
     this.readHadithIds.set(new Set(readArr));
   }
@@ -50,22 +50,21 @@ export class StorageServiceService {
     await this.storage.set(THEME_KEY, value);
   }
 
-  async setHadithFavorites(item: number) {
-    const storedData = (await this.storage.get(HADITHFAVORIS_KEY)) || [];
-    storedData.push(item);
-    await this.storage.set(HADITHFAVORIS_KEY, storedData);
-    this.savedHadithList.update(list => [...list, item]);
+  async setHadithFavorites(id: number): Promise<void> {
+    const normalizedId = Number(id);
+    const list: number[] = ((await this.storage.get(HADITHFAVORIS_KEY)) || []).map(Number);
+    if (list.includes(normalizedId)) return;
+    list.push(normalizedId);
+    await this.storage.set(HADITHFAVORIS_KEY, list);
+    this.savedHadithList.update(l => [...l, normalizedId]);
   }
 
-  async removeHadithFavorites(index) {
-    const storedData = (await this.storage.get(HADITHFAVORIS_KEY)) || [];
-    storedData.splice(index, 1);
-    await this.storage.set(HADITHFAVORIS_KEY, storedData);
-    this.savedHadithList.update(list => {
-      const newList = [...list];
-      newList.splice(index, 1);
-      return newList;
-    });
+  async removeHadithFavorites(id: number): Promise<void> {
+    const normalizedId = Number(id);
+    const list: number[] = ((await this.storage.get(HADITHFAVORIS_KEY)) || []).map(Number);
+    const filtered = list.filter(n => n !== normalizedId);
+    await this.storage.set(HADITHFAVORIS_KEY, filtered);
+    this.savedHadithList.update(l => l.filter(n => n !== normalizedId));
   }
 
   private async getHadithFavoritesPromise() {

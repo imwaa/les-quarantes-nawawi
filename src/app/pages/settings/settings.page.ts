@@ -1,12 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 import { StorageServiceService } from '../../services/storage-service.service';
 import { LanguageService } from '../../services/language.service';
 import { NotificationService } from '../../services/notification.service';
 import { Share } from '@capacitor/share';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, IonList, IonItem, IonIcon, IonLabel, IonToggle, IonChip } from '@ionic/angular/standalone';
+import { IonContent, IonIcon, IonToggle } from '@ionic/angular/standalone';
 import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
 import { addIcons } from 'ionicons';
 import { moon, people, star, heart, chevronForward, chevronDownOutline, checkmarkOutline, shareSocialOutline, starOutline, language, notifications, timeOutline, flaskOutline } from 'ionicons/icons';
 import { TranslocoService, TranslocoPipe } from '@jsverse/transloco';
@@ -15,7 +14,8 @@ import { TranslocoService, TranslocoPipe } from '@jsverse/transloco';
   selector: 'app-settings',
   templateUrl: 'settings.page.html',
   styleUrls: ['settings.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, IonCard, IonCardContent, IonList, IonItem, IonIcon, IonLabel, IonToggle, IonChip, FormsModule, CommonModule, TranslocoPipe]
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [IonContent, IonIcon, IonToggle, FormsModule, TranslocoPipe]
 })
 export class SettingsPage implements OnInit {
   themeValue = false;
@@ -39,17 +39,20 @@ export class SettingsPage implements OnInit {
     private storage: StorageServiceService,
     public langService: LanguageService,
     private notifService: NotificationService,
-    private translocoService: TranslocoService
+    private translocoService: TranslocoService,
+    private cdr: ChangeDetectorRef
   ) {
     addIcons({ moon, people, star, heart, chevronForward, chevronDownOutline, checkmarkOutline, shareSocialOutline, starOutline, language, notifications, timeOutline, flaskOutline });
     this.storage.getThemeData().subscribe((res) => {
       this.themeValue = res ?? true;
+      this.cdr.markForCheck();
     });
   }
 
   async ngOnInit() {
     this.notifEnabled = await this.storage.getNotifEnabled();
     this.notifTime = await this.storage.getNotifTime();
+    this.cdr.markForCheck();
   }
 
   get darkBoolean() {

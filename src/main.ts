@@ -1,6 +1,6 @@
-import { enableProdMode, importProvidersFrom, isDevMode } from '@angular/core';
+import { enableProdMode, importProvidersFrom, isDevMode, APP_INITIALIZER } from '@angular/core';
 import { bootstrapApplication } from '@angular/platform-browser';
-import { RouteReuseStrategy, provideRouter, withPreloading, PreloadAllModules } from '@angular/router';
+import { RouteReuseStrategy, provideRouter, NoPreloading, withPreloading } from '@angular/router';
 import { IonicRouteStrategy, provideIonicAngular } from '@ionic/angular/standalone';
 import { IonicStorageModule } from '@ionic/storage-angular';
 import { Drivers } from '@ionic/storage';
@@ -8,6 +8,7 @@ import * as CordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
 import { provideHttpClient } from '@angular/common/http';
 import { provideTransloco, provideTranslocoLoader } from '@jsverse/transloco';
 import { AppTranslocoLoader } from './app/transloco-loader';
+import { HadithServiceService } from './app/services/hadith-service.service';
 
 import { environment } from './environments/environment';
 import { AppComponent } from './app/app.component';
@@ -21,7 +22,13 @@ bootstrapApplication(AppComponent, {
   providers: [
     provideHttpClient(),
     provideIonicAngular(),
-    provideRouter(routes, withPreloading(PreloadAllModules)),
+    provideRouter(routes, withPreloading(NoPreloading)),
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (hadithService: HadithServiceService) => () => hadithService.preload(),
+      deps: [HadithServiceService],
+      multi: true
+    },
     provideTransloco({
       config: {
         availableLangs: ['fr', 'en', 'es', 'ar'],
@@ -45,4 +52,4 @@ bootstrapApplication(AppComponent, {
     ),
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ]
-}).catch(err => console.log(err));
+}).catch(err => console.error(err));

@@ -1,5 +1,4 @@
 import { Routes } from '@angular/router';
-import { AuteurComponent } from "./pages/auteur/auteur.component";
 import { onboardingGuard } from './guards/onboarding.guard';
 
 export const routes: Routes = [
@@ -18,6 +17,6 @@ export const routes: Routes = [
   },
   {
     path: 'auteur',
-    component: AuteurComponent
+    loadComponent: () => import('./pages/auteur/auteur.component').then(m => m.AuteurComponent)
   }
 ];
